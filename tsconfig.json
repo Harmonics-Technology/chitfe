@@ -20,9 +20,9 @@
     ],
     "paths": {
       "@components/*": ["./src/components/*"],
+      "@features/*": ["./src/features/*"],
       "@lib/*": ["./src/lib/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@wait/*": ["./src/wait/*"],
       "@ui/*": ["./src/components/ui/*"],
       "~/*": ["./src/*"],
       // "@src/*": ["./src/*"]
