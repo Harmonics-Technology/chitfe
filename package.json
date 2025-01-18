@@ -7,6 +7,7 @@
     "build": "prettier --check . && next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "echo 'No tests available yet' && exit 0",
     "format": "prettier --write .",
     "prepare": "husky",
     "codegen": "pnpx openapi-merge-cli && openapi --input ./openapi-merged.json --output ./src/lib/services --client axios --useOptions"
