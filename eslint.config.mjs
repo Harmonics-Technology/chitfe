@@ -123,6 +123,10 @@ export default [
                             allow: ['shared', 'ui', 'services'],
                         },
                         {
+                            from: 'ui',
+                            allow: ['ui', 'shared'],
+                        },
+                        {
                             from: 'feature',
                             allow: [
                                 'shared',
