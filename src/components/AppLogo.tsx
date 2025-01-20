@@ -10,7 +10,7 @@ export default function AppLogo() {
                 priority
                 src={ChitLogo}
                 alt='Chit brand logo'
-                className='w-28 lg:w-36'
+                className='w-20 lg:w-36'
             />
         </Link>
     );

@@ -90,7 +90,7 @@ export default [
                     mode: 'full',
                     type: 'feature',
                     capture: ['featureName'],
-                    pattern: ['src/features/**/*'],
+                    pattern: ['src/features/*/**/*'],
                 },
                 {
                     mode: 'full',
@@ -111,7 +111,7 @@ export default [
             'import/no-cycle': 'error',
             // Ensure imports are resolved
             'import/no-unresolved': 'error',
-            // 'boundaries/no-private': 1,
+            'boundaries/no-private': 0,
             'boundaries/no-unknown-files': ['error'],
             'boundaries/element-types': [
                 2,
@@ -140,12 +140,7 @@ export default [
                         },
                         {
                             from: 'app',
-                            allow: [
-                                'shared',
-                                'ui',
-                                'feature',
-                                'services'
-                            ],
+                            allow: ['shared', 'ui', 'feature', 'services'],
                         },
                         {
                             from: 'app',
