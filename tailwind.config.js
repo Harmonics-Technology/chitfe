@@ -16,6 +16,12 @@ module.exports = {
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)',
             },
+            spacing: {
+                52: '3.25rem',
+            },
+            lineHeight: {
+                17: '17.08px',
+            },
             colors: {
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
@@ -59,10 +65,14 @@ module.exports = {
                 },
                 chit: {
                     primary: '#2A1A6E',
+                    'white-smoke': '#F5F4F9',
                     'milk-white': '#FCFCFC',
                     'link-water': '#E3DEF7',
                     'ship-gray': '#434343',
                     gainsboro: '#E0E0E0',
+                    woodsmoke: '#090815',
+                    'baltic-sea': '#292929',
+                    indigo: '#382395',
                 },
             },
         },

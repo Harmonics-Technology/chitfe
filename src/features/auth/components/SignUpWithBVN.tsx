@@ -1,25 +1,51 @@
 import React from 'react';
-// import Link from 'next/link';
+import Link from 'next/link';
 
-// import {
-//     Form,
-//     FormControl,
-//     // FormDescription,
-//     FormField,
-//     FormItem,
-//     FormLabel,
-//     FormMessage,
-// } from '@components/ui/form';
-// import { Input } from '@components/ui/input';
+import { Info } from 'lucide-react';
+
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+
+import {
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from '@components/ui/form';
+import { Input } from '@components/ui/input';
+import AppButton from '@components/app-button';
+
+import { signUpWithBVN } from '@features/auth/schema';
+
+type FormSchema = yup.InferType<typeof signUpWithBVN>;
 
 export default function SignUpWithBVN() {
+    const form = useForm<FormSchema>({
+        resolver: yupResolver(signUpWithBVN),
+        defaultValues: {
+            bvn: '',
+        },
+    });
+
+    const {
+        formState: { isValid, isSubmitting },
+    } = form;
+
+    function onSubmit(values: FormSchema) {
+        console.log(values);
+    }
+
     return (
-        <div className='w-full space-y-6 md:p-16'>
+        <div className='w-full space-y-8 pt-9 md:p-16'>
             <div
                 aria-label='Sign up form for new users using BVN'
-                className='space-y-1.5 md:max-w-sm'
+                className='space-y-3'
             >
-                <h1 className='text-2xl font-bold leading-normal'>
+                <h1 className='text-xl font-bold leading-normal'>
                     Hi! Welcome to CHIT
                 </h1>
                 <p className='text-sm font-normal'>
@@ -27,92 +53,74 @@ export default function SignUpWithBVN() {
                 </p>
             </div>
 
-            {/* <Form {...form}>
-                <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className='w-full space-y-3'
-                >
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className='w-full'>
                     <FormField
                         control={form.control}
-                        name='email'
+                        name='bvn'
                         render={({ field }) => (
                             <FormItem className='w-full'>
-                                <FormLabel>Email address</FormLabel>
+                                <FormLabel>Enter BVN</FormLabel>
                                 <FormControl>
                                     <Input
-                                        type='email'
-                                        placeholder='email address'
+                                        type='text'
+                                        placeholder='Enter BVN'
                                         {...field}
                                     />
                                 </FormControl>
+                                <FormDescription className='text-chit-baltic-sea'>
+                                    Don’t know your BVN?{' '}
+                                    <span className='text-chit-indigo'>
+                                        Retrieve BVN.
+                                    </span>
+                                </FormDescription>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
 
-                    <FormField
-                        control={form.control}
-                        name='password'
-                        render={({ field }) => (
-                            <FormItem className='w-full'>
-                                <FormLabel>Password</FormLabel>
-                                <FormControl>
-                                    <PasswordInput
-                                        placeholder='enter password'
-                                        {...field}
-                                    />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                    <div className='mt-4 flex w-full items-center justify-between gap-1'>
-                        <FormField
-                            control={form.control}
-                            name='remember'
-                            render={({ field }) => (
-                                <FormItem className='flex items-center space-x-3 space-y-0'>
-                                    <FormControl>
-                                        <Checkbox
-                                            checked={field.value}
-                                            onCheckedChange={field.onChange}
-                                        />
-                                    </FormControl>
-                                    <div className='leading-none'>
-                                        <FormLabel>Remember me</FormLabel>
-                                    </div>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                        <Link
-                            href='/forgot-password'
-                            className='text-base font-medium'
-                        >
-                            Forgot password?
-                        </Link>
+                    <div className='mt-8 flex w-full gap-2 rounded-xl border border-chit-link-water bg-chit-white-smoke px-3 py-4'>
+                        <div className='w-4 shrink-0'>
+                            <Info className='size-4 text-chit-indigo' />
+                        </div>
+                        <div>
+                            <h2 className='text-sm font-medium text-chit-indigo'>
+                                Why We Need Your BVN
+                            </h2>
+                            <p className='text-xs leading-17 text-chit-ship-gray'>
+                                Your BVN ensures your account is unique and
+                                secure. It’s a trusted way to confirm your
+                                identity. Rest assured, we don’t have access to
+                                your bank account or sensitive financial
+                                details.
+                            </p>
+                        </div>
                     </div>
 
-                    {/* <div className='mt-8 flex items-center gap-4'>
-                      <AppButton
-                          type='submit'
-                          isLoading={isSubmitting}
-                          isDisabled={!isValid || isSubmitting}
-                      >
-                          Login
-                      </AppButton>
-                  </div> */}
+                    <div className='mt-8 flex items-center gap-4'>
+                        <AppButton
+                            type='submit'
+                            className='font-bold'
+                            isLoading={isSubmitting}
+                            isDisabled={!isValid || isSubmitting}
+                        >
+                            Verify BVN
+                        </AppButton>
+                    </div>
 
-            {/* <div className='mt-4 flex w-full items-center justify-center gap-1'>
-                        <p className='text-brand-dune font-light'>
-                            Don't have an account?{' '}
-                            <Link href='/register' className='font-bold'>
-                                Sign up
+                    <div className='mt-4 flex w-full items-center justify-center gap-1'>
+                        <p className='text-sm text-chit-baltic-sea'>
+                            Already have an account?{' '}
+                            <Link
+                                href='/auth/login'
+                                className='text-chit-indigo'
+                            >
+                                Log in
                             </Link>
                         </p>
                     </div>
                 </form>
-            </Form>  */}
+            </Form>
         </div>
     );
 }
