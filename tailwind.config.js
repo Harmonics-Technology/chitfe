@@ -62,6 +62,7 @@ module.exports = {
                     'milk-white': '#FCFCFC',
                     'link-water': '#E3DEF7',
                     'ship-gray': '#434343',
+                    gainsboro: '#E0E0E0',
                 },
             },
         },

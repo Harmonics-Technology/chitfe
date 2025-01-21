@@ -16,16 +16,18 @@ type AuthLayoutProps = {
 
 export default function Authlayout({ children }: AuthLayoutProps) {
     return (
-        <section className='h-dvh w-full bg-gradient-to-t from-[#211364] to-[#442BB6]'>
-            <header className='px-5 pt-4'>
+        <section className='h-dvh w-full'>
+            <header className='h-14 px-5 pt-4'>
                 <AppLogo />
             </header>
 
             <section className='grid size-full grid-cols-1 md:grid-cols-2 md:gap-6 md:p-4'>
-                <div className='relative flex size-full items-center justify-center overflow-hidden'>
+                <div className='relative hidden size-full items-center justify-center overflow-hidden sm:flex'>
                     <AuthCarousel />
                 </div>
-                <div className='flex flex-col'>{children}</div>
+                <div className='flex flex-col rounded-3xl bg-chit-milk-white'>
+                    {children}
+                </div>
             </section>
         </section>
     );

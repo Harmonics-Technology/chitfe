@@ -1,0 +1,36 @@
+import * as yup from 'yup';
+
+export const signUpWithBVN = yup.object().shape({
+    bvn: yup
+        .string()
+        .min(15, 'BVN must be at least 15 digits')
+        .required('BVN is required'),
+});
+
+export const signUpWithEmail = yup.object().shape({
+    lastName: yup.string().trim().required('Last name is required'),
+    firstName: yup.string().trim().required('first name is required'),
+    email: yup.string().email().trim().required(),
+    phoneNumber: yup
+        .string()
+        .min(11, 'phone number must be 11 digits')
+        .required('phone number is required'),
+
+    password: yup
+        .string()
+        .trim()
+        .required('Password is required')
+        .matches(/[a-z]/, 'Password must contain at least one lowercase letter')
+        .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
+        .matches(/\d/, 'Password must contain at least one number')
+        .matches(
+            /[\W_]/,
+            'Password must contain at least one special character'
+        ),
+    confirmPassword: yup
+        .string()
+        .trim()
+        .oneOf([yup.ref('password')], 'Password should match')
+        .required('Confirm password is required'),
+    referral: yup.string().optional(),
+});

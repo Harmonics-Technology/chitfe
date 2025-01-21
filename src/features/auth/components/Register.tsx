@@ -1,25 +1,34 @@
-import Link from 'next/link';
+'use client';
 
-import { Button } from '@components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@components/ui/tabs';
+import SignUpWithBVN from './SignUpWithBVN';
 
 export default function Register() {
     return (
-        <div className='h-full rounded-t-3xl bg-chit-milk-white'>
-            <div className='grid grid-cols-1 gap-4 px-5 pt-16'>
-                <Button className='w-full font-semibold'>
-                    Sign Up with Email
-                </Button>
-                <Button
-                    variant='outline'
-                    className='font-semibold text-chit-primary'
-                >
-                    Sign Up with BVN
-                </Button>
-            </div>
+        <section className='w-full rounded-3xl bg-chit-milk-white p-5'>
+            <Tabs defaultValue='bvn' className='w-full'>
+                <TabsList className='h-fit w-full items-start justify-between rounded-none border-b border-[#E0E0E0] p-0'>
+                    <TabsTrigger
+                        value='bvn'
+                        className='rounded-none border-b-2 border-transparent px-1 py-3 font-medium text-gray-500 data-[state=active]:border-chit-primary data-[state=active]:bg-transparent data-[state=active]:font-bold data-[state=active]:text-chit-primary'
+                    >
+                        Sign Up with BVN
+                    </TabsTrigger>
+                    <TabsTrigger
+                        value='email'
+                        className='rounded-none border-b-2 border-transparent px-1 py-3 font-medium text-gray-500 data-[state=active]:border-chit-primary data-[state=active]:bg-transparent data-[state=active]:font-bold data-[state=active]:text-chit-primary'
+                    >
+                        Sign Up with Email
+                    </TabsTrigger>
+                </TabsList>
 
-            <p className='mb-0 mt-6 text-center text-sm text-chit-ship-gray'>
-                Already have an account? <Link href='/auth/login'>Login</Link>
-            </p>
-        </div>
+                <TabsContent value='bvn'>
+                    <SignUpWithBVN />
+                </TabsContent>
+                <TabsContent value='email'>
+                    Change your password here.
+                </TabsContent>
+            </Tabs>
+        </section>
     );
 }
