@@ -17,8 +17,9 @@ export const OTPSchema = yup.object().shape({
 });
 
 export const signUpWithEmail = yup.object().shape({
-    lastName: yup.string().trim().required('Last name is required'),
+    surname: yup.string().trim().required('Surname is required'),
     firstName: yup.string().trim().required('first name is required'),
+    otherName: yup.string().trim().optional(),
     email: yup.string().email().trim().required(),
     phoneNumber: yup
         .string()

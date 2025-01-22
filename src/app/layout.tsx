@@ -28,9 +28,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en'>
-            <Providers>
-                <body className={poppins.className}>{children}</body>
-            </Providers>
+            <body className={poppins.className}>
+                <Providers>{children}</Providers>
+            </body>
         </html>
     );
 }
