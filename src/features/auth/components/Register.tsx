@@ -1,7 +1,7 @@
 'use client';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@components/ui/tabs';
-import SignUpWithBVN from './SignUpWithBVN';
+import SignUpWithBVN from './bvn/SignUpWithBVN';
 
 export default function Register() {
     return (

@@ -11,6 +11,35 @@ module.exports = {
     ],
     theme: {
         extend: {
+            keyframes: {
+                'caret-blink': {
+                    '0%,70%,100%': {
+                        opacity: '1',
+                    },
+                    '20%,50%': {
+                        opacity: '0',
+                    },
+                },
+                'accordion-down': {
+                    from: {
+                        height: '0',
+                    },
+                    to: {
+                        height: 'var(--radix-accordion-content-height)',
+                    },
+                },
+                'accordion-up': {
+                    from: {
+                        height: 'var(--radix-accordion-content-height)',
+                    },
+                    to: {
+                        height: '0',
+                    },
+                },
+            },
+            animation: {
+                'caret-blink': 'caret-blink 1.25s ease-out infinite',
+            },
             borderRadius: {
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',
@@ -69,6 +98,7 @@ module.exports = {
                     'milk-white': '#FCFCFC',
                     'link-water': '#E3DEF7',
                     'ship-gray': '#434343',
+                    'carbon-grey': '#5F5F5F',
                     gainsboro: '#E0E0E0',
                     woodsmoke: '#090815',
                     'baltic-sea': '#292929',

@@ -7,6 +7,15 @@ export const signUpWithBVN = yup.object().shape({
         .required('BVN is required'),
 });
 
+export const OTPSchema = yup.object().shape({
+    otp: yup
+        .string()
+        .min(6, {
+            message: 'Your one-time password must be 5 characters.',
+        })
+        .required(),
+});
+
 export const signUpWithEmail = yup.object().shape({
     lastName: yup.string().trim().required('Last name is required'),
     firstName: yup.string().trim().required('first name is required'),

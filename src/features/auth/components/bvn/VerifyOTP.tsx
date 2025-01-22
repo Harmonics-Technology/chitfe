@@ -1,0 +1,127 @@
+'use client';
+
+// import Link from 'next/link';
+import { useEffect } from 'react';
+
+import AppButton from '@components/app-button';
+import { Button } from '@components/ui/button';
+import { Form, FormControl, FormField, FormItem } from '@components/ui/form';
+import {
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSlot,
+} from '@components/ui/input-otp';
+
+import useAuth, { type OtpSchemaType } from '@features/auth/hooks/useAuth';
+import useCountdown from '@features/auth/hooks/useCountdown';
+
+const OTP_TIMER = 60;
+
+export default function VerifyOTP() {
+    const { OTPForm } = useAuth();
+    const { countdown, isCountingDown, startTimer } = useCountdown();
+
+    const {
+        control,
+        formState: { isValid, isSubmitting },
+    } = OTPForm;
+
+    function onSubmit(values: OtpSchemaType) {
+        console.log(values);
+    }
+
+    useEffect(() => {
+        startTimer(OTP_TIMER);
+    }, []);
+
+    return (
+        <div className='w-full'>
+            <div className='space-y-12'>
+                <div
+                    aria-label='Input fields to verify BVN for new users'
+                    className='space-y-3'
+                >
+                    <h1 className='text-xl font-bold leading-[26.4px]'>
+                        Verify your BVN
+                    </h1>
+                    <p className='text-sm font-normal leading-[20.72px]'>
+                        Please enter the code sent to chu*********ess@gmail.com
+                        to verify your BVN
+                    </p>
+                </div>
+
+                <Form {...OTPForm}>
+                    <form
+                        onSubmit={OTPForm.handleSubmit(onSubmit)}
+                        className='w-full md:max-w-sm'
+                    >
+                        <FormField
+                            control={control}
+                            name='otp'
+                            render={({ field }) => (
+                                <FormItem className='flex w-full flex-col items-center'>
+                                    <FormControl>
+                                        <InputOTP maxLength={6} {...field}>
+                                            <InputOTPGroup>
+                                                <InputOTPSlot index={0} />
+                                                <InputOTPSlot index={1} />
+                                                <InputOTPSlot index={2} />
+                                                <InputOTPSlot index={3} />
+                                                <InputOTPSlot index={4} />
+                                            </InputOTPGroup>
+                                        </InputOTP>
+                                    </FormControl>
+                                </FormItem>
+                            )}
+                        />
+
+                        <div className='mt-20 flex items-center gap-4'>
+                            <AppButton
+                                type='submit'
+                                isLoading={isSubmitting}
+                                isDisabled={!isValid || isSubmitting}
+                            >
+                                Verify
+                            </AppButton>
+                        </div>
+                    </form>
+                </Form>
+            </div>
+
+            <div className='mt-4 flex w-full items-center justify-center gap-1'>
+                <div className='flex items-center text-sm text-chit-primary'>
+                    Didn't receive the code?{' '}
+                    <span className='ml-1'>
+                        {isCountingDown ? (
+                            countdown
+                        ) : (
+                            <Button
+                                type='button'
+                                className='w-full px-1 py-0 font-medium hover:bg-transparent'
+                                variant='ghost'
+                                // onClick={() =>
+                                //     handleEmailResend(
+                                //         decodeURIComponent(email)
+                                //     )
+                                // }
+                            >
+                                Resend OTP
+                            </Button>
+                        )}
+                    </span>
+                </div>
+            </div>
+
+            {/* <div className='mt-14'>
+                <AppButton
+                    type='submit'
+                    className='text-chit-white-smoke font-semibold'
+                    isLoading={false}
+                    // isDisabled={!isValid || isSubmitting}
+                >
+                    Send OTP
+                </AppButton>
+            </div> */}
+        </div>
+    );
+}
