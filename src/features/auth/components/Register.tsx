@@ -1,7 +1,9 @@
 'use client';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@components/ui/tabs';
+
 import SignUpWithBVN from './bvn/SignUpWithBVN';
+import SignUpWithEmail from './SignUpWithEmail';
 
 export default function Register() {
     return (
@@ -26,7 +28,7 @@ export default function Register() {
                     <SignUpWithBVN />
                 </TabsContent>
                 <TabsContent value='email'>
-                    Change your password here.
+                    <SignUpWithEmail />
                 </TabsContent>
             </Tabs>
         </section>
