@@ -14,10 +14,12 @@ import {
 } from '@components/ui/form';
 import { Input } from '@components/ui/input';
 import InputPassword from '@components/input-password';
+import { PhoneInput } from '@components/phone-input';
 
 import useAuth, {
     type SignUpEmailSchemaType,
 } from '@features/auth/hooks/useAuth';
+import Link from 'next/link';
 
 export default function SignUpWithEmail() {
     const { signUpForm } = useAuth();
@@ -63,7 +65,7 @@ export default function SignUpWithEmail() {
                                         <FormControl>
                                             <Input
                                                 type='text'
-                                                placeholder='enter surname'
+                                                placeholder='Enter surname'
                                                 {...field}
                                             />
                                         </FormControl>
@@ -81,7 +83,7 @@ export default function SignUpWithEmail() {
                                         <FormControl>
                                             <Input
                                                 type='text'
-                                                placeholder='enter first name'
+                                                placeholder='Enter first name'
                                                 {...field}
                                                 onChange={field.onChange}
                                             />
@@ -97,9 +99,9 @@ export default function SignUpWithEmail() {
                                     <FormItem className='w-full space-y-1'>
                                         <FormLabel>Phone Number </FormLabel>
                                         <FormControl>
-                                            <Input
-                                                type='text'
-                                                placeholder='enter phone number'
+                                            <PhoneInput
+                                                placeholder='8145092367'
+                                                defaultCountry='NG'
                                                 {...field}
                                             />
                                         </FormControl>
@@ -169,7 +171,11 @@ export default function SignUpWithEmail() {
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
                                         <FormLabel>
-                                            Referral ID (optional)
+                                            Referral ID{' '}
+                                            <span className='text-chit-woodsmoke/35'>
+                                                {' '}
+                                                (optional)
+                                            </span>
                                         </FormLabel>
                                         <FormControl>
                                             <Input
@@ -182,9 +188,22 @@ export default function SignUpWithEmail() {
                                     </FormItem>
                                 )}
                             />
+
+                            <div className='w-full'>
+                                <p className='text-sm font-light text-chit-baltic-sea'>
+                                    By signing up, you agree to our{' '}
+                                    <Link href='/' className='text-chit-indigo'>
+                                        Terms of Service
+                                    </Link>{' '}
+                                    {' and '}
+                                    <Link href='/' className='text-chit-indigo'>
+                                        Privacy Policy.
+                                    </Link>
+                                </p>
+                            </div>
                         </div>
 
-                        <div className='flex flex-col-reverse pt-16 sm:flex-row sm:justify-end sm:space-x-2'>
+                        <div className='flex flex-col items-center space-y-4 pt-16'>
                             <AppButton
                                 type='submit'
                                 className='w-full'
@@ -193,6 +212,16 @@ export default function SignUpWithEmail() {
                             >
                                 Create an account
                             </AppButton>
+
+                            <p className='text-sm font-light text-chit-ship-gray'>
+                                Already have an account?{' '}
+                                <Link
+                                    href='/auth/login'
+                                    className='text-chit-indigo'
+                                >
+                                    Log in
+                                </Link>
+                            </p>
                         </div>
                     </form>
                 </Form>

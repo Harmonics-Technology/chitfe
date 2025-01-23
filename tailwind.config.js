@@ -98,6 +98,7 @@ module.exports = {
                     'milk-white': '#FCFCFC',
                     'link-water': '#E3DEF7',
                     'ship-gray': '#434343',
+                    'ash-gray': '#B8B8B8',
                     'carbon-grey': '#5F5F5F',
                     gainsboro: '#E0E0E0',
                     woodsmoke: '#090815',

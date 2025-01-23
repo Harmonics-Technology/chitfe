@@ -3,7 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@components/ui/tabs';
 
 import SignUpWithBVN from './bvn/SignUpWithBVN';
-import SignUpWithEmail from './SignUpWithEmail';
+import SignUpWithEmail from './email/SignUpWithEmail';
 
 export default function Register() {
     return (
