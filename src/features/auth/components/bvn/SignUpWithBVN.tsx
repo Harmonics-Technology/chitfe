@@ -40,15 +40,15 @@ export default function SignUpWithBVN() {
     }
 
     return (
-        <div className='w-full space-y-8 pt-9 md:p-16'>
+        <div className='w-full space-y-8 pt-9 sm:space-y-14 sm:py-10'>
             <div
                 aria-label='Sign up form for new users using BVN'
                 className='space-y-3'
             >
-                <h1 className='text-xl font-bold leading-normal'>
+                <h1 className='text-xl font-bold leading-normal sm:text-3xl'>
                     Hi! Welcome to CHIT
                 </h1>
-                <p className='text-sm font-normal'>
+                <p className='text-sm font-normal sm:text-base'>
                     Please input your BVN for verification to get started.
                 </p>
             </div>
@@ -80,14 +80,14 @@ export default function SignUpWithBVN() {
                     />
 
                     <div className='mt-8 flex w-full gap-2 rounded-xl border border-chit-link-water bg-chit-white-smoke px-3 py-4'>
-                        <div className='w-4 shrink-0'>
+                        <div className='w-4 shrink-0 sm:mt-1'>
                             <Info className='size-4 text-chit-indigo' />
                         </div>
-                        <div>
-                            <h2 className='text-sm font-medium text-chit-indigo'>
+                        <div className='sm:space-y-2'>
+                            <h2 className='text-sm font-medium leading-[18.3px] text-chit-indigo sm:text-base'>
                                 Why We Need Your BVN
                             </h2>
-                            <p className='text-xs leading-17 text-chit-ship-gray'>
+                            <p className='text-xs leading-17 text-chit-ship-gray sm:text-sm sm:leading-[19.24px] sm:text-chit-black-cow'>
                                 Your BVN ensures your account is unique and
                                 secure. It’s a trusted way to confirm your
                                 identity. Rest assured, we don’t have access to
@@ -97,10 +97,10 @@ export default function SignUpWithBVN() {
                         </div>
                     </div>
 
-                    <div className='mt-8 flex items-center gap-4'>
+                    <div className='mt-8 flex items-center gap-4 sm:mt-16'>
                         <AppButton
                             type='submit'
-                            className='font-bold'
+                            className='font-bold sm:text-lg'
                             isLoading={isSubmitting}
                             isDisabled={!isValid || isSubmitting}
                         >
@@ -109,7 +109,7 @@ export default function SignUpWithBVN() {
                     </div>
 
                     <div className='mt-4 flex w-full items-center justify-center gap-1'>
-                        <p className='text-sm text-chit-baltic-sea'>
+                        <p className='text-sm text-chit-baltic-sea sm:text-base'>
                             Already have an account?{' '}
                             <Link
                                 href='/auth/login'

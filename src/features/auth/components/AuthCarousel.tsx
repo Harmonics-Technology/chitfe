@@ -72,9 +72,8 @@ export default function AuthCarousel() {
                             <div className='flex items-center justify-center'>
                                 <Image
                                     src={illustration}
-                                    width='213'
-                                    height={282}
                                     alt='a phone screen screen showing a list of banks'
+                                    className='h-[282px] w-[213px] sm:w-full'
                                 />
                             </div>
                             {/* Navigation dots */}
