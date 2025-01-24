@@ -6,6 +6,8 @@ import * as RPNInput from 'react-phone-number-input';
 
 import flags from 'react-phone-number-input/flags';
 
+import { cn } from '@lib/utils';
+
 import { Button } from '@components/ui/button';
 import {
     Command,
@@ -22,8 +24,8 @@ import {
     PopoverTrigger,
 } from '@components/ui/popover';
 
-import { cn } from '@lib/utils';
 import { ScrollArea } from '@components/ui/scroll-area';
+import { Separator } from '@components/ui/separator';
 
 type PhoneInputProps = Omit<
     React.InputHTMLAttributes<HTMLInputElement>,
@@ -70,11 +72,13 @@ PhoneInput.displayName = 'PhoneInput';
 const InputComponent = React.forwardRef<
     HTMLInputElement,
     React.ComponentProps<'input'>
->(({ className, value, ...props }, ref) => (
+>(({ className, ...props }, ref) => (
     <Input
-        className={cn('rounded-xl border-none', className)}
+        className={cn(
+            'rounded-xl border-none focus-visible:bg-transparent focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0',
+            className
+        )}
         pattern='^(\+)?[0-9\s]*$'
-        defaultValue={value}
         {...props}
         ref={ref}
     />
@@ -110,19 +114,23 @@ const CountrySelect = ({
                     type='button'
                     variant={'outline'}
                     className={cn(
-                        'flex h-52 gap-1 rounded-none border-none bg-transparent px-3'
+                        'flex h-52 gap-1 rounded-none border-none bg-transparent pl-3 pr-0'
                     )}
                     disabled={disabled}
                 >
                     <FlagComponent country={value} countryName={value} />
                     <ChevronDown
                         className={cn(
-                            '-mr-2 h-4 w-4 text-foreground/40 opacity-50',
+                            '-mr-1 h-4 w-4 text-foreground/40 opacity-50',
                             disabled ? 'hidden' : 'opacity-100'
                         )}
                     />
+                    <Separator
+                        orientation='vertical'
+                        className='mx-2 my-4 h-4 bg-chit-silver-chalice'
+                    />
                     {
-                        <span className='pl-2 text-sm text-chit-gainsboro'>
+                        <span className='text-sm font-light leading-17 text-chit-silver-chalice'>
                             {`+${RPNInput.getCountryCallingCode(value)}`}
                         </span>
                     }

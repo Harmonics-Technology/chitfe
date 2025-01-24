@@ -100,6 +100,7 @@ module.exports = {
                     'ship-gray': '#434343',
                     'ash-gray': '#B8B8B8',
                     'carbon-grey': '#5F5F5F',
+                    'silver-chalice': '#ACACAC',
                     gainsboro: '#E0E0E0',
                     woodsmoke: '#090815',
                     'baltic-sea': '#292929',

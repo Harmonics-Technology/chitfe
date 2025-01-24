@@ -5,7 +5,7 @@ import ChitLogo from '~/public/chit.svg';
 
 export default function AppLogo() {
     return (
-        <Link href='/'>
+        <Link href='/' as='image'>
             <Image
                 priority
                 src={ChitLogo}
