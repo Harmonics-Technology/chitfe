@@ -24,7 +24,7 @@ export default function Register() {
                     </TabsTrigger>
                 </TabsList>
 
-                <TabsContent value='bvn'>
+                <TabsContent value='bvn' className=''>
                     <SignUpWithBVN />
                 </TabsContent>
                 <TabsContent value='email'>

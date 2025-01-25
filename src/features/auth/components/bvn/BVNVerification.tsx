@@ -43,10 +43,13 @@ export default function BVNVerification() {
     };
 
     return (
-        <div className='w-full space-y-8 p-5'>
+        <div className='w-full space-y-8 p-5 sm:space-y-14 sm:px-16'>
             <div>
-                <Link href='/auth/register'>
-                    <ArrowLeft />
+                <Link href='/auth/register' className='flex items-center gap-3'>
+                    <ArrowLeft />{' '}
+                    <span className='hidden text-xl text-chit-woodsmoke sm:inline-block'>
+                        Back
+                    </span>
                 </Link>
             </div>
 
@@ -58,10 +61,10 @@ export default function BVNVerification() {
                         aria-label='Sign up form for new users using BVN'
                         className='space-y-3'
                     >
-                        <h1 className='text-xl font-bold leading-[26.4px]'>
+                        <h1 className='text-xl font-bold leading-26 sm:text-2xl sm:font-semibold sm:text-chit-woodsmoke'>
                             Verify your BVN
                         </h1>
-                        <p className='text-sm font-normal leading-[20.72px]'>
+                        <p className='text-sm font-normal leading-[20.72px] sm:text-base'>
                             Please select how you want to receive otp for bvn
                             verification
                         </p>
@@ -71,7 +74,7 @@ export default function BVNVerification() {
                             {options.map((option) => (
                                 <div
                                     key={option.id}
-                                    className='mb-3 flex items-start gap-4 focus-within:rounded-xl focus-within:ring-1 focus-within:ring-gray-100 hover:shadow-none'
+                                    className='mb-3 flex items-start gap-4 focus-within:rounded-xl focus-within:ring-1 focus-within:ring-gray-100 hover:shadow-none sm:items-center'
                                 >
                                     <RadioGroupItem
                                         id={option.id}
@@ -80,9 +83,9 @@ export default function BVNVerification() {
                                     />
                                     <label
                                         htmlFor={option.id}
-                                        className='flex-1 space-y-2'
+                                        className='flex-1 space-y-2 sm:rounded-xl sm:bg-chit-milk-white sm:p-2.5'
                                     >
-                                        <h2 className='text-base font-semibold leading-[21.12px] text-chit-woodsmoke'>
+                                        <h2 className='text-base font-semibold leading-[21.12px] text-chit-woodsmoke sm:text-lg sm:font-medium'>
                                             {option.label}
                                         </h2>
                                         <p className='text-xs leading-[14.64px] text-chit-ship-gray'>
@@ -93,10 +96,10 @@ export default function BVNVerification() {
                             ))}
                         </RadioGroup>
                     </div>
-                    <div className='mt-14'>
+                    <div className='pt-14 sm:pt-16'>
                         <AppButton
                             type='submit'
-                            className='font-semibold text-chit-white-smoke'
+                            className='font-semibold text-chit-white-smoke sm:text-lg'
                             isLoading={false}
                             onClick={() => toggleOtpInput()}
                             // isDisabled={!isValid || isSubmitting}

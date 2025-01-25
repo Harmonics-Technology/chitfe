@@ -50,6 +50,7 @@ module.exports = {
             },
             lineHeight: {
                 17: '17.08px',
+                26: '26.4px',
             },
             colors: {
                 background: 'hsl(var(--background))',

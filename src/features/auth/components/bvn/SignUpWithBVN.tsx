@@ -109,11 +109,11 @@ export default function SignUpWithBVN() {
                     </div>
 
                     <div className='mt-4 flex w-full items-center justify-center gap-1'>
-                        <p className='text-sm text-chit-baltic-sea sm:text-base'>
+                        <p className='text-sm text-chit-baltic-sea sm:text-base sm:font-light sm:text-chit-ship-gray'>
                             Already have an account?{' '}
                             <Link
                                 href='/auth/login'
-                                className='text-chit-indigo'
+                                className='text-chit-indigo sm:font-medium'
                             >
                                 Log in
                             </Link>

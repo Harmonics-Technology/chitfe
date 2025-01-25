@@ -57,12 +57,12 @@ export default function AccountSetup() {
     }
 
     return (
-        <div className='space-y-8 p-5'>
+        <div className='space-y-8 p-5 sm:space-y-16 sm:px-16'>
             <div
                 aria-label='Input fields to confirm details and setup password'
                 className='space-y-3'
             >
-                <h1 className='text-xl font-bold leading-[26.4px]'>
+                <h1 className='text-xl font-bold leading-26'>
                     You’re almost there
                 </h1>
                 <p className='text-sm font-normal leading-[20.72px]'>

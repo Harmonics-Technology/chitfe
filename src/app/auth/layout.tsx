@@ -31,7 +31,7 @@ export default function Authlayout({ children }: AuthLayoutProps) {
                         <AuthCarousel />
                     </div>
                 </div>
-                <div className='order-last flex flex-col rounded-3xl bg-chit-milk-white sm:order-first'>
+                <div className='order-last flex flex-col rounded-3xl bg-chit-milk-white sm:order-first sm:bg-white'>
                     {children}
                 </div>
             </section>

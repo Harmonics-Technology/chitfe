@@ -41,10 +41,10 @@ export default function VerifyOTP() {
                     aria-label='Input fields to verify BVN for new users'
                     className='space-y-3'
                 >
-                    <h1 className='text-xl font-bold leading-[26.4px]'>
+                    <h1 className='text-xl font-bold leading-26 sm:text-2xl sm:font-semibold sm:text-chit-woodsmoke'>
                         Verify your BVN
                     </h1>
-                    <p className='text-sm font-normal leading-[20.72px]'>
+                    <p className='text-sm font-normal leading-[20.72px] sm:text-base sm:leading-[23.68px]'>
                         Please enter the code sent to chu*********ess@gmail.com
                         to verify your BVN
                     </p>
@@ -53,7 +53,7 @@ export default function VerifyOTP() {
                 <Form {...OTPForm}>
                     <form
                         onSubmit={OTPForm.handleSubmit(onSubmit)}
-                        className='w-full md:max-w-sm'
+                        className='w-full'
                     >
                         <FormField
                             control={control}
