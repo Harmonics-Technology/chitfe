@@ -2,7 +2,7 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 
-import AppLogo from '@components/AppLogo';
+import AppLogo from '@components/app-logo';
 import AuthCarousel from '@features/auth/components/AuthCarousel';
 
 export const metadata: Metadata = {

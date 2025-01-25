@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 
-import AppLogo from '@components/AppLogo';
+import AppLogo from '@components/app-logo';
 import { Button } from '@components/ui/button';
 
 import AuthCarousel from './AuthCarousel';
