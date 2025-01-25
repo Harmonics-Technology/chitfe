@@ -7,7 +7,8 @@
     "build": "prettier --check . && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo 'No tests available yet'",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "format": "prettier --write .",
     "prepare": "husky",
     "codegen": "pnpx openapi-merge-cli && openapi --input ./openapi-merged.json --output ./src/lib/services --client axios --useOptions"
@@ -50,6 +51,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",

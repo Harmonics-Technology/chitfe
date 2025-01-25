@@ -9,22 +9,13 @@ interface IAppLogoProps {
 }
 export default function AppLogo({ isIcon }: IAppLogoProps) {
     return (
-        <Link href='/' as='image'>
-            {isIcon ? (
-                <Image
-                    priority
-                    src={ChitIcon}
-                    alt='Chit brand icon'
-                    className='w-12'
-                />
-            ) : (
-                <Image
-                    priority
-                    src={ChitLogo}
-                    alt='Chit brand logo'
-                    className='w-20 lg:w-36'
-                />
-            )}
+        <Link href='/' aria-label='link to homepage'>
+            <Image
+                priority
+                src={isIcon ? ChitIcon : ChitLogo}
+                alt={isIcon ? 'Chit brand icon' : 'Chit brand logo'}
+                className={`${isIcon ? 'w-12' : 'w-28 lg:w-36'}`}
+            />
         </Link>
     );
 }

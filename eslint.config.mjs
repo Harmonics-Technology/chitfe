@@ -79,6 +79,11 @@ export default [
                     ],
                 },
                 {
+                    mode: 'full',
+                    type: 'tests', // Separate type for tests
+                    pattern: ['src/tests/**/*.+(ts|tsx|js|jsx)'],
+                },
+                {
                     type: 'services', // Separate type for services
                     pattern: ['src/services/**/*'],
                 },
@@ -125,6 +130,10 @@ export default [
                         {
                             from: 'ui',
                             allow: ['ui', 'shared'],
+                        },
+                        {
+                            from: 'tests',
+                            allow: ['tests', 'shared'],
                         },
                         {
                             from: 'feature',
