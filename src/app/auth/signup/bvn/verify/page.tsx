@@ -15,10 +15,11 @@ export default function page() {
     return (
         <div>
             <div>
-                <Link href='/auth/register'>
+                <Link href='/auth/signup'>
                     <ArrowLeft />
                 </Link>
             </div>
+
             <BVNVerification />
         </div>
     );
