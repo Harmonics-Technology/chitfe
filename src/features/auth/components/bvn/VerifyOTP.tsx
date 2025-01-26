@@ -63,11 +63,26 @@ export default function VerifyOTP() {
                                     <FormControl>
                                         <InputOTP maxLength={6} {...field}>
                                             <InputOTPGroup>
-                                                <InputOTPSlot index={0} />
-                                                <InputOTPSlot index={1} />
-                                                <InputOTPSlot index={2} />
-                                                <InputOTPSlot index={3} />
-                                                <InputOTPSlot index={4} />
+                                                <InputOTPSlot
+                                                    index={0}
+                                                    className='size-[75.96px]'
+                                                />
+                                                <InputOTPSlot
+                                                    index={1}
+                                                    className='size-[75.96px]'
+                                                />
+                                                <InputOTPSlot
+                                                    index={2}
+                                                    className='size-[75.96px]'
+                                                />
+                                                <InputOTPSlot
+                                                    index={3}
+                                                    className='size-[75.96px]'
+                                                />
+                                                <InputOTPSlot
+                                                    index={4}
+                                                    className='size-[75.96px]'
+                                                />
                                             </InputOTPGroup>
                                         </InputOTP>
                                     </FormControl>
@@ -78,6 +93,7 @@ export default function VerifyOTP() {
                         <div className='mt-20 flex items-center gap-4'>
                             <AppButton
                                 type='submit'
+                                className='sm:text-lg'
                                 isLoading={isSubmitting}
                                 isDisabled={!isValid || isSubmitting}
                             >
@@ -89,7 +105,7 @@ export default function VerifyOTP() {
             </div>
 
             <div className='mt-4 flex w-full items-center justify-center gap-1'>
-                <div className='flex items-center text-sm text-chit-primary'>
+                <div className='flex items-center text-sm text-chit-primary sm:text-base'>
                     Didn't receive the code?{' '}
                     <span className='ml-1'>
                         {isCountingDown ? (
@@ -97,7 +113,7 @@ export default function VerifyOTP() {
                         ) : (
                             <Button
                                 type='button'
-                                className='w-full px-1 py-0 font-medium hover:bg-transparent'
+                                className='w-full px-1 py-0 font-medium hover:bg-transparent sm:font-semibold'
                                 variant='ghost'
                                 // onClick={() =>
                                 //     handleEmailResend(

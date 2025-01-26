@@ -37,6 +37,7 @@ const steps = [
 
 export default function AccountSetup() {
     const [step, setStep] = useState<number>(0);
+    // const router = useRouter();
 
     const { signUpForm } = useAuth();
 
@@ -53,6 +54,7 @@ export default function AccountSetup() {
     };
 
     async function onSubmit(values: SignUpEmailSchemaType) {
+        // router.push('/auth/account-created');
         console.log(values);
     }
 
@@ -147,7 +149,7 @@ export default function AccountSetup() {
                             {step == 1 ? (
                                 <AppButton
                                     type='submit'
-                                    className='w-full'
+                                    className='w-full sm:text-lg'
                                     isLoading={isSubmitting}
                                     isDisabled={isSubmitting}
                                 >
@@ -156,7 +158,7 @@ export default function AccountSetup() {
                             ) : (
                                 <Button
                                     type='button'
-                                    className='w-full'
+                                    className='w-full sm:text-lg'
                                     onClick={() => goForward()}
                                 >
                                     Set Password
@@ -184,9 +186,8 @@ function PersonalInformation() {
                         <FormControl>
                             <Input
                                 type='text'
-                                placeholder='enter surname'
+                                placeholder='Enter surname'
                                 {...field}
-                                disabled
                             />
                         </FormControl>
                         <FormMessage />
@@ -203,10 +204,9 @@ function PersonalInformation() {
                         <FormControl>
                             <Input
                                 type='text'
-                                placeholder='enter first name'
+                                placeholder='Enter first name'
                                 {...field}
                                 onChange={field.onChange}
-                                disabled
                             />
                         </FormControl>
                         <FormMessage />
@@ -223,9 +223,8 @@ function PersonalInformation() {
                         <FormControl>
                             <Input
                                 type='text'
-                                placeholder='enter other name'
+                                placeholder='Enter other name'
                                 {...field}
-                                disabled
                             />
                         </FormControl>
                         <FormMessage />
@@ -241,9 +240,8 @@ function PersonalInformation() {
                         <FormControl>
                             <Input
                                 type='text'
-                                placeholder='enter other name'
+                                placeholder='Enter other name'
                                 {...field}
-                                disabled
                             />
                         </FormControl>
                         <FormMessage />
@@ -259,9 +257,8 @@ function PersonalInformation() {
                         <FormControl>
                             <Input
                                 type='text'
-                                placeholder='enter email'
+                                placeholder='Enter email'
                                 {...field}
-                                disabled
                             />
                         </FormControl>
                         <FormMessage />
