@@ -1,8 +1,7 @@
 // import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 import BVNVerification from '@features/auth/components/bvn/BVNVerification';
-import { ArrowLeft } from 'lucide-react';
 
 // const steps = [
 //   {
@@ -12,15 +11,5 @@ import { ArrowLeft } from 'lucide-react';
 // ]
 
 export default function page() {
-    return (
-        <div>
-            <div>
-                <Link href='/auth/signup'>
-                    <ArrowLeft />
-                </Link>
-            </div>
-
-            <BVNVerification />
-        </div>
-    );
+    return <BVNVerification />;
 }

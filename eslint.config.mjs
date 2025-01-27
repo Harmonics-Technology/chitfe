@@ -133,7 +133,7 @@ export default [
                         },
                         {
                             from: 'tests',
-                            allow: ['tests', 'shared'],
+                            allow: ['tests', 'shared', 'feature'],
                         },
                         {
                             from: 'feature',

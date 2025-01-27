@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useFormContext } from 'react-hook-form';
 
 import AppButton from '@components/app-button';
@@ -16,6 +17,7 @@ import {
 } from '@components/ui/form';
 import { Input } from '@components/ui/input';
 import InputPassword from '@components/input-password';
+import BackButton from './BackButton';
 
 import useAuth, {
     type SignUpEmailSchemaType,
@@ -37,7 +39,7 @@ const steps = [
 
 export default function AccountSetup() {
     const [step, setStep] = useState<number>(0);
-    // const router = useRouter();
+    const router = useRouter();
 
     const { signUpForm } = useAuth();
 
@@ -53,6 +55,12 @@ export default function AccountSetup() {
         }
     };
 
+    const goBack = (): void => {
+        console.log({ step });
+        if (step == 0) return router.replace('/auth/signup/bvn/verify');
+        setStep((prevStep) => prevStep - 1);
+    };
+
     async function onSubmit(values: SignUpEmailSchemaType) {
         // router.push('/auth/account-created');
         console.log(values);
@@ -60,6 +68,8 @@ export default function AccountSetup() {
 
     return (
         <div className='space-y-8 p-5 sm:space-y-16 sm:px-16'>
+            <BackButton onGoBack={() => goBack()} />
+
             <div
                 aria-label='Input fields to confirm details and setup password'
                 className='space-y-3'
