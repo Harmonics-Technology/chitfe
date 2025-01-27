@@ -49,7 +49,7 @@ export default function useEmailRegister() {
                 query: { email: data.email },
             });
         } catch (error) {
-            const errorBody = (error as unknown)?.body;
+            const errorBody = (error as { body: unknown })?.body as string;
 
             toast({
                 variant: 'destructive',
