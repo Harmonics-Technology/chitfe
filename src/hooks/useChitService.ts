@@ -6,14 +6,22 @@
 // ts-nocheck - Ignore all TypeScript checks
 // ts-expect-error - Complex generic types and service method handling
 
-import { CancelablePromise } from '@lib/services';
 import { useState, useCallback, useEffect } from 'react';
+
+import { CancelablePromise } from '@lib/services';
+import { ServiceMode } from '@lib/enums';
 
 // Helper type to get the return type of a function, unwrapping the CancelablePromise
 type UnwrapPromise<T> = T extends CancelablePromise<infer U> ? U : T;
 
 // Helper type for static class methods
-type StaticMethod<T> = T extends { [K in keyof T]: T[K] } ? T[keyof T] : never;
+// type StaticMethod<T> = T extends { [K in keyof T]: T[K] } ? T[keyof T] : never;
+
+type StaticMethod<T> = {
+    [K in keyof T]: T[K] extends (...args: infer A) => infer R
+        ? (...args: A) => R
+        : never;
+}[keyof T];
 
 // Type for the hook parameters
 type UseChitServiceParams<TService, TMethod extends StaticMethod<TService>> = {
@@ -21,7 +29,7 @@ type UseChitServiceParams<TService, TMethod extends StaticMethod<TService>> = {
     selector: (service: TService) => TMethod;
     params?: Parameters<TMethod>[0];
     enabled?: boolean;
-    mode?: 'query' | 'mutation';
+    mode?: ServiceMode;
 };
 
 // Type for the hook return value
@@ -62,9 +70,9 @@ export function useChitService<
             try {
                 const method = selector(service);
                 const finalParams = executeParams || params;
-                const result = await (finalParams
+                const result = (await (finalParams
                     ? method(finalParams)
-                    : method());
+                    : method())) as UnwrapPromise<ReturnType<TMethod>>;
                 setData(result);
                 return result;
             } catch (e) {
