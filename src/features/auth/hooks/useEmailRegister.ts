@@ -1,15 +1,26 @@
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/router';
 
-import { signUpWithEmail } from '../schema';
+import { useToast } from '@hooks/use-toast';
+
+import { signUpWithEmail } from '../lib/schema';
 
 import { IdentityService } from '@lib/services';
-import { useRouter } from 'next/router';
-import { useToast } from '@hooks/use-toast';
+import { onErrorDisplay } from '@lib/index';
 
 export type SignUpEmailSchemaType = yup.InferType<typeof signUpWithEmail>;
 
+const DEFAULT_VALUES = {
+    surname: '',
+    firstName: '',
+    otherName: '',
+    phoneNumber: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+};
 export default function useEmailRegister() {
     const router = useRouter();
     const { toast } = useToast();
@@ -21,15 +32,7 @@ export default function useEmailRegister() {
         formState: { isValid, isSubmitting },
     } = useForm<SignUpEmailSchemaType>({
         resolver: yupResolver<SignUpEmailSchemaType>(signUpWithEmail),
-        defaultValues: {
-            surname: '',
-            firstName: '',
-            otherName: '',
-            phoneNumber: '',
-            email: '',
-            password: '',
-            confirmPassword: '',
-        },
+        defaultValues: DEFAULT_VALUES,
     });
 
     const onSubmit = async (data: SignUpEmailSchemaType) => {
@@ -49,13 +52,10 @@ export default function useEmailRegister() {
                 query: { email: data.email },
             });
         } catch (error) {
-            const errorBody = (error as { body: unknown })?.body as string;
+            const errorBody = (error as { body: unknown; message: string })
+                ?.body as Record<string, string>;
 
-            toast({
-                variant: 'destructive',
-                title: 'Operation Failed',
-                description: errorBody,
-            });
+            onErrorDisplay(errorBody, toast, 'Authentication Error');
         }
     };
 
