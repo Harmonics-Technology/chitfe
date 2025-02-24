@@ -13,7 +13,6 @@ import {
     FormField,
     FormItem,
     FormMessage,
-    FormDescription,
 } from '@components/ui/form';
 import { Input } from '@components/ui/input';
 import InputPassword from '@components/input-password';
@@ -104,12 +103,7 @@ export default function AccountSetup() {
                                                     {...field}
                                                 />
                                             </FormControl>
-                                            <FormDescription className='text-xs text-chit-ship-gray'>
-                                                Password must contain at least
-                                                six letters, 1 number, and a
-                                                character
-                                            </FormDescription>
-                                            <FormMessage />
+                                            <FormMessage className='text-xs sm:text-sm' />
                                         </FormItem>
                                     )}
                                 />
@@ -128,7 +122,7 @@ export default function AccountSetup() {
                                                     {...field}
                                                 />
                                             </FormControl>
-                                            <FormMessage />
+                                            <FormMessage className='text-xs sm:text-sm' />
                                         </FormItem>
                                     )}
                                 />
