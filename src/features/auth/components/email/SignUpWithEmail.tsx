@@ -40,7 +40,7 @@ export default function SignUpWithEmail() {
                 aria-label='Input fields to confirm details and setup password'
                 className='space-y-3'
             >
-                <h1 className='text-xl font-bold leading-[26.4px]'>
+                <h1 className='text-xl font-bold leading-26'>
                     Hi! Welcome to CHIT
                 </h1>
                 <p className='text-sm font-normal leading-[20.72px]'>

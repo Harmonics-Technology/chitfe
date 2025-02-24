@@ -19,7 +19,7 @@ import {
 import { Input } from '@components/ui/input';
 import AppButton from '@components/app-button';
 
-import { signUpWithBVN } from '@features/auth/schema';
+import { signUpWithBVN } from '@features/auth/lib/schema';
 
 type FormSchema = yup.InferType<typeof signUpWithBVN>;
 
