@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Unbounded } from 'next/font/google';
 
 // These styles apply to every route in the application
 import './globals.css';
 
 import { validateEnv } from '@lib/env';
 import Providers from '@src/providers';
+import Navbar from '@features/landing-page/navbar';
+import Footer from '@features/landing-page/footer';
 
-const poppins = Poppins({
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+const unbounded = Unbounded({
+    weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ['latin'],
 });
 
@@ -28,8 +30,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en'>
-            <body className={`${poppins.className} font-sans`}>
-                <Providers>{children}</Providers>
+            <body className={`${unbounded.className} `}>
+                <Providers>
+                    <Navbar />
+
+                    {children}
+                    <Footer />
+                </Providers>
             </body>
         </html>
     );

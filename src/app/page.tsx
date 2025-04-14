@@ -1,5 +1,9 @@
-import Dashboard from '@features/dashboard/components/Dashboard';
+import Main from '@features/landing-page/component/home/main';
 
-export default function page() {
-    return <Dashboard />;
+export default function Page() {
+    return (
+        <>
+            <Main />
+        </>
+    );
 }

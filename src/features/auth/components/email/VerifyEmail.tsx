@@ -21,7 +21,7 @@ export default function VerifyEmail() {
                 aria-label='account created successfully page'
                 className='space-y-4'
             >
-                <h1 className='text-xl font-bold leading-[26.4px]'>
+                <h1 className='text-xl font-bold leading-26'>
                     Verify Your Email
                 </h1>
                 <p className='text-sm font-normal leading-[20.72px]'>
