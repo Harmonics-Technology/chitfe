@@ -109,6 +109,9 @@ module.exports = {
                     indigo: '#382395',
                 },
             },
+            margin: {
+                27: '6.75rem',
+            },
         },
     },
     plugins: [require('tailwindcss-animate')],

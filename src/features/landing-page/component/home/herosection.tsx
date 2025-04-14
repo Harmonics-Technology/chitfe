@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Download } from 'lucide-react';
 import Image from 'next/image';
-import Button from '@features/landing-page/link/getstarted';
+import Button from '@features/landing-page/component/reuseables/ChitButton';
 
 const HeroSection = () => {
     return (
-        <section className='bg-white px-4 pb-0 sm:px-6 lg:px-8'>
+        <section className='bg-white bg-[linear-gradient(to_top,#C6BDEF_0%,transparent_60%)] px-4 pb-0 sm:px-6 lg:px-8'>
             <div className='mx-auto max-w-7xl'>
                 <div className='pb-12 pt-16 text-center'>
                     <h1 className='mx-auto mb-6 max-w-xs text-4xl font-extrabold leading-snug text-gray-900 sm:max-w-none md:text-5xl'>
@@ -42,7 +42,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className='relative -mx-8 flex items-center justify-center overflow-hidden bg-[linear-gradient(to_top,#C6BDEF_0%,transparent_60%)] pb-8'>
+                <div className='relative -mx-8 flex items-center justify-center overflow-hidden pb-8'>
                     <div className='mb-8 w-full max-w-2xl px-4'>
                         <Image
                             src='/mobile-phone.svg'
@@ -52,15 +52,6 @@ const HeroSection = () => {
                             className='h-auto w-full'
                         />
                     </div>
-                </div>
-
-                <div className='mb-20 mt-14 px-4 text-center'>
-                    <h2 className='mb-4 text-4xl font-bold leading-10'>
-                        Smarter Finance, Simplified.
-                    </h2>
-                    <p className='text-lg font-normal'>
-                        Everything you need to manage your money with ease.
-                    </p>
                 </div>
             </div>
         </section>
