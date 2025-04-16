@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Button from '@features/landing-page/component/reuseables/ChitButton';
 
 export default function GetStarted() {
     const steps = [
@@ -26,7 +27,7 @@ export default function GetStarted() {
     ];
 
     return (
-        <section className='w-full bg-gradient-to-br from-white to-[#f4f0ff] px-6 py-10 md:px-20'>
+        <section className='mb-14 w-full bg-gradient-to-br from-white to-[#f4f0ff] px-6 py-10 md:px-20'>
             <div className='mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2'>
                 {/* Left Content */}
                 <div className='pt-5 text-center md:text-left'>
@@ -35,16 +36,17 @@ export default function GetStarted() {
                         With <span className='text-indigo-600'>CHIT</span>
                     </h2>
                     <p className='mb-8 text-lg text-gray-700'>
-                        A step-by-step guide to setting up your account,{' '}
-                        <br className='hidden md:inline' />
-                        linking your banks, and unlocking the full{' '}
+                        A step-by-step guide to setting up your account, linking
+                        your banks, and unlocking the full{' '}
                         <br className='hidden md:inline' />
                         potential of our app.
                     </p>
-                    <Link href='/create-account' passHref>
-                        <div className='mx-auto flex w-fit cursor-pointer items-center gap-2 rounded-lg bg-indigo-900 px-6 py-3 text-base font-semibold text-white transition hover:bg-indigo-800 md:mx-0'>
-                            Create an Account <ArrowRight className='size-4' />
-                        </div>
+                    <Link href='/get-started'>
+                        <Button
+                            label='Get Started'
+                            variant='filled'
+                            suffix={<ArrowRight className='size-5' />}
+                        />
                     </Link>
                 </div>
 
@@ -78,7 +80,7 @@ export default function GetStarted() {
                             </div>
 
                             {/* Floating card */}
-                            <div className='absolute right-[-30px] top-[120px] z-20 m-2 w-40 rounded-xl bg-white p-3 shadow-xl md:right-[100px] md:w-72'>
+                            <div className='absolute right-[-20px] top-[-60px] z-20 m-2 w-40 rounded-xl bg-white p-3 shadow-xl md:right-[100px] md:w-72'>
                                 <h2 className='mb-1 text-sm font-semibold text-gray-900 md:text-base'>
                                     {step.title}
                                 </h2>

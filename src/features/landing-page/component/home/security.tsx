@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Security = () => {
     return (
-        <div className='flex flex-1 flex-col items-center justify-around p-4 md:flex-row'>
+        <div className='mb-14 flex flex-1 flex-col items-center justify-around p-4 md:flex-row'>
             <div>
                 <Image
                     src='/security.svg'

@@ -6,9 +6,8 @@ import Secure from '@features/landing-page/component/home/secure';
 import Getstarted from '@features/landing-page/component/home/getstarted';
 import User from '@features/landing-page/component/home/user';
 import Security from '@features/landing-page/component/home/security';
-import Starthere from '@features/landing-page/component/home/starthere';
+import StartHere from '../reuseables/starthere';
 
-import Download from '@features/landing-page/link/download';
 export default function Main() {
     return (
         <>
@@ -20,8 +19,7 @@ export default function Main() {
             <Getstarted />
             <User />
             <Security />
-            <Starthere />
-            <Download />
+            <StartHere />
         </>
     );
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const solution = () => {
     return (
         <div className='text-center'>
-            <p className='mt-14 text-xl font-medium uppercase text-[#2A1A6E]'>
+            <p className='mt-27 text-xl font-medium uppercase text-[#2A1A6E]'>
                 Our Solution
             </p>
             <h1 className='text-4xl font-semibold'>

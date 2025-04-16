@@ -5,7 +5,7 @@ import Mission from '@features/landing-page/component/about/mission';
 import Vision from '@features/landing-page/component/about/vision';
 import Solution from '@features/landing-page/component/about/solution';
 import Feature from '@features/landing-page/component/about/feature';
-import Download from '@features/landing-page/link/download';
+import StartHere from '@features/landing-page/component/reuseables/starthere';
 
 export default function Page() {
     return (
@@ -16,7 +16,7 @@ export default function Page() {
             <Vision />
             <Solution />
             <Feature />
-            <Download />
+            <StartHere />
         </>
     );
 }

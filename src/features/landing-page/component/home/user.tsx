@@ -42,7 +42,7 @@ const Testimonials = () => {
     ];
 
     return (
-        <div className='bg-[#F3F2F9] p-8'>
+        <div className='mb-14 bg-[#F3F2F9] p-8'>
             {/* Header */}
             <div className='mb-12 text-center'>
                 <h1 className='mb-3 text-3xl font-bold'>

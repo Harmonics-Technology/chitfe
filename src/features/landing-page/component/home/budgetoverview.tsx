@@ -4,10 +4,10 @@ import { ChitContainer } from '../reuseables/ChitContainer';
 export default function BudgetSection() {
     return (
         <ChitContainer>
-            <div className='mt-27 flex w-full flex-row items-center justify-center gap-20 rounded-xl bg-[#DDF9DF4D] px-16 pt-12'>
+            <div className='mt-20 flex w-full flex-col-reverse items-center justify-center gap-10 rounded-xl bg-[#DDF9DF4D] px-6 py-10 md:mt-27 md:flex-row md:gap-20 md:px-12 md:pt-12'>
                 {/* Images on the left */}
-                <div className='flex w-1/2 flex-col gap-4'>
-                    <div className='h-auto w-full overflow-hidden'>
+                <div className='flex w-full flex-col gap-6 md:w-1/2'>
+                    <div className='w-full overflow-hidden'>
                         <Image
                             src='/totalbudgetb.svg'
                             alt='budget'
@@ -16,7 +16,7 @@ export default function BudgetSection() {
                             className='h-auto w-full'
                         />
                     </div>
-                    <div className='h-auto w-full overflow-hidden'>
+                    <div className='w-full overflow-hidden'>
                         <Image
                             src='/budgetplan.svg'
                             alt='budget plan'
@@ -28,11 +28,11 @@ export default function BudgetSection() {
                 </div>
 
                 {/* Text on the right */}
-                <div className='w-1/2 max-w-xl text-center md:text-left'>
-                    <h1 className='mb-3 text-3xl font-medium leading-10 md:text-3xl'>
+                <div className='w-full max-w-xl text-center md:w-1/2 md:text-left'>
+                    <h1 className='mb-3 text-2xl font-semibold leading-tight sm:text-3xl'>
                         Smart Budgeting Tools
                     </h1>
-                    <p className='text-base font-normal leading-7 lg:w-11/12'>
+                    <p className='text-base font-normal leading-7 sm:w-11/12'>
                         Gain clarity on your spending habits, set achievable
                         goals, and make better financial decisions with insights
                         tailored just for you.

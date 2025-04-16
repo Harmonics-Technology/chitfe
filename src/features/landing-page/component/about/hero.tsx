@@ -1,25 +1,102 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const hero = () => {
+const initialImages = [
+    '/aboutus-hero-img.svg',
+    '/aboutus-hero-img2.svg',
+    '/aboutus-hero-img3.svg',
+];
+
+const Hero = () => {
+    const [images, setImages] = useState(initialImages);
+    const [isSliding, setIsSliding] = useState(false);
+    const slideRef = useRef<HTMLDivElement>(null);
+
+    const nextSlide = () => {
+        if (isSliding) return;
+        setIsSliding(true);
+        setTimeout(() => {
+            setImages((prev) => [...prev.slice(1), prev[0]]);
+            setIsSliding(false);
+        }, 700);
+    };
+
+    const prevSlide = () => {
+        if (isSliding) return;
+        setIsSliding(true);
+        setImages((prev) => {
+            const last = prev[prev.length - 1];
+            return [last, ...prev.slice(0, prev.length - 1)];
+        });
+        setTimeout(() => {
+            setIsSliding(false);
+        }, 700);
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <div>
-            <div>
-                <h1 className='ml-6 mt-10 text-center text-2xl font-semibold leading-tight sm:ml-10 sm:mt-16 sm:text-4xl sm:leading-snug md:ml-14 md:mt-20 md:text-5xl lg:text-6xl'>
-                    Simplifying <span className='text-[#5539D0]'>Finances</span>{' '}
-                    <br /> for a Better Tomorrow
-                </h1>
+        <div className='w-full py-10'>
+            {/* Title */}
+            <h1 className='text-center text-2xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl'>
+                Simplifying <span className='text-[#5539D0]'>Finances</span>{' '}
+                <br /> for a Better Tomorrow
+            </h1>
 
-                <Image
-                    src='/about-us hero.svg'
-                    alt='Hero image'
-                    width={1440}
-                    height={400}
-                    className='mt-10 p-4'
-                />
+            {/* Carousel */}
+            <div className='relative mx-auto mt-10 flex max-w-6xl items-center justify-center overflow-hidden px-4'>
+                {/* Slide Container */}
+                <div
+                    ref={slideRef}
+                    className={`flex w-full transition-transform duration-700 ease-in-out ${
+                        isSliding
+                            ? '-translate-x-full sm:translate-x-[-33.3333%]'
+                            : ''
+                    }`}
+                >
+                    {[...images, ...images.slice(0, 1)]
+                        .slice(0, 4)
+                        .map((src, idx) => (
+                            <div
+                                key={idx}
+                                className='w-full shrink-0 px-2 sm:w-1/3'
+                            >
+                                <div className='overflow-hidden rounded-2xl shadow-md'>
+                                    <Image
+                                        src={src}
+                                        alt={`Hero ${idx + 1}`}
+                                        width={400}
+                                        height={300}
+                                        className='h-auto w-full object-cover'
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                </div>
+
+                {/* Navigation Arrows */}
+                <button
+                    onClick={prevSlide}
+                    className='absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-black hover:bg-white'
+                >
+                    <ChevronLeft />
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className='absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-black hover:bg-white'
+                >
+                    <ChevronRight />
+                </button>
             </div>
         </div>
     );
 };
 
-export default hero;
+export default Hero;
