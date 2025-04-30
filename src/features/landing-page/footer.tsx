@@ -20,7 +20,7 @@ const Footer = () => {
                     <Link href='/about' className='hover:text-gray-900'>
                         About Us
                     </Link>
-                    <Link href='/careers' className='hover:text-gray-900'>
+                    <Link href='/career' className='hover:text-gray-900'>
                         Careers
                     </Link>
                     <Link href='/support' className='hover:text-gray-900'>
@@ -63,7 +63,7 @@ const Footer = () => {
                     <Link href='/terms' className='hover:text-gray-900'>
                         Terms of service
                     </Link>
-                    <Link href='/privacy' className='hover:text-gray-900'>
+                    <Link href='/policy' className='hover:text-gray-900'>
                         Privacy policy
                     </Link>
                 </div>
