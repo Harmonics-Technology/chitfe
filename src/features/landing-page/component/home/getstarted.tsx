@@ -31,9 +31,9 @@ export default function GetStarted() {
             <div className='mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2'>
                 {/* Left Content */}
                 <div className='pt-5 text-center md:text-left'>
-                    <h2 className='mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl'>
-                        Get Started <br />
-                        With <span className='text-indigo-600'>CHIT</span>
+                    <h2 className='mb-6 text-4xl font-bold text-gray-900 md:text-5xl'>
+                        Get Started
+                        <div className='mt-4 text-indigo-600'>With CHIT</div>
                     </h2>
                     <p className='mb-8 text-lg text-gray-700'>
                         A step-by-step guide to setting up your account, linking
@@ -51,7 +51,7 @@ export default function GetStarted() {
                 </div>
 
                 {/* Right Pillar + Floating Card */}
-                <div className='relative mx-auto mt-32 flex items-end justify-between gap-2 md:gap-4'>
+                <div className='relative mx-auto mt-32 flex flex-row items-end justify-between gap-2 md:gap-4'>
                     {steps.map((step, index) => (
                         <div
                             key={index}
@@ -79,12 +79,12 @@ export default function GetStarted() {
                                 </div>
                             </div>
 
-                            {/* Floating card */}
-                            <div className='absolute right-[-20px] top-[-60px] z-20 m-2 w-40 rounded-xl bg-white p-3 shadow-xl md:right-[100px] md:w-72'>
+                            {/* Floating card with hover effect */}
+                            <div className='absolute right-[-20px] top-[-60px] z-20 m-2 w-40 rounded-xl bg-white p-3 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl md:right-[100px] md:w-72'>
                                 <h2 className='mb-1 text-sm font-semibold text-gray-900 md:text-base'>
                                     {step.title}
                                 </h2>
-                                <p className='text-xs leading-relaxed text-gray-300 hover:text-black md:text-xs'>
+                                <p className='text-xs leading-relaxed text-gray-300 transition-colors duration-200 hover:text-black md:text-xs'>
                                     {step.description}
                                 </p>
                             </div>
