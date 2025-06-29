@@ -6,4 +6,3 @@ export type InfoResponse = {
     email: string | null;
     isEmailConfirmed: boolean;
 };
-

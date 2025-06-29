@@ -15,4 +15,3 @@ export type BudgetSpending = {
     transactionId?: string | null;
     transaction?: Transaction;
 };
-

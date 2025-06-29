@@ -13,4 +13,3 @@ export type Customer = {
     risk_action?: string | null;
     international_format_phone?: any;
 };
-

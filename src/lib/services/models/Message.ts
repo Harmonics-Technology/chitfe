@@ -10,4 +10,3 @@ export type Message = {
     text?: Text;
     type?: string | null;
 };
-

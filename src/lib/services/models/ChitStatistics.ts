@@ -9,4 +9,3 @@ export type ChitStatistics = {
     totalAmountClaimed?: number;
     activeChits?: number;
 };
-

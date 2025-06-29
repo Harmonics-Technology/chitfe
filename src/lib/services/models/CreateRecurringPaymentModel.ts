@@ -25,4 +25,3 @@ export type CreateRecurringPaymentModel = {
     billProductId?: string | null;
     customerId?: string | null;
 };
-

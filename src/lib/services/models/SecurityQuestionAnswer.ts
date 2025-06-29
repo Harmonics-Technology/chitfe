@@ -6,4 +6,3 @@ export type SecurityQuestionAnswer = {
     question: string;
     answer: string;
 };
-

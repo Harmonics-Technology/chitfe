@@ -16,4 +16,3 @@ export type ChitView = {
     budgetCategoryName?: string | null;
     requiresPin?: boolean;
 };
-

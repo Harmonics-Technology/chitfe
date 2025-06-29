@@ -8,4 +8,3 @@ export type UpdatePinModel = {
     securityQuestion: string;
     securityAnswer: string;
 };
-

@@ -48,4 +48,3 @@ export type RecurringPayment = {
     budgetCategory?: BudgetCategory;
     paymentHistory?: Array<RecurringPaymentHistory> | null;
 };
-

@@ -7,4 +7,3 @@ export type TransferRecipientView = {
     accountName?: string | null;
     bankId?: number;
 };
-

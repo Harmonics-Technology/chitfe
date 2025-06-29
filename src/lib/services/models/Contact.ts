@@ -7,4 +7,3 @@ export type Contact = {
     profile?: Profile;
     wa_id?: string | null;
 };
-

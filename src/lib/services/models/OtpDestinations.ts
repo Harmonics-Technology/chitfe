@@ -7,4 +7,3 @@ export type OtpDestinations = {
     session?: string | null;
     methods?: Array<Method> | null;
 };
-

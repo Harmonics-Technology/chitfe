@@ -16,4 +16,3 @@ export type RequestStatisticsChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

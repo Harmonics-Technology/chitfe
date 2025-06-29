@@ -7,4 +7,3 @@ export type BiometricDeviceRegistrationModel = {
     deviceId?: string | null;
     deviceName?: string | null;
 };
-

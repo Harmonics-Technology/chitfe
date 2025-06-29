@@ -20,4 +20,3 @@ export type TransactionView = {
     categories?: Array<BudgetCategoryView> | null;
     isAiCategorized?: boolean;
 };
-

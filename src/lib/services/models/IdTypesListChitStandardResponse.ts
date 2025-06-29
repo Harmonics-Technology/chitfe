@@ -16,4 +16,3 @@ export type IdTypesListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

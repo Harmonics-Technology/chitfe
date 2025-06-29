@@ -6,4 +6,3 @@ export type GenericWebHookModel = {
     event?: string | null;
     data?: any;
 };
-

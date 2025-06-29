@@ -6,4 +6,3 @@ export type BudgetCategoryModel = {
     name?: string | null;
     description?: string | null;
 };
-

@@ -21,4 +21,3 @@ export type Wallet = {
     walletStatus?: WalletStatus;
     walletAccountNumbers?: Array<WalletAccountNumber> | null;
 };
-

@@ -9,4 +9,3 @@ export type TransactionStatus = {
     name?: string | null;
     description?: string | null;
 };
-

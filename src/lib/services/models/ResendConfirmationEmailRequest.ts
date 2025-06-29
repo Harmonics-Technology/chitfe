@@ -5,4 +5,3 @@
 export type ResendConfirmationEmailRequest = {
     email: string | null;
 };
-

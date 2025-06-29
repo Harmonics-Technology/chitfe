@@ -7,4 +7,3 @@ export type DailyRequestActivity = {
     requestCount?: number;
     totalAmount?: number;
 };
-

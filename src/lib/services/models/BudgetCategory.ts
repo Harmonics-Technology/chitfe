@@ -17,4 +17,3 @@ export type BudgetCategory = {
     budgets?: Array<Budget> | null;
     transactionCategories?: Array<TransactionCategory> | null;
 };
-

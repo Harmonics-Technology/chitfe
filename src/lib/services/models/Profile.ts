@@ -5,4 +5,3 @@
 export type Profile = {
     name?: string | null;
 };
-

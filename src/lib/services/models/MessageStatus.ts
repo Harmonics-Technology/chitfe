@@ -12,4 +12,3 @@ export type MessageStatus = {
     conversation?: Conversation;
     pricing?: Pricing;
 };
-

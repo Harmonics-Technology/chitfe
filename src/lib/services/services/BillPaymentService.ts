@@ -24,13 +24,13 @@ export class BillPaymentService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BillCategoryIEnumerableChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/BillPayment/categories',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -46,20 +46,20 @@ export class BillPaymentService {
         categoryId,
         isMobile,
     }: {
-        categoryId: string,
+        categoryId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BillProductIEnumerableChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/BillPayment/categories/{categoryId}/products',
             path: {
-                'categoryId': categoryId,
+                categoryId: categoryId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -78,14 +78,14 @@ export class BillPaymentService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: CustomerValidationRequest,
+        isMobile?: any;
+        requestBody?: CustomerValidationRequest;
     }): CancelablePromise<BillValidationResponseChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/BillPayment/validate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -106,14 +106,14 @@ export class BillPaymentService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: BillPaymentRequest,
+        isMobile?: any;
+        requestBody?: BillPaymentRequest;
     }): CancelablePromise<BillPaymentResponseChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/BillPayment/pay',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -138,34 +138,34 @@ export class BillPaymentService {
         categoryId,
         isMobile,
     }: {
-        offset?: number,
-        limit?: number,
-        startDate?: string,
-        endDate?: string,
-        transactionStatusId?: number,
-        transactionReference?: string,
-        productId?: string,
-        categoryId?: string,
+        offset?: number;
+        limit?: number;
+        startDate?: string;
+        endDate?: string;
+        transactionStatusId?: number;
+        transactionReference?: string;
+        productId?: string;
+        categoryId?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<TransactionViewPagedCollectionChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/BillPayment/history',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'Offset': offset,
-                'Limit': limit,
-                'StartDate': startDate,
-                'EndDate': endDate,
-                'TransactionStatusId': transactionStatusId,
-                'TransactionReference': transactionReference,
-                'ProductId': productId,
-                'CategoryId': categoryId,
+                Offset: offset,
+                Limit: limit,
+                StartDate: startDate,
+                EndDate: endDate,
+                TransactionStatusId: transactionStatusId,
+                TransactionReference: transactionReference,
+                ProductId: productId,
+                CategoryId: categoryId,
             },
             errors: {
                 400: `Bad Request`,
@@ -183,13 +183,13 @@ export class BillPaymentService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RecentBillPaymentListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/BillPayment/recent',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 500: `Server Error`,

@@ -18,4 +18,3 @@ export type BudgetHistory = {
     year?: number;
     budgetSpendings?: Array<BudgetSpending> | null;
 };
-

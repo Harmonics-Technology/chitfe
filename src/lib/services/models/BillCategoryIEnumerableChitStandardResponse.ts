@@ -16,4 +16,3 @@ export type BillCategoryIEnumerableChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

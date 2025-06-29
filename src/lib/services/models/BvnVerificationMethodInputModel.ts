@@ -8,4 +8,3 @@ export type BvnVerificationMethodInputModel = {
     sessionId?: string | null;
     phoneNumber?: string | null;
 };
-

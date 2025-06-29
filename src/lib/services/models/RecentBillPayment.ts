@@ -10,4 +10,3 @@ export type RecentBillPayment = {
     status?: string | null;
     date?: string;
 };
-

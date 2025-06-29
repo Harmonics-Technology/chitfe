@@ -8,4 +8,3 @@ export type ResetPinModel = {
     securityAnswer: string;
     newPin: string;
 };
-

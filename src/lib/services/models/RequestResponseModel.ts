@@ -6,4 +6,3 @@ export type RequestResponseModel = {
     declineReason?: string | null;
     linkedAccountId?: string | null;
 };
-

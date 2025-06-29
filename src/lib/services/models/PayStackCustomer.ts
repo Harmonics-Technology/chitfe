@@ -13,4 +13,3 @@ export type PayStackCustomer = {
     payStackCustomerId?: number | null;
     isValidated?: boolean;
 };
-

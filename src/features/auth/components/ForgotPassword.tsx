@@ -61,7 +61,7 @@ export default function ForgotPassword() {
                         <div className='space-y-4'>
                             <FormField
                                 control={control}
-                                name='id'
+                                name='email'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
                                         <FormLabel>Email address</FormLabel>

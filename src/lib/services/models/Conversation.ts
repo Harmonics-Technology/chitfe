@@ -8,4 +8,3 @@ export type Conversation = {
     expiration_timestamp?: string | null;
     origin?: Origin;
 };
-

@@ -10,4 +10,3 @@ export type SecurityQuestionModel = {
     password?: string | null;
     transactionPin?: number;
 };
-

@@ -39,14 +39,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: RegisterRequest,
+        isMobile?: any;
+        requestBody?: RegisterRequest;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/register',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -65,23 +65,23 @@ export class IdentityService {
         isMobile,
         requestBody,
     }: {
-        useCookies?: boolean,
-        useSessionCookies?: boolean,
+        useCookies?: boolean;
+        useSessionCookies?: boolean;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: LoginRequest,
+        isMobile?: any;
+        requestBody?: LoginRequest;
     }): CancelablePromise<AccessTokenResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/login',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'useCookies': useCookies,
-                'useSessionCookies': useSessionCookies,
+                useCookies: useCookies,
+                useSessionCookies: useSessionCookies,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -98,14 +98,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: RefreshRequest,
+        isMobile?: any;
+        requestBody?: RefreshRequest;
     }): CancelablePromise<AccessTokenResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/refresh',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -121,24 +121,24 @@ export class IdentityService {
         changedEmail,
         isMobile,
     }: {
-        userId?: string,
-        code?: string,
-        changedEmail?: string,
+        userId?: string;
+        code?: string;
+        changedEmail?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/identity/confirmEmail',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'userId': userId,
-                'code': code,
-                'changedEmail': changedEmail,
+                userId: userId,
+                code: code,
+                changedEmail: changedEmail,
             },
         });
     }
@@ -153,14 +153,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ResendConfirmationEmailRequest,
+        isMobile?: any;
+        requestBody?: ResendConfirmationEmailRequest;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/resendConfirmationEmail',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -177,14 +177,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ForgotPasswordRequest,
+        isMobile?: any;
+        requestBody?: ForgotPasswordRequest;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/forgotPassword',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -204,14 +204,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ResetPasswordRequest,
+        isMobile?: any;
+        requestBody?: ResetPasswordRequest;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/resetPassword',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -231,14 +231,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: TwoFactorRequest,
+        isMobile?: any;
+        requestBody?: TwoFactorRequest;
     }): CancelablePromise<TwoFactorResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/manage/2fa',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -258,13 +258,13 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<InfoResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/identity/manage/info',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -283,14 +283,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: InfoRequest,
+        isMobile?: any;
+        requestBody?: InfoRequest;
     }): CancelablePromise<InfoResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/identity/manage/info',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -311,14 +311,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: UserModel,
+        isMobile?: any;
+        requestBody?: UserModel;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/custom/register',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -338,14 +338,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: EmailConfirmationModel,
+        isMobile?: any;
+        requestBody?: EmailConfirmationModel;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/custom/confirm-email',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -364,13 +364,13 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Identity/info',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -385,20 +385,20 @@ export class IdentityService {
         phoneNumber,
         isMobile,
     }: {
-        phoneNumber: string,
+        phoneNumber: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Identity/custom/verify-phone-number/{phoneNumber}',
             path: {
-                'phoneNumber': phoneNumber,
+                phoneNumber: phoneNumber,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -413,20 +413,20 @@ export class IdentityService {
         token,
         isMobile,
     }: {
-        token: string,
+        token: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Identity/custom/verify-phone-number/confirm/{token}',
             path: {
-                'token': token,
+                token: token,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -444,14 +444,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: BankAccountValidationPayload,
+        isMobile?: any;
+        requestBody?: BankAccountValidationPayload;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/custom/verify-bank-details',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -471,14 +471,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ResetPasswordPayload,
+        isMobile?: any;
+        requestBody?: ResetPasswordPayload;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/custom/reset-password',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -498,14 +498,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: CustomLoginModel,
+        isMobile?: any;
+        requestBody?: CustomLoginModel;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/custom/login',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -519,20 +519,20 @@ export class IdentityService {
         identifier,
         isMobile,
     }: {
-        identifier: string,
+        identifier: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<StringChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Identity/custom/retrieve-email/{identifier}',
             path: {
-                'identifier': identifier,
+                identifier: identifier,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -547,20 +547,20 @@ export class IdentityService {
         bvn,
         isMobile,
     }: {
-        bvn: string,
+        bvn: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<InitiateRegistrationResponseChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/bvn/register/initiate/{bvn}',
             path: {
-                'bvn': bvn,
+                bvn: bvn,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -578,14 +578,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: BvnVerificationMethodInputModel,
+        isMobile?: any;
+        requestBody?: BvnVerificationMethodInputModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/bvn/register/verify',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -604,26 +604,26 @@ export class IdentityService {
         userId,
         isMobile,
     }: {
-        otp: string,
-        sessionId: string,
-        userId?: string,
+        otp: string;
+        sessionId: string;
+        userId?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Identity/bvn/register/complete/{otp}/{sessionId}',
             path: {
-                'otp': otp,
-                'sessionId': sessionId,
+                otp: otp,
+                sessionId: sessionId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'userId': userId,
+                userId: userId,
             },
             errors: {
                 400: `Bad Request`,
@@ -641,14 +641,14 @@ export class IdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: UserModel,
+        isMobile?: any;
+        requestBody?: UserModel;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/bvn/register/complete',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -666,21 +666,21 @@ export class IdentityService {
         isMobile,
         requestBody,
     }: {
-        nin: string,
+        nin: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: NinVerificationMethodInputModel,
+        isMobile?: any;
+        requestBody?: NinVerificationMethodInputModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Identity/nin/verify/{nin}',
             path: {
-                'nin': nin,
+                nin: nin,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',

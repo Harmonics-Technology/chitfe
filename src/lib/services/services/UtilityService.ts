@@ -19,13 +19,13 @@ export class UtilityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BankListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Utility/getBankList',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 403: `Forbidden`,
@@ -43,14 +43,14 @@ export class UtilityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: Array<Bank>,
+        isMobile?: any;
+        requestBody?: Array<Bank>;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Utility/addBankList',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -69,13 +69,13 @@ export class UtilityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Utility/getMonoBanks',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 403: `Forbidden`,

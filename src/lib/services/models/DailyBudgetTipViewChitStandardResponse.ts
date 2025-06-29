@@ -16,4 +16,3 @@ export type DailyBudgetTipViewChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

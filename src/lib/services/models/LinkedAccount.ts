@@ -23,4 +23,3 @@ export type LinkedAccount = {
     updatedAt?: string;
     hasMandate?: boolean;
 };
-

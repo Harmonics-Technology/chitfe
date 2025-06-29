@@ -21,4 +21,3 @@ export type BudgetView = {
     currentPeriod?: BudgetHistoryView;
     previousPeriods?: Array<BudgetHistoryView> | null;
 };
-

@@ -11,4 +11,3 @@ export type BankAccountValidationPayload = {
     email?: string | null;
     country?: string | null;
 };
-

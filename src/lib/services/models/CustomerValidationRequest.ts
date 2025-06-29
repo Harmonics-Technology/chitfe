@@ -7,4 +7,3 @@ export type CustomerValidationRequest = {
     customerId: string;
     additionalParameters?: Record<string, string> | null;
 };
-

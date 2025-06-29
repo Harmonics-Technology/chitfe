@@ -6,4 +6,3 @@ export type RegisterRequest = {
     email: string | null;
     password: string | null;
 };
-

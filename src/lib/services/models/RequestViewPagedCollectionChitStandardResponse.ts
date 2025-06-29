@@ -16,4 +16,3 @@ export type RequestViewPagedCollectionChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

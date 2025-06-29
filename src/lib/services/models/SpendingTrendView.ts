@@ -8,4 +8,3 @@ export type SpendingTrendView = {
     averageSpend?: number;
     projectedSpend?: number;
 };
-

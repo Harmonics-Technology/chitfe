@@ -11,4 +11,3 @@ export type BudgetModel = {
     startDate?: string;
     endDate?: string;
 };
-

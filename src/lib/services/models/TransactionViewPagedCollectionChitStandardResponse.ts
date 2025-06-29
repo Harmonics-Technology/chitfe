@@ -16,4 +16,3 @@ export type TransactionViewPagedCollectionChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

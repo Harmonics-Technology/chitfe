@@ -16,4 +16,3 @@ export type BudgetAnalyticsView = {
     accountBreakdown?: Array<AccountAnalytics> | null;
     dailySpending?: Array<DailySpending> | null;
 };
-

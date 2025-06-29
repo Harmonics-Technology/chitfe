@@ -6,4 +6,3 @@ export type TransactionCategoryModel = {
     transactionId?: string;
     budgetCategoryId?: string;
 };
-

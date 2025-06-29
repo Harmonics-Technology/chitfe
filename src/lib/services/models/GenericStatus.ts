@@ -9,4 +9,3 @@ export type GenericStatus = {
     name?: string | null;
     description?: string | null;
 };
-

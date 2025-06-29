@@ -5,4 +5,3 @@
 export type Origin = {
     type?: string | null;
 };
-

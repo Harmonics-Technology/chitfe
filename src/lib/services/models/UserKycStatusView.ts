@@ -12,4 +12,3 @@ export type UserKycStatusView = {
     addressVerified?: boolean;
     transactionPinSet?: boolean;
 };
-

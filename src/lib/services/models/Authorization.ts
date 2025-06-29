@@ -17,4 +17,3 @@ export type Authorization = {
     signature?: string | null;
     account_name?: any;
 };
-

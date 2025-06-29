@@ -17,13 +17,13 @@ export class LiveService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Live',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
         });
     }
@@ -38,14 +38,14 @@ export class LiveService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: SomethingModel,
+        isMobile?: any;
+        requestBody?: SomethingModel;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Live',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -61,13 +61,13 @@ export class LiveService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Live/test/slack',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
         });
     }

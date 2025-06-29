@@ -15,4 +15,3 @@ export type StringChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

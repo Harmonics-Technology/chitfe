@@ -6,4 +6,3 @@ export type IdTypes = {
     name?: string | null;
     code?: string | null;
 };
-

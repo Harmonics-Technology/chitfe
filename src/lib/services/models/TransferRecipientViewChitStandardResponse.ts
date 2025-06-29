@@ -16,4 +16,3 @@ export type TransferRecipientViewChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

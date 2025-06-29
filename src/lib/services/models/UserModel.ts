@@ -16,4 +16,3 @@ export type UserModel = {
     referralId?: string | null;
     bvn?: string | null;
 };
-

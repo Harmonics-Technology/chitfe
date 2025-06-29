@@ -32,4 +32,3 @@ export type Transaction = {
     transactionCategories?: Array<TransactionCategory> | null;
     additionalData?: Record<string, string> | null;
 };
-

@@ -23,14 +23,14 @@ export class TransactionService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: InternalTransferModel,
+        isMobile?: any;
+        requestBody?: InternalTransferModel;
     }): CancelablePromise<TransferResponseChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Transaction/transfer/internal',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -51,14 +51,14 @@ export class TransactionService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ValidateAccountModel,
+        isMobile?: any;
+        requestBody?: ValidateAccountModel;
     }): CancelablePromise<TransferRecipientViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Transaction/transfer/validate/account',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -76,20 +76,20 @@ export class TransactionService {
         identifier,
         isMobile,
     }: {
-        identifier: string,
+        identifier: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<TransferRecipientViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Transaction/transfer/validate/{identifier}',
             path: {
-                'identifier': identifier,
+                identifier: identifier,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -108,14 +108,14 @@ export class TransactionService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ExternalTransferModel,
+        isMobile?: any;
+        requestBody?: ExternalTransferModel;
     }): CancelablePromise<TransferResponseChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Transaction/transfer/external',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -140,34 +140,34 @@ export class TransactionService {
         budgetCategoryId,
         isMobile,
     }: {
-        offset?: number,
-        limit?: number,
-        transactionTypeId?: number,
-        transactionStatusId?: number,
-        transactionReference?: string,
-        startDate?: string,
-        endDate?: string,
-        budgetCategoryId?: string,
+        offset?: number;
+        limit?: number;
+        transactionTypeId?: number;
+        transactionStatusId?: number;
+        transactionReference?: string;
+        startDate?: string;
+        endDate?: string;
+        budgetCategoryId?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<TransactionViewPagedCollectionChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Transaction/user/transactions',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'Offset': offset,
-                'Limit': limit,
-                'TransactionTypeId': transactionTypeId,
-                'TransactionStatusId': transactionStatusId,
-                'TransactionReference': transactionReference,
-                'StartDate': startDate,
-                'EndDate': endDate,
-                'BudgetCategoryId': budgetCategoryId,
+                Offset: offset,
+                Limit: limit,
+                TransactionTypeId: transactionTypeId,
+                TransactionStatusId: transactionStatusId,
+                TransactionReference: transactionReference,
+                StartDate: startDate,
+                EndDate: endDate,
+                BudgetCategoryId: budgetCategoryId,
             },
             errors: {
                 400: `Bad Request`,

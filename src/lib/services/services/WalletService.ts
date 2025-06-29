@@ -26,13 +26,13 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<WalletViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Wallet/name',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 401: `Unauthorized`,
@@ -48,20 +48,20 @@ export class WalletService {
         walletId,
         isMobile,
     }: {
-        walletId: string,
+        walletId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<WalletViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Wallet/{walletId}',
             path: {
-                'walletId': walletId,
+                walletId: walletId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 401: `Unauthorized`,
@@ -79,13 +79,13 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<WalletViewListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Wallet/all',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 401: `Unauthorized`,
@@ -104,14 +104,14 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: FundWalletModel,
+        isMobile?: any;
+        requestBody?: FundWalletModel;
     }): CancelablePromise<StringChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/dev/fund',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -129,20 +129,20 @@ export class WalletService {
         reference,
         isMobile,
     }: {
-        reference?: string,
+        reference?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/dev/fund/callback',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'reference': reference,
+                reference: reference,
             },
             errors: {
                 401: `Unauthorized`,
@@ -161,14 +161,14 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: WebhookModel,
+        isMobile?: any;
+        requestBody?: WebhookModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/paystack/charge',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -188,13 +188,13 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<StringChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/account/linking/initiate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 401: `Unauthorized`,
@@ -213,14 +213,14 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: string,
+        isMobile?: any;
+        requestBody?: string;
     }): CancelablePromise<OtpDestinationsChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/directDebit/mandate/create',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -241,14 +241,14 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: SetMandateVerificationModel,
+        isMobile?: any;
+        requestBody?: SetMandateVerificationModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/directDebit/mandate/verify/initiate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -269,14 +269,14 @@ export class WalletService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: VerifyMandateOtpModel,
+        isMobile?: any;
+        requestBody?: VerifyMandateOtpModel;
     }): CancelablePromise<MandateResponseChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Wallet/directDebit/mandate/verify/complete',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',

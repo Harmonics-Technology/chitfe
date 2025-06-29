@@ -16,4 +16,3 @@ export type UpcomingPaymentViewListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

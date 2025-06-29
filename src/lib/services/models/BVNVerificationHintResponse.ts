@@ -7,4 +7,3 @@ export type BVNVerificationHintResponse = {
     hint?: string | null;
     data?: string | null;
 };
-

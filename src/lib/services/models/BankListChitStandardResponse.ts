@@ -16,4 +16,3 @@ export type BankListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

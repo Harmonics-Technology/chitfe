@@ -6,4 +6,3 @@ export type SomethingModel = {
     name?: string | null;
     description?: string | null;
 };
-

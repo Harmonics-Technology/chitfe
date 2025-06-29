@@ -6,4 +6,3 @@ export type SecurityQuestionValidationModel = {
     question: string;
     answer: string;
 };
-

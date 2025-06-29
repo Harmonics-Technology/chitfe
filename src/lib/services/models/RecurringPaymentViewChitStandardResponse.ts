@@ -16,4 +16,3 @@ export type RecurringPaymentViewChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

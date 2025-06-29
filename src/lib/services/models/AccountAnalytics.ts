@@ -8,4 +8,3 @@ export type AccountAnalytics = {
     accountType?: string | null;
     totalSpent?: number;
 };
-

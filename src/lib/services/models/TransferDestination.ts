@@ -7,4 +7,3 @@ export type TransferDestination = {
     account_number?: string | null;
     icon?: string | null;
 };
-

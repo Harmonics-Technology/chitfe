@@ -10,4 +10,3 @@ export type BudgetTipSummary = {
     daysRemaining?: number;
     overBudgetCategories?: Array<CategoryOverBudgetInfo> | null;
 };
-

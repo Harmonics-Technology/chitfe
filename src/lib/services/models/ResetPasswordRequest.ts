@@ -7,4 +7,3 @@ export type ResetPasswordRequest = {
     resetCode: string | null;
     newPassword: string | null;
 };
-

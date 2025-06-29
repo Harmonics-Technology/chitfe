@@ -16,4 +16,3 @@ export type BillValidationResponseChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

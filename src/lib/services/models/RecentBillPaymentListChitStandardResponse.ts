@@ -16,4 +16,3 @@ export type RecentBillPaymentListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

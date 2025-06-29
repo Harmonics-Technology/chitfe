@@ -6,4 +6,3 @@ export type NinVerificationMethodInputModel = {
     nin?: string | null;
     phoneNumber?: string | null;
 };
-

@@ -7,4 +7,3 @@ export type UpdateSecurityQuestionsModel = {
     currentPassword: string;
     newSecurityQuestions: Array<SecurityQuestionAnswer>;
 };
-

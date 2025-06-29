@@ -6,4 +6,3 @@ export type VerifyMandateOtpModel = {
     sessionId?: string | null;
     otp?: string | null;
 };
-
