@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Button from '@features/landing-page/component/reuseables/ChitButton';
 
@@ -33,11 +33,7 @@ const HeroSection = () => {
                         </Link>
 
                         <Link href='/download'>
-                            <Button
-                                label='Download App'
-                                variant='outline'
-                                prefix={<Download className='size-5' />}
-                            />
+                            <Button label='Download App' variant='outline' />
                         </Link>
                     </div>
                 </div>

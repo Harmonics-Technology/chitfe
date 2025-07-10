@@ -68,10 +68,10 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+                                className={`rounded-lg px-4 py-2 font-[Poppins] text-lg font-semibold transition-all ${
                                     link.name === 'Sign Up'
-                                        ? 'border-2 border-[#3A2A7E] bg-[#3A2A7E] text-white hover:bg-white hover:text-[#3A2A7E]'
-                                        : 'border-2 border-[#3A2A7E] text-[#3A2A7E] hover:bg-[#3A2A7E] hover:text-white'
+                                        ? 'border-2 border-[#3A2A7E] bg-[#3A2A7E] text-white'
+                                        : 'border-2 border-[#3A2A7E] text-[#3A2A7E]'
                                 }`}
                             >
                                 {link.name}
@@ -120,8 +120,8 @@ export default function Navbar() {
                                 onClick={() => setMenuOpen(false)}
                                 className={`w-full rounded-lg px-4 py-2 text-center text-sm font-medium transition-all ${
                                     link.name === 'Sign Up'
-                                        ? 'border-2 border-[#3A2A7E] bg-[#3A2A7E] text-white hover:bg-white hover:text-[#3A2A7E]'
-                                        : 'border-2 border-[#3A2A7E] text-[#3A2A7E] hover:bg-[#3A2A7E] hover:text-white'
+                                        ? 'border-2 border-[#3A2A7E] bg-[#3A2A7E] text-white'
+                                        : 'border-2 border-[#3A2A7E] text-[#3A2A7E]'
                                 }`}
                             >
                                 {link.name}
