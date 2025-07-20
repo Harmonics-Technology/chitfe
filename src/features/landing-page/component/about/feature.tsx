@@ -8,7 +8,7 @@ const FeaturesSection = () => {
     return (
         <section className='mt-7 flex flex-col items-stretch justify-between gap-10 px-6 py-16 md:px-16 lg:flex-row'>
             {/* Text Section */}
-            <div className='flex size-full flex-col justify-between gap-12 lg:w-1/2'>
+            <div className='flex size-full flex-col justify-between gap-12 font-[poppins] lg:w-1/2'>
                 {/* Active Feature */}
                 <div className='group mt-14'>
                     <div className='flex flex-col items-start text-[#2A1A6E]'>

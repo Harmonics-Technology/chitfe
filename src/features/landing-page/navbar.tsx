@@ -68,7 +68,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`rounded-lg px-4 py-2 font-[Poppins] text-lg font-semibold transition-all ${
+                                className={`rounded-lg px-4 py-2 font-[poppins] text-lg font-semibold transition-all ${
                                     link.name === 'Sign Up'
                                         ? 'border-2 border-[#3A2A7E] bg-[#3A2A7E] text-white'
                                         : 'border-2 border-[#3A2A7E] text-[#3A2A7E]'

@@ -19,12 +19,12 @@ const Inclusion = () => {
                     <h1 className='text-3xl font-bold text-[#0F0F0F] md:text-4xl'>
                         Inclusion and Diversity
                     </h1>
-                    <p className='mt-5 text-base font-normal text-gray-700 md:text-sm'>
+                    <p className='mt-5 font-[poppins] text-base font-normal text-gray-700 md:text-sm'>
                         A Place for Everyone, A Future for All – we celebrate
                         diversity and <br className='hidden md:block' />
                         empower individuals from all backgrounds.
                     </p>
-                    <p className='mt-5 text-base font-normal text-gray-700 md:text-sm'>
+                    <p className='mt-5 font-[poppins] text-lg font-normal text-gray-700 md:text-sm'>
                         At CHIT, diversity isn’t just a policy—it’s our
                         strength. We celebrate{' '}
                         <br className='hidden md:block' />

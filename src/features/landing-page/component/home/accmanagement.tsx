@@ -8,7 +8,7 @@ const AccManagement = () => {
                 <h2 className='mb-4 text-4xl font-bold leading-10'>
                     Smarter Finance, Simplified.
                 </h2>
-                <p className='text-lg font-normal'>
+                <p className='font-[poppins] text-lg font-normal'>
                     Everything you need to manage your money with ease.
                 </p>
             </div>
@@ -18,7 +18,7 @@ const AccManagement = () => {
                         <h1 className='mb-3 text-3xl font-medium leading-9 md:text-4xl'>
                             Effortless Account Management
                         </h1>
-                        <p className='text-lg font-normal leading-7'>
+                        <p className='font-[poppins] text-lg font-normal leading-7'>
                             Link and monitor all your bank accounts in one app.{' '}
                             With everything in one place, managing your finances{' '}
                             has never been easier or more convenient.

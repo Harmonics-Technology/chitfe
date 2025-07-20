@@ -16,7 +16,7 @@ const Footer = () => {
                 />
 
                 {/* Navigation Links */}
-                <nav className='m-4 flex gap-6 text-sm text-gray-700'>
+                <nav className='m-4 flex gap-6 text-sm text-[#030303]'>
                     <Link href='/about' className='hover:text-gray-900'>
                         About Us
                     </Link>
@@ -32,24 +32,25 @@ const Footer = () => {
                 </nav>
 
                 {/* Social Media Icons */}
-                <div className='flex gap-4'>
+                {/* Social Media Icons */}
+                <div className='flex gap-3'>
                     <Link
                         href='#'
-                        className='rounded-full bg-gray-200 p-2 hover:bg-gray-300'
+                        className='flex size-10 items-center justify-center rounded-full bg-gray-100 transition-colors duration-200 hover:bg-gray-200'
                     >
-                        <Instagram size={20} />
+                        <Instagram size={20} className='text-gray-700' />
                     </Link>
                     <Link
                         href='#'
-                        className='rounded-full bg-gray-200 p-2 hover:bg-gray-300'
+                        className='flex size-10 items-center justify-center rounded-full bg-gray-100 transition-colors duration-200 hover:bg-gray-200'
                     >
-                        <Linkedin size={20} />
+                        <Linkedin size={20} className='text-gray-700' />
                     </Link>
                     <Link
                         href='#'
-                        className='rounded-full bg-gray-200 p-2 hover:bg-gray-300'
+                        className='flex size-10 items-center justify-center rounded-full bg-gray-100 transition-colors duration-200 hover:bg-gray-200'
                     >
-                        <Twitter size={20} />
+                        <Twitter size={20} className='text-gray-700' />
                     </Link>
                 </div>
             </div>
@@ -58,7 +59,7 @@ const Footer = () => {
             <div className='my-4 w-full border-t border-gray-300'></div>
 
             {/* Bottom Section */}
-            <div className='mx-auto mb-8 flex max-w-6xl flex-col flex-wrap items-center justify-between text-sm text-gray-500 md:flex-row'>
+            <div className='mx-auto mb-8 flex max-w-6xl flex-col flex-wrap items-center justify-between text-sm text-[#030303] md:flex-row'>
                 <div className='mb-4 flex gap-6 md:mb-0'>
                     <Link href='/terms' className='hover:text-gray-900'>
                         Terms of service

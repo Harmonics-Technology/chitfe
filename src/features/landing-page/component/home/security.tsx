@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Security = () => {
     return (
-        <div className='mb-14 flex flex-1 items-center justify-around gap-0 p-4 md:flex-row'>
+        <div className='mb-14 flex flex-1 flex-col items-center justify-around gap-0 p-4 md:flex-row'>
             {/* ↓↓↓ Image Section ↓↓↓ */}
             <div>
                 <Image
@@ -23,7 +23,7 @@ const Security = () => {
                     Security You Can Trust
                 </h1>
 
-                <ul className='space-y-4 text-base text-gray-700'>
+                <ul className='space-y-4 font-[poppins] text-base text-gray-700'>
                     <li className='flex items-start justify-center text-left md:justify-start'>
                         <span className='mr-2 mt-1 text-[#3A2A7E]'>•</span>
                         <span>
@@ -44,7 +44,7 @@ const Security = () => {
 
                 <Link
                     href='/get-started'
-                    className='mt-6 flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-[#3A2A7E] px-6 py-3 font-medium text-white transition-colors hover:bg-[#4d3a9e] md:w-fit'
+                    className='mt-6 flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-[#3A2A7E] px-6 py-3 font-[poppins] font-medium text-white transition-colors hover:bg-[#4d3a9e] md:w-fit'
                 >
                     Get Started <ArrowRight className='size-5' />
                 </Link>

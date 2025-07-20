@@ -7,7 +7,7 @@ export default function CoreValues() {
                 <h2 className='mb-4 text-3xl font-bold text-[#0F0F0F] md:text-4xl'>
                     Built on Trust, Driven by Innovation
                 </h2>
-                <p className='mx-auto mb-12 max-w-2xl text-gray-600'>
+                <p className='mx-auto mb-12 max-w-2xl font-[poppins] text-gray-600'>
                     Our core values shape everything we do—from building
                     inclusive financial solutions to fostering innovation and
                     integrity.
@@ -22,7 +22,7 @@ export default function CoreValues() {
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Innovation
                         </h3>
-                        <p className='text-sm leading-relaxed text-gray-600'>
+                        <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
                             We embrace creativity and <br />
                             forward-thinking solutions <br />
                             to develop seamless <br />
@@ -39,7 +39,7 @@ export default function CoreValues() {
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Inclusion
                         </h3>
-                        <p className='text-sm leading-relaxed text-gray-600'>
+                        <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
                             We believe in equitable <br />
                             access to financial <br />
                             services, ensuring no one is <br />
@@ -56,7 +56,7 @@ export default function CoreValues() {
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Integrity
                         </h3>
-                        <p className='text-sm leading-relaxed text-gray-600'>
+                        <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
                             We uphold transparency, <br />
                             accountability, and ethical <br />
                             decision-making in all our <br />
@@ -74,7 +74,7 @@ export default function CoreValues() {
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Impact
                         </h3>
-                        <p className='text-sm leading-relaxed text-gray-600'>
+                        <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
                             We are committed to <br />
                             making a real difference in <br />
                             communities by improving <br />

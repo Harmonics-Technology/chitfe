@@ -16,14 +16,14 @@ const HeroSection = () => {
                             <span className='text-[#3A2A7E]'>CHIT</span>
                         </span>
                     </h1>
-                    <p className='font-poppins text-lg'>
+                    <p className='font-[poppins] text-lg'>
                         Manage all your bank accounts, track spending, and stay
                         on
                         <br className='hidden md:inline' /> budget—all in one
                         secure app.
                     </p>
 
-                    <div className='mx-auto mt-6 flex w-full max-w-2xl flex-col items-center justify-center gap-4 md:flex-row'>
+                    <div className='mx-auto mt-6 flex w-full max-w-2xl flex-col items-center justify-center gap-4 font-[poppins] md:flex-row'>
                         <Link href='/get-started'>
                             <Button
                                 label='Get Started'

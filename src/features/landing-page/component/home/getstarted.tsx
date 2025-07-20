@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Button from '@features/landing-page/component/reuseables/ChitButton';
 
 export default function GetStarted() {
     const steps = [
@@ -35,18 +34,17 @@ export default function GetStarted() {
                         Get Started
                         <div className='mt-4 text-indigo-600'>With CHIT</div>
                     </h2>
-                    <p className='mb-8 text-lg text-gray-700'>
-                        A step-by-step guide to setting up your account, linking
-                        your banks, and unlocking the full{' '}
+                    <p className='mb-8 font-[poppins] text-lg text-gray-700'>
+                        A step-by-step guide to setting up your account,
+                        <br /> linking your banks, and unlocking the full{' '}
                         <br className='hidden md:inline' />
                         potential of our app.
                     </p>
                     <Link href='/get-started'>
-                        <Button
-                            label='Get Started'
-                            variant='filled'
-                            suffix={<ArrowRight className='size-5' />}
-                        />
+                        <button className='mt-4 flex items-center gap-2 rounded-xl bg-[#2A1A6E] px-6 py-4 font-[poppins] text-sm font-semibold text-white transition-all hover:bg-[#47227e] md:text-base'>
+                            Create an Account
+                            <ArrowRight className='ml-1 size-5' />
+                        </button>
                     </Link>
                 </div>
 
@@ -84,7 +82,7 @@ export default function GetStarted() {
                                 <h2 className='mb-1 text-sm font-semibold text-gray-900 md:text-base'>
                                     {step.title}
                                 </h2>
-                                <p className='text-xs leading-relaxed text-gray-300 transition-colors duration-200 hover:text-black md:text-xs'>
+                                <p className='font-[poppins] text-xs leading-relaxed text-gray-300 transition-colors duration-200 hover:text-black md:text-xs'>
                                     {step.description}
                                 </p>
                             </div>

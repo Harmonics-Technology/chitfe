@@ -42,7 +42,7 @@ const Secure = () => {
                     <h1 className='mb-3 text-3xl font-medium md:text-4xl'>
                         Secure and Reliable
                     </h1>
-                    <p className='text-lg leading-7 text-gray-700'>
+                    <p className='font-[poppins] text-lg leading-7 text-gray-700'>
                         We prioritize your safety with robust security{' '}
                         <br className='hidden sm:inline' />
                         measures. Your data and transactions are always{' '}

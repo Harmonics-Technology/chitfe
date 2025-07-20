@@ -11,7 +11,7 @@ const Financial = () => {
                     <h1 className='mb-3 text-3xl font-medium leading-10 md:text-4xl'>
                         Tailored Financial <br /> Insights
                     </h1>
-                    <p className='text-lg font-normal leading-7'>
+                    <p className='font-[poppins] text-lg font-normal leading-7'>
                         Stay on top of your finances with insights that help you
                         manage transactions, track trends, and optimize your
                         money effectively.
@@ -23,8 +23,8 @@ const Financial = () => {
                     <Image
                         src='/financialadvice.svg'
                         alt='Financial advice'
-                        width={0}
-                        height={0}
+                        width={582}
+                        height={480}
                         className='h-auto w-full'
                     />
                 </div>

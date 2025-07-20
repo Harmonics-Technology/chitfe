@@ -45,7 +45,7 @@ const Hero = () => {
     return (
         <div className='w-full py-10'>
             {/* Title */}
-            <h1 className='text-center text-2xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl'>
+            <h1 className='text-center text-2xl font-semibold sm:text-4xl md:text-5xl lg:text-5xl'>
                 Simplifying <span className='text-[#5539D0]'>Finances</span>{' '}
                 <br /> for a Better Tomorrow
             </h1>
@@ -56,29 +56,22 @@ const Hero = () => {
                 <div
                     ref={slideRef}
                     className={`flex w-full transition-transform duration-700 ease-in-out ${
-                        isSliding
-                            ? '-translate-x-full sm:translate-x-[-33.3333%]'
-                            : ''
+                        isSliding ? '-translate-x-[33.3333%]' : ''
                     }`}
                 >
-                    {[...images, ...images.slice(0, 1)]
-                        .slice(0, 4)
-                        .map((src, idx) => (
-                            <div
-                                key={idx}
-                                className='w-full shrink-0 px-2 sm:w-1/3'
-                            >
-                                <div className='overflow-hidden rounded-2xl shadow-md'>
-                                    <Image
-                                        src={src}
-                                        alt={`Hero ${idx + 1}`}
-                                        width={400}
-                                        height={300}
-                                        className='h-auto w-full object-cover'
-                                    />
-                                </div>
+                    {images.map((src, idx) => (
+                        <div key={idx} className='shrink-0 basis-1/3 px-2'>
+                            <div className='overflow-hidden rounded-2xl shadow-md'>
+                                <Image
+                                    src={src}
+                                    alt={`Hero ${idx + 1}`}
+                                    width={450}
+                                    height={400}
+                                    className='h-auto w-full object-cover'
+                                />
                             </div>
-                        ))}
+                        </div>
+                    ))}
                 </div>
 
                 {/* Navigation Arrows */}

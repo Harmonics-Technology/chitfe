@@ -9,7 +9,7 @@ interface buttonType {
 const Button = ({ prefix, suffix, label, variant }: buttonType) => {
     return (
         <button
-            className={`${variant == 'filled' ? 'bg-[#3A2A7E] text-white' : 'text-[#3A2A7E]'} h-14 w-full min-w-[160px] whitespace-nowrap rounded-lg border-2 border-[#3A2A7E] px-6 font-medium transition-colors md:w-auto`}
+            className={`${variant == 'filled' ? 'bg-[#3A2A7E] text-white' : 'text-[#3A2A7E]'} h-14 w-full min-w-[160px] whitespace-nowrap rounded-lg border-2 border-[#3A2A7E] px-6 text-lg font-semibold transition-colors md:w-auto`}
         >
             <div className='flex items-center gap-2'>
                 {' '}

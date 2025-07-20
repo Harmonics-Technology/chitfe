@@ -60,16 +60,16 @@ const Testimonials = () => {
                         key={index}
                         className={`rounded-lg border border-gray-200 p-6 ${
                             index % 2 === 0 ? 'bg-[#E3DEF7]' : 'bg-white'
-                        } shadow-lg transition-shadow duration-300 hover:shadow-xl`}
+                        } font-[poppins] shadow-lg transition-shadow duration-300 hover:shadow-xl`}
                     >
                         <h3 className='mb-2 text-lg font-bold'>
                             {testimonial.title}
                         </h3>
-                        <p className='mb-4 italic text-gray-600'>
+                        <p className='mb-4 text-gray-600'>
                             "{testimonial.quote}"
                         </p>
                         <div className='flex flex-col'>
-                            <p className='mb-1 font-medium'>
+                            <p className='mb-1 font-[poppins] font-medium'>
                                 {testimonial.author}
                             </p>
                             <div className='flex'>

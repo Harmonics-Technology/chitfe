@@ -19,11 +19,11 @@ const StartHere = () => {
                 <div className='mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 px-6 md:flex-row md:justify-between md:px-20'>
                     {/* Left: Text + Buttons */}
                     <div className='text-center md:max-w-xl md:text-left'>
-                        <h2 className='text-2xl font-semibold leading-tight md:text-5xl'>
+                        <h2 className='text-[28px] font-semibold leading-snug text-white sm:text-[32px] md:text-[40px] md:leading-[48px]'>
                             Your Financial Future <br />
-                            <span className='text-white'>Starts Here</span>
+                            <span className='font-semibold'>Starts Here</span>
                         </h2>
-                        <p className='mt-4 text-lg text-gray-200'>
+                        <p className='mt-4 font-[poppins] text-base text-gray-200 md:text-lg'>
                             Take control of your money effortlessly and
                             securely. Join thousands already managing their
                             finances smarter with CHIT.
@@ -42,7 +42,7 @@ const StartHere = () => {
                                     width={24}
                                     height={24}
                                 />
-                                <div className='text-left leading-tight'>
+                                <div className='text-left font-[poppins] leading-tight'>
                                     <p className='text-[10px] text-gray-600'>
                                         Download on the
                                     </p>
@@ -63,7 +63,7 @@ const StartHere = () => {
                                     width={24}
                                     height={24}
                                 />
-                                <div className='text-left leading-tight'>
+                                <div className='text-left font-[poppins] leading-tight'>
                                     <p className='text-[10px] text-gray-600'>
                                         Get it on
                                     </p>

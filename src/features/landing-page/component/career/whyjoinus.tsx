@@ -7,7 +7,7 @@ export default function WhyJoinUs() {
                 <h2 className='mb-4 text-3xl font-bold text-[#0F0F0F] md:text-4xl'>
                     Why Join Us
                 </h2>
-                <p className='mx-auto mb-12 max-w-3xl text-gray-600'>
+                <p className='mx-auto mb-12 max-w-3xl font-[poppins] text-lg text-gray-600'>
                     At CHIT, we invest in our people, providing opportunities to
                     grow, lead, and innovate while making a difference in the
                     financial sector.
@@ -49,7 +49,7 @@ export default function WhyJoinUs() {
                                 <h3 className='font-semibold text-[#0F0F0F]'>
                                     {item.title}
                                 </h3>
-                                <p className='mt-1 text-sm text-gray-600'>
+                                <p className='mt-1 font-[poppins] text-sm text-gray-600'>
                                     {item.text}
                                 </p>
                             </div>
