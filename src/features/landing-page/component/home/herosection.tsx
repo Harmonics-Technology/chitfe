@@ -16,7 +16,7 @@ const HeroSection = () => {
                             <span className='text-[#3A2A7E]'>CHIT</span>
                         </span>
                     </h1>
-                    <p className='text-lg'>
+                    <p className='font-poppins text-lg'>
                         Manage all your bank accounts, track spending, and stay
                         on
                         <br className='hidden md:inline' /> budget—all in one

@@ -5,17 +5,19 @@ import { ArrowRight } from 'lucide-react';
 
 const Security = () => {
     return (
-        <div className='mb-14 flex flex-1 flex-col items-center justify-around p-4 md:flex-row'>
+        <div className='mb-14 flex flex-1 items-center justify-around gap-0 p-4 md:flex-row'>
+            {/* ↓↓↓ Image Section ↓↓↓ */}
             <div>
                 <Image
                     src='/security.svg'
                     alt='a shield'
-                    width={450}
-                    height={500}
+                    width={608}
+                    height={513}
                     className='p-8'
                 />
             </div>
 
+            {/* ↓↓↓ Text Section ↓↓↓ */}
             <div className='max-w-xl text-center md:text-left'>
                 <h1 className='mx-auto mb-6 max-w-sm text-4xl font-bold leading-[44px] text-[#191042] md:mx-0 md:max-w-md lg:max-w-lg'>
                     Security You Can Trust

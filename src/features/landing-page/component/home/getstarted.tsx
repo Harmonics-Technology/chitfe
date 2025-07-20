@@ -27,7 +27,7 @@ export default function GetStarted() {
     ];
 
     return (
-        <section className='mb-14 w-full bg-gradient-to-br from-white to-[#f4f0ff] px-6 py-10 md:px-20'>
+        <section className='mb-3 w-full bg-gradient-to-br from-white to-[#f4f0ff] px-6 py-10 md:px-20'>
             <div className='mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2'>
                 {/* Left Content */}
                 <div className='pt-5 text-center md:text-left'>
