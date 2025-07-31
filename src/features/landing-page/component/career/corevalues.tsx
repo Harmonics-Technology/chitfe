@@ -1,4 +1,4 @@
-import { Box, Circle, Layers, MoveDiagonal } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CoreValues() {
     return (
@@ -17,7 +17,12 @@ export default function CoreValues() {
                     {/* Innovation */}
                     <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#FAFDEA] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
-                            <Box className='size-5 text-[#333]' />
+                            <Image
+                                src='/innovation.svg'
+                                alt='Innovation icon'
+                                width={32}
+                                height={32}
+                            />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Innovation
@@ -34,7 +39,12 @@ export default function CoreValues() {
                     {/* Inclusion */}
                     <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#F8F3FF] p-4 shadow-sm md:mt-16'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
-                            <Circle className='size-5 text-[#3A2A7E]' />
+                            <Image
+                                src='/inclusion.svg'
+                                alt='Inclusion icon'
+                                width={32}
+                                height={32}
+                            />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Inclusion
@@ -51,7 +61,12 @@ export default function CoreValues() {
                     {/* Integrity */}
                     <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#F4FDF5] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
-                            <Layers className='size-5 text-[#144B1E]' />
+                            <Image
+                                src='/integrity.svg'
+                                alt='Integrity icon'
+                                width={32}
+                                height={32}
+                            />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Integrity
@@ -69,7 +84,12 @@ export default function CoreValues() {
                     {/* Impact */}
                     <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#F0F9FF] p-4 shadow-sm md:mt-16'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
-                            <MoveDiagonal className='size-5 text-[#0B314A]' />
+                            <Image
+                                src='/impact.svg'
+                                alt='Impact icon'
+                                width={32}
+                                height={32}
+                            />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
                             Impact
