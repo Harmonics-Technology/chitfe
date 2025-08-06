@@ -7,4 +7,3 @@ export type InfoRequest = {
     newPassword?: string | null;
     oldPassword?: string | null;
 };
-

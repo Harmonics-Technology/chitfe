@@ -9,4 +9,3 @@ export type BillPaymentResponse = {
     message?: string | null;
     additionalInfo?: Record<string, string> | null;
 };
-

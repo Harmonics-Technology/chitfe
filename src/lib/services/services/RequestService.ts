@@ -24,14 +24,14 @@ export class RequestService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: CreateRequestModel,
+        isMobile?: any;
+        requestBody?: CreateRequestModel;
     }): CancelablePromise<RequestViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Request/create',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -52,26 +52,26 @@ export class RequestService {
         status,
         isMobile,
     }: {
-        offset?: number,
-        limit?: number,
-        sent?: boolean,
-        status?: RequestStatusEnum,
+        offset?: number;
+        limit?: number;
+        sent?: boolean;
+        status?: RequestStatusEnum;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RequestViewPagedCollectionChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Request/list',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'Offset': offset,
-                'Limit': limit,
-                'sent': sent,
-                'status': status,
+                Offset: offset,
+                Limit: limit,
+                sent: sent,
+                status: status,
             },
             errors: {
                 400: `Bad Request`,
@@ -87,20 +87,20 @@ export class RequestService {
         requestId,
         isMobile,
     }: {
-        requestId: string,
+        requestId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RequestViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Request/{requestId}',
             path: {
-                'requestId': requestId,
+                requestId: requestId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -118,21 +118,21 @@ export class RequestService {
         isMobile,
         requestBody,
     }: {
-        requestId: string,
+        requestId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: RequestResponseModel,
+        isMobile?: any;
+        requestBody?: RequestResponseModel;
     }): CancelablePromise<RequestViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Request/{requestId}/approve',
             path: {
-                'requestId': requestId,
+                requestId: requestId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -152,21 +152,21 @@ export class RequestService {
         isMobile,
         requestBody,
     }: {
-        requestId: string,
+        requestId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: RequestResponseModel,
+        isMobile?: any;
+        requestBody?: RequestResponseModel;
     }): CancelablePromise<RequestViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Request/{requestId}/decline',
             path: {
-                'requestId': requestId,
+                requestId: requestId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -185,20 +185,20 @@ export class RequestService {
         requestId,
         isMobile,
     }: {
-        requestId: string,
+        requestId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RequestViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Request/{requestId}/cancel',
             path: {
-                'requestId': requestId,
+                requestId: requestId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -217,13 +217,13 @@ export class RequestService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RequestStatisticsChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Request/statistics',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -241,13 +241,13 @@ export class RequestService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RequestSummaryChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Request/summary',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,

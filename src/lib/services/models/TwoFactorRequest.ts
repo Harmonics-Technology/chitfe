@@ -9,4 +9,3 @@ export type TwoFactorRequest = {
     resetRecoveryCodes?: boolean;
     forgetMachine?: boolean;
 };
-

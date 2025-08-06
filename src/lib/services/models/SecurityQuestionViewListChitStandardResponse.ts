@@ -16,4 +16,3 @@ export type SecurityQuestionViewListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

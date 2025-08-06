@@ -9,4 +9,3 @@ export type GenerateChitModel = {
     linkedAccountId?: string | null;
     budgetCategoryId?: string | null;
 };
-

@@ -22,14 +22,14 @@ export class KycService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: InitiateBasicKycPayload,
+        isMobile?: any;
+        requestBody?: InitiateBasicKycPayload;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Kyc/basic',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -48,13 +48,13 @@ export class KycService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<IdTypesListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Kyc/id-types',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -72,14 +72,14 @@ export class KycService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: SmileIdVerificationResponse,
+        isMobile?: any;
+        requestBody?: SmileIdVerificationResponse;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Kyc/smile-id-callback',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -98,13 +98,13 @@ export class KycService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<UserKycStatusViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Kyc/kyc-status',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,

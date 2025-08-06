@@ -27,4 +27,3 @@ export type MandateResponse = {
     otp_destinations?: OtpDestinations;
     transfer_destinations?: Array<TransferDestination> | null;
 };
-

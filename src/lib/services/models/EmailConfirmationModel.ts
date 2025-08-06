@@ -6,4 +6,3 @@ export type EmailConfirmationModel = {
     email?: string | null;
     token?: string | null;
 };
-

@@ -16,4 +16,3 @@ export type BudgetAnalyticsViewChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

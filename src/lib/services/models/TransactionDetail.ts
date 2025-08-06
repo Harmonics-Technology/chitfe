@@ -7,4 +7,3 @@ export type TransactionDetail = {
     description?: string | null;
     accountName?: string | null;
 };
-

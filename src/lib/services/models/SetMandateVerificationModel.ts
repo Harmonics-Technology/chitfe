@@ -6,4 +6,3 @@ export type SetMandateVerificationModel = {
     sessionId?: string | null;
     method?: string | null;
 };
-

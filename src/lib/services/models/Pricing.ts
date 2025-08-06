@@ -7,4 +7,3 @@ export type Pricing = {
     pricing_model?: string | null;
     category?: string | null;
 };
-

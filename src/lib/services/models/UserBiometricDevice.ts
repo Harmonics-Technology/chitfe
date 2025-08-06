@@ -11,4 +11,3 @@ export type UserBiometricDevice = {
     deviceName?: string | null;
     userId?: string;
 };
-

@@ -16,4 +16,3 @@ export type ChitViewPagedCollectionChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

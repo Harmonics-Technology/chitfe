@@ -7,4 +7,3 @@ export type ResetPasswordPayload = {
     token?: string | null;
     password?: string | null;
 };
-

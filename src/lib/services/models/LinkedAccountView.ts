@@ -9,4 +9,3 @@ export type LinkedAccountView = {
     bankName?: string | null;
     balance?: number;
 };
-

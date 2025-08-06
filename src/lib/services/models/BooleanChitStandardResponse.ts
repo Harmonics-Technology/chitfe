@@ -15,4 +15,3 @@ export type BooleanChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

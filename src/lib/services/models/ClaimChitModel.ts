@@ -6,4 +6,3 @@ export type ClaimChitModel = {
     shortCode?: string | null;
     pin?: number | null;
 };
-

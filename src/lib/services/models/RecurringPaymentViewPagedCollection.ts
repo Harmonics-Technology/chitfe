@@ -15,4 +15,3 @@ export type RecurringPaymentViewPagedCollection = {
     self?: Link;
     value?: Array<RecurringPaymentView> | null;
 };
-

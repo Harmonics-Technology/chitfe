@@ -24,14 +24,14 @@ export class ChitService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: GenerateChitModel,
+        isMobile?: any;
+        requestBody?: GenerateChitModel;
     }): CancelablePromise<ChitViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Chit/generate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -52,14 +52,14 @@ export class ChitService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ClaimChitModel,
+        isMobile?: any;
+        requestBody?: ClaimChitModel;
     }): CancelablePromise<ChitViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Chit/claim',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -77,20 +77,20 @@ export class ChitService {
         shortCode,
         isMobile,
     }: {
-        shortCode: string,
+        shortCode: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<ChitViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Chit/validate/{shortCode}',
             path: {
-                'shortCode': shortCode,
+                shortCode: shortCode,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -113,34 +113,34 @@ export class ChitService {
         limit,
         isMobile,
     }: {
-        created?: boolean,
-        status?: ChitStatuses,
-        startDate?: string,
-        endDate?: string,
-        minAmount?: number,
-        maxAmount?: number,
-        offset?: number,
-        limit?: number,
+        created?: boolean;
+        status?: ChitStatuses;
+        startDate?: string;
+        endDate?: string;
+        minAmount?: number;
+        maxAmount?: number;
+        offset?: number;
+        limit?: number;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<ChitViewPagedCollectionChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Chit/list',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'Created': created,
-                'Status': status,
-                'StartDate': startDate,
-                'EndDate': endDate,
-                'MinAmount': minAmount,
-                'MaxAmount': maxAmount,
-                'Offset': offset,
-                'Limit': limit,
+                Created: created,
+                Status: status,
+                StartDate: startDate,
+                EndDate: endDate,
+                MinAmount: minAmount,
+                MaxAmount: maxAmount,
+                Offset: offset,
+                Limit: limit,
             },
             errors: {
                 400: `Bad Request`,
@@ -156,20 +156,20 @@ export class ChitService {
         reference,
         isMobile,
     }: {
-        reference: string,
+        reference: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<ChitViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Chit/{reference}',
             path: {
-                'reference': reference,
+                reference: reference,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -187,13 +187,13 @@ export class ChitService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<ChitTypeViewListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Chit/types',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,
@@ -211,13 +211,13 @@ export class ChitService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<ChitStatisticsChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/Chit/statistics',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 400: `Bad Request`,

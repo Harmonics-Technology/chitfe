@@ -16,4 +16,3 @@ export type OtpDestinationsChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

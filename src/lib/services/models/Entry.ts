@@ -7,4 +7,3 @@ export type Entry = {
     id?: string | null;
     changes?: Array<Change> | null;
 };
-

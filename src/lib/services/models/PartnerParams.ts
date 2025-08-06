@@ -7,4 +7,3 @@ export type PartnerParams = {
     user_id?: string | null;
     job_type?: number;
 };
-

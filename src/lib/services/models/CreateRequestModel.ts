@@ -7,4 +7,3 @@ export type CreateRequestModel = {
     amount: number;
     message?: string | null;
 };
-

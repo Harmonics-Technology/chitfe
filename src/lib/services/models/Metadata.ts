@@ -6,4 +6,3 @@ export type Metadata = {
     display_phone_number?: string | null;
     phone_number_id?: string | null;
 };
-

@@ -6,4 +6,3 @@ export type ValidateAccountModel = {
     accountNumber?: string | null;
     bankCode?: string | null;
 };
-

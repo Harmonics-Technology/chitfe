@@ -16,4 +16,3 @@ export type BudgetViewPagedCollectionChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

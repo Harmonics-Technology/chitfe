@@ -8,4 +8,3 @@ export type SpendingBreakdown = {
     runningTotal?: number;
     budgetAllowanceForPeriod?: number;
 };
-

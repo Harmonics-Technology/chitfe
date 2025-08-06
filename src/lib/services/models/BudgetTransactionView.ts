@@ -12,4 +12,3 @@ export type BudgetTransactionView = {
     transactionDate?: string;
     isAiCategorized?: boolean;
 };
-

@@ -20,4 +20,3 @@ export type WalletAccountNumber = {
     isDefault?: boolean;
     isActive?: boolean;
 };
-

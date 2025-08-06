@@ -16,4 +16,3 @@ export type SpendingTrendViewListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

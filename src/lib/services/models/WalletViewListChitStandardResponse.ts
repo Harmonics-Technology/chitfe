@@ -16,4 +16,3 @@ export type WalletViewListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

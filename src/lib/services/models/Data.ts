@@ -37,4 +37,3 @@ export type Data = {
     pos_transaction_data?: any;
     source?: Source;
 };
-

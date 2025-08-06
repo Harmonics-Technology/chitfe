@@ -6,4 +6,3 @@ export type SecurityQuestionView = {
     id?: string;
     question?: string | null;
 };
-

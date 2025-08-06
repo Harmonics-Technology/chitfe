@@ -7,4 +7,3 @@ export type Change = {
     value?: Value;
     field?: string | null;
 };
-

@@ -24,4 +24,3 @@ export type SmileIdVerificationResponse = {
     signature?: string | null;
     timestamp?: string;
 };
-

@@ -20,4 +20,3 @@ export type BudgetHistoryView = {
     spendingBreakdown?: Array<BudgetSpendingBreakdown> | null;
     historyBreakdown?: Array<HistorySpendingBreakdown> | null;
 };
-

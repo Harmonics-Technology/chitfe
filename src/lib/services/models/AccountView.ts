@@ -13,4 +13,3 @@ export type AccountView = {
     bankLogo?: string | null;
     bankCode?: string | null;
 };
-

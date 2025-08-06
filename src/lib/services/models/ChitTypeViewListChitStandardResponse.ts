@@ -16,4 +16,3 @@ export type ChitTypeViewListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

@@ -16,4 +16,3 @@ export type UserKycStatusViewChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

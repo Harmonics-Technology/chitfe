@@ -18,14 +18,14 @@ export class MonoWebhookService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: GenericWebHookModel,
+        isMobile?: any;
+        requestBody?: GenericWebHookModel;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/MonoWebhook/receive',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -42,14 +42,14 @@ export class MonoWebhookService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: GenericWebHookModel,
+        isMobile?: any;
+        requestBody?: GenericWebHookModel;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/MonoWebhook/receive',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',

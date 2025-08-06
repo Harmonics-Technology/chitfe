@@ -8,4 +8,3 @@ export type HistorySpendingBreakdown = {
     dailyTotal?: number;
     transactions?: Array<TransactionDetail> | null;
 };
-

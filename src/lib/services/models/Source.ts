@@ -8,4 +8,3 @@ export type Source = {
     entry_point?: string | null;
     identifier?: any;
 };
-

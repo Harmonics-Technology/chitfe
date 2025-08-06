@@ -8,4 +8,3 @@ export type TransferResponse = {
     description?: string | null;
     status?: string | null;
 };
-

@@ -15,4 +15,3 @@ export type BudgetTransactionViewPagedCollection = {
     self?: Link;
     value?: Array<BudgetTransactionView> | null;
 };
-

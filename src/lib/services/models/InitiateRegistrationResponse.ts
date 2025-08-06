@@ -7,4 +7,3 @@ export type InitiateRegistrationResponse = {
     sessionId?: string | null;
     methods?: Array<BVNVerificationHintResponse> | null;
 };
-

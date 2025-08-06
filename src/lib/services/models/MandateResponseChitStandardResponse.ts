@@ -16,4 +16,3 @@ export type MandateResponseChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

@@ -26,14 +26,14 @@ export class RecurringPaymentService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: CreateRecurringPaymentModel,
+        isMobile?: any;
+        requestBody?: CreateRecurringPaymentModel;
     }): CancelablePromise<RecurringPaymentViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/RecurringPayment/create',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -56,30 +56,30 @@ export class RecurringPaymentService {
         endDate,
         isMobile,
     }: {
-        offset?: number,
-        limit?: number,
-        status?: RecurringPaymentStatus,
-        paymentType?: RecurringPaymentType,
-        startDate?: string,
-        endDate?: string,
+        offset?: number;
+        limit?: number;
+        status?: RecurringPaymentStatus;
+        paymentType?: RecurringPaymentType;
+        startDate?: string;
+        endDate?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RecurringPaymentViewPagedCollectionChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/RecurringPayment/list',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'Offset': offset,
-                'Limit': limit,
-                'Status': status,
-                'PaymentType': paymentType,
-                'StartDate': startDate,
-                'EndDate': endDate,
+                Offset: offset,
+                Limit: limit,
+                Status: status,
+                PaymentType: paymentType,
+                StartDate: startDate,
+                EndDate: endDate,
             },
             errors: {
                 400: `Bad Request`,
@@ -95,20 +95,20 @@ export class RecurringPaymentService {
         paymentId,
         isMobile,
     }: {
-        paymentId: string,
+        paymentId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RecurringPaymentViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/RecurringPayment/{paymentId}',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 404: `Not Found`,
@@ -125,21 +125,21 @@ export class RecurringPaymentService {
         isMobile,
         requestBody,
     }: {
-        paymentId: string,
+        paymentId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: UpdateRecurringPaymentModel,
+        isMobile?: any;
+        requestBody?: UpdateRecurringPaymentModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'PUT',
             url: '/wallet/api/RecurringPayment/{paymentId}',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -157,20 +157,20 @@ export class RecurringPaymentService {
         paymentId,
         isMobile,
     }: {
-        paymentId: string,
+        paymentId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/RecurringPayment/{paymentId}/pause',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 404: `Not Found`,
@@ -186,20 +186,20 @@ export class RecurringPaymentService {
         paymentId,
         isMobile,
     }: {
-        paymentId: string,
+        paymentId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/RecurringPayment/{paymentId}/resume',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 404: `Not Found`,
@@ -215,20 +215,20 @@ export class RecurringPaymentService {
         paymentId,
         isMobile,
     }: {
-        paymentId: string,
+        paymentId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/RecurringPayment/{paymentId}/cancel',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 404: `Not Found`,
@@ -244,20 +244,20 @@ export class RecurringPaymentService {
         paymentId,
         isMobile,
     }: {
-        paymentId: string,
+        paymentId: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/RecurringPayment/{paymentId}/process',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 404: `Not Found`,
@@ -275,26 +275,26 @@ export class RecurringPaymentService {
         endDate,
         isMobile,
     }: {
-        paymentId: string,
-        startDate?: string,
-        endDate?: string,
+        paymentId: string;
+        startDate?: string;
+        endDate?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<RecurringPaymentHistoryListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/RecurringPayment/{paymentId}/history',
             path: {
-                'paymentId': paymentId,
+                paymentId: paymentId,
             },
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'startDate': startDate,
-                'endDate': endDate,
+                startDate: startDate,
+                endDate: endDate,
             },
             errors: {
                 404: `Not Found`,
@@ -310,20 +310,20 @@ export class RecurringPaymentService {
         endDate,
         isMobile,
     }: {
-        endDate?: string,
+        endDate?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<UpcomingPaymentViewListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/RecurringPayment/upcoming',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
-                'endDate': endDate,
+                endDate: endDate,
             },
             errors: {
                 500: `Server Error`,

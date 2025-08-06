@@ -10,4 +10,3 @@ export type MonoInstitution = {
     bankCode?: string | null;
     type?: string | null;
 };
-

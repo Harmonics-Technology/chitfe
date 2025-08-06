@@ -15,4 +15,3 @@ export type ChitViewPagedCollection = {
     self?: Link;
     value?: Array<ChitView> | null;
 };
-

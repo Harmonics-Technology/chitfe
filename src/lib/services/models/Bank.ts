@@ -12,4 +12,3 @@ export type Bank = {
     logo?: string | null;
     ussd?: string | null;
 };
-

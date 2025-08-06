@@ -9,4 +9,3 @@ export type InternalTransferModel = {
     fromAccountId?: string | null;
     budgetCategoryId?: string | null;
 };
-

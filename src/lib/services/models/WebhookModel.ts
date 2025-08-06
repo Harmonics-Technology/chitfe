@@ -7,4 +7,3 @@ export type WebhookModel = {
     event?: string | null;
     data?: Data;
 };
-

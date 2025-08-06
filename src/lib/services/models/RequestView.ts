@@ -16,4 +16,3 @@ export type RequestView = {
     createdDate?: string;
     responseDate?: string | null;
 };
-

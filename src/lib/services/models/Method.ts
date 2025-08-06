@@ -6,4 +6,3 @@ export type Method = {
     type?: string | null;
     value?: string | null;
 };
-

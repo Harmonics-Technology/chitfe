@@ -26,4 +26,3 @@ export type RecurringPaymentView = {
     totalAmountProcessed?: number;
     budgetCategory?: string | null;
 };
-

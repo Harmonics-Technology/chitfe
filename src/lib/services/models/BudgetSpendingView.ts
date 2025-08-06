@@ -11,4 +11,3 @@ export type BudgetSpendingView = {
     remainingAmount?: number;
     dailySpending?: Array<SpendingBreakdown> | null;
 };
-

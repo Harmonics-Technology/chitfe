@@ -7,4 +7,3 @@ export type DailySpending = {
     dayOfWeek?: string | null;
     amount?: number;
 };
-

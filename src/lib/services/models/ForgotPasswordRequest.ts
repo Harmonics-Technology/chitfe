@@ -5,4 +5,3 @@
 export type ForgotPasswordRequest = {
     email: string | null;
 };
-

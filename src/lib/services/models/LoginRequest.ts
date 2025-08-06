@@ -8,4 +8,3 @@ export type LoginRequest = {
     twoFactorCode?: string | null;
     twoFactorRecoveryCode?: string | null;
 };
-

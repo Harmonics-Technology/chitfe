@@ -9,4 +9,3 @@ export type BillValidationResponse = {
     additionalInfo?: Record<string, string> | null;
     isValid?: boolean;
 };
-

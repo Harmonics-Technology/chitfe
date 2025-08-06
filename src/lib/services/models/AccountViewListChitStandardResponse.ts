@@ -16,4 +16,3 @@ export type AccountViewListChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

@@ -8,4 +8,3 @@ export type RequestSummary = {
     totalPendingAmount?: number;
     recentRequests?: Array<RecentRequest> | null;
 };
-

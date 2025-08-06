@@ -7,4 +7,3 @@ export type BudgetPeriodInfo = {
     endDate?: string;
     daysInPeriod?: number;
 };
-

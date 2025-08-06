@@ -14,4 +14,3 @@ export type UserView = {
     roles?: Array<string> | null;
     dateOfBirth?: string | null;
 };
-

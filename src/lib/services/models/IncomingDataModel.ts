@@ -7,4 +7,3 @@ export type IncomingDataModel = {
     object?: string | null;
     entry?: Array<Entry> | null;
 };
-

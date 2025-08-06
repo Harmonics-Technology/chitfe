@@ -8,4 +8,3 @@ export type DailyBudgetTipView = {
     generatedDate?: string;
     budgetSummary?: BudgetTipSummary;
 };
-

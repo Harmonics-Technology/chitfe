@@ -13,4 +13,3 @@ export type Value = {
     messages?: Array<Message> | null;
     statuses?: Array<MessageStatus> | null;
 };
-

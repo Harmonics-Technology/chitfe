@@ -15,4 +15,3 @@ export type BillProduct = {
     requiresValidation?: boolean;
     logoUrl?: string | null;
 };
-

@@ -8,4 +8,3 @@ export type BudgetSpendingBreakdown = {
     transactionDescription?: string | null;
     transactionReference?: string | null;
 };
-

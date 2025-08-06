@@ -6,4 +6,3 @@ export type Actions = {
     return_Personal_Info?: string | null;
     verify_ID_Number?: string | null;
 };
-

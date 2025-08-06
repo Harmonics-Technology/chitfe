@@ -19,13 +19,13 @@ export class WhatsAppService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/WhatsApp/send',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
         });
     }
@@ -40,14 +40,14 @@ export class WhatsAppService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: IncomingDataModel,
+        isMobile?: any;
+        requestBody?: IncomingDataModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/WhatsApp/receive',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -66,19 +66,19 @@ export class WhatsAppService {
         hubVerifyToken,
         isMobile,
     }: {
-        hubMode?: string,
-        hubChallenge?: number,
-        hubVerifyToken?: string,
+        hubMode?: string;
+        hubChallenge?: number;
+        hubVerifyToken?: string;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<string> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/wallet/api/WhatsApp/receive',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             query: {
                 'hub.mode': hubMode,
@@ -98,14 +98,14 @@ export class WhatsAppService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: string,
+        isMobile?: any;
+        requestBody?: string;
     }): CancelablePromise<StringChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/WhatsApp/chat/test/openai/whoami',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -125,14 +125,14 @@ export class WhatsAppService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: string,
+        isMobile?: any;
+        requestBody?: string;
     }): CancelablePromise<StringChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/WhatsApp/chat/test/converse',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',

@@ -7,4 +7,3 @@ export type InitiateBasicKycPayload = {
     idNumber?: string | null;
     gender?: string | null;
 };
-

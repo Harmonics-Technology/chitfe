@@ -15,4 +15,3 @@ export type UpdateRecurringPaymentModel = {
     totalPayments?: number | null;
     budgetCategoryId?: string | null;
 };
-

@@ -17,4 +17,3 @@ export type RecurringPaymentHistory = {
     recurringPayment?: RecurringPayment;
     transaction?: Transaction;
 };
-

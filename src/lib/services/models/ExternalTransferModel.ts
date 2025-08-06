@@ -13,4 +13,3 @@ export type ExternalTransferModel = {
     linkedAccountId?: string | null;
     budgetCategoryId?: string | null;
 };
-

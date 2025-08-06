@@ -20,14 +20,14 @@ export class BiometricIdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: BiometricDeviceRegistrationModel,
+        isMobile?: any;
+        requestBody?: BiometricDeviceRegistrationModel;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/BiometricIdentity/register',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -47,14 +47,14 @@ export class BiometricIdentityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: BiometricLoginModel,
+        isMobile?: any;
+        requestBody?: BiometricLoginModel;
     }): CancelablePromise<UserViewChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/BiometricIdentity/authenticate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',

@@ -9,4 +9,3 @@ export type TwoFactorResponse = {
     isTwoFactorEnabled: boolean;
     isMachineRemembered: boolean;
 };
-

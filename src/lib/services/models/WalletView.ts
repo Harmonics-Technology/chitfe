@@ -9,4 +9,3 @@ export type WalletView = {
     walletName?: string | null;
     walletType?: string | null;
 };
-

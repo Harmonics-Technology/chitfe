@@ -6,4 +6,3 @@ export type CategoryOverBudgetInfo = {
     name?: string | null;
     overspendingPercentage?: number;
 };
-

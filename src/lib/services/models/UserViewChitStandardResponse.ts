@@ -16,4 +16,3 @@ export type UserViewChitStandardResponse = {
     statusCode?: HttpStatusCode;
     errors?: any;
 };
-

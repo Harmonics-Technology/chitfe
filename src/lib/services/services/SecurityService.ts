@@ -24,13 +24,13 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<SecurityQuestionViewListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/identity/api/Security/questions',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 401: `Unauthorized`,
@@ -49,14 +49,14 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: UpdateSecurityQuestionsModel,
+        isMobile?: any;
+        requestBody?: UpdateSecurityQuestionsModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'PUT',
             url: '/identity/api/Security/questions/update-all',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -77,14 +77,14 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: SecurityQuestionValidationModel,
+        isMobile?: any;
+        requestBody?: SecurityQuestionValidationModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Security/questions/validate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -105,14 +105,14 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: SecurityQuestionModel,
+        isMobile?: any;
+        requestBody?: SecurityQuestionModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Security/pin/create',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -133,14 +133,14 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: UpdatePinModel,
+        isMobile?: any;
+        requestBody?: UpdatePinModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'PUT',
             url: '/identity/api/Security/pin/update',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -161,14 +161,14 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: TransactionPinValidationModel,
+        isMobile?: any;
+        requestBody?: TransactionPinValidationModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Security/pin/validate',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -190,14 +190,14 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
-        requestBody?: ResetPinModel,
+        isMobile?: any;
+        requestBody?: ResetPinModel;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Security/pin/reset',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             body: requestBody,
             mediaType: 'application/json',
@@ -217,13 +217,13 @@ export class SecurityService {
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
-        isMobile?: any,
+        isMobile?: any;
     }): CancelablePromise<BooleanChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/identity/api/Security/rotate-keys',
             headers: {
-                'IsMobile': isMobile,
+                IsMobile: isMobile,
             },
             errors: {
                 401: `Unauthorized`,

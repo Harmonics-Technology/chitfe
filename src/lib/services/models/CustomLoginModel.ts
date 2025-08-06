@@ -6,4 +6,3 @@ export type CustomLoginModel = {
     identifier?: string | null;
     password?: string | null;
 };
-

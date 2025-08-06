@@ -7,4 +7,3 @@ export type ChitTypeView = {
     typeName?: string | null;
     typeDescription?: string | null;
 };
-

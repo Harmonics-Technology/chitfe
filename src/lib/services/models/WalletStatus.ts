@@ -9,4 +9,3 @@ export type WalletStatus = {
     name?: string | null;
     description?: string | null;
 };
-

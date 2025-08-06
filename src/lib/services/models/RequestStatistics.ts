@@ -14,4 +14,3 @@ export type RequestStatistics = {
     totalAmountReceived?: number;
     lastThirtyDaysActivity?: Array<DailyRequestActivity> | null;
 };
-

@@ -41,4 +41,3 @@ export type User = {
     userBiometricDevices?: Array<UserBiometricDevice> | null;
     securityQuestions?: Array<SecurityQuestion> | null;
 };
-

@@ -12,4 +12,3 @@ export type SecurityQuestion = {
     userId?: string;
     user?: User;
 };
-

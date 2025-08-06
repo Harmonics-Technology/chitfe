@@ -9,4 +9,3 @@ export type BillCategory = {
     iconUrl?: string | null;
     isActive?: boolean;
 };
-

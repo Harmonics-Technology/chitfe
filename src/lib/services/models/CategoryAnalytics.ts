@@ -10,4 +10,3 @@ export type CategoryAnalytics = {
     budgetCount?: number;
     readonly spendingPercentage?: number;
 };
-

@@ -9,4 +9,3 @@ export type BudgetCategoryView = {
     isPredefined?: boolean;
     createdAt?: string;
 };
-

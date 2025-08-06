@@ -17,4 +17,3 @@ export type UpcomingPaymentView = {
     failureRisk?: string | null;
     budgetCategory?: string | null;
 };
-

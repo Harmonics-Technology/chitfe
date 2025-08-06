@@ -14,4 +14,3 @@ export type TransactionCategory = {
     budgetCategory?: BudgetCategory;
     isAiCategorized?: boolean;
 };
-

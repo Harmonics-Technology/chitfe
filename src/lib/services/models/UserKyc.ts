@@ -13,4 +13,3 @@ export type UserKyc = {
     data?: string | null;
     isVerified?: boolean;
 };
-

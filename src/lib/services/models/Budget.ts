@@ -31,4 +31,3 @@ export type Budget = {
     transactions?: Array<Transaction> | null;
     budgetHistory?: Array<BudgetHistory> | null;
 };
-

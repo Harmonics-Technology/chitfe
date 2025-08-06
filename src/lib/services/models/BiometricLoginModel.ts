@@ -6,4 +6,3 @@ export type BiometricLoginModel = {
     deviceId?: string | null;
     signature?: string | null;
 };
-

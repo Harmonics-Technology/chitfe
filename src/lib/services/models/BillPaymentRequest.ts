@@ -12,4 +12,3 @@ export type BillPaymentRequest = {
     linkedAccountId?: string | null;
     additionalParameters?: Record<string, string> | null;
 };
-
