@@ -1,4 +1,4 @@
-import { Quote } from 'lucide-react';
+import Image from 'next/image';
 
 export default function WhyJoinUs() {
     return (
@@ -44,7 +44,12 @@ export default function WhyJoinUs() {
                             key={index}
                             className='flex flex-col items-center gap-3 text-center md:flex-row md:items-start md:text-left'
                         >
-                            <Quote className='size-6 text-green-600' />
+                            <Image
+                                src='/ballon.svg'
+                                alt='icon'
+                                width={40}
+                                height={40}
+                            />
                             <div>
                                 <h3 className='font-semibold text-[#0F0F0F]'>
                                     {item.title}

@@ -6,7 +6,7 @@ import Secure from '@features/landing-page/component/home/secure';
 import Getstarted from '@features/landing-page/component/home/getstarted';
 import User from '@features/landing-page/component/home/user';
 import Security from '@features/landing-page/component/home/security';
-import StartHere from '../reuseables/starthere';
+import StartHere from '../../features/landing-page/component/reuseables/starthere';
 
 export default function Main() {
     return (

@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Security = () => {
     return (
-        <div className='mb-14 flex flex-1 flex-col items-center justify-around gap-0 p-4 md:flex-row'>
+        <div className='mb-14 flex flex-1 flex-col items-center justify-center gap-8 p-4 md:flex-row md:gap-12'>
             {/* ↓↓↓ Image Section ↓↓↓ */}
             <div>
                 <Image
@@ -13,7 +13,7 @@ const Security = () => {
                     alt='a shield'
                     width={608}
                     height={513}
-                    className='p-8'
+                    className='p-4' // reduced from p-8
                 />
             </div>
 

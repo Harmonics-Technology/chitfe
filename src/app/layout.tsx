@@ -5,8 +5,6 @@ import './globals.css';
 
 import { validateEnv } from '@lib/env';
 import Providers from '@src/providers';
-import Navbar from '@features/landing-page/navbar';
-import Footer from '@features/landing-page/footer';
 
 const unbounded = Unbounded({
     weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
@@ -37,14 +35,8 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={`${unbounded.className} ${poppins.variable}`}>
-                <Providers>
-                    <Navbar />
-                    {children}
-                    <Footer />
-                </Providers>
+                <Providers>{children}</Providers>
             </body>
         </html>
     );
 }
-
-export { poppins, unbounded }; // Optional: reuse in other files

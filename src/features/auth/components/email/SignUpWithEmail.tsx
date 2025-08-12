@@ -35,12 +35,12 @@ export default function SignUpWithEmail() {
     }
 
     return (
-        <div className='space-y-8 pt-9 md:p-16'>
+        <div className='space-y-8 pt-9 font-[poppins] md:p-16'>
             <div
                 aria-label='Input fields to confirm details and setup password'
                 className='space-y-3'
             >
-                <h1 className='text-xl font-bold leading-26'>
+                <h1 className='text-4xl font-bold leading-26'>
                     Hi! Welcome to CHIT
                 </h1>
                 <p className='text-sm font-normal leading-[20.72px]'>
@@ -92,6 +92,25 @@ export default function SignUpWithEmail() {
                                     </FormItem>
                                 )}
                             />
+
+                            <FormField
+                                control={control}
+                                name='otherName'
+                                render={({ field }) => (
+                                    <FormItem className='w-full space-y-1'>
+                                        <FormLabel>Other Name</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                type='text'
+                                                placeholder='Enter other name'
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+
                             <FormField
                                 control={control}
                                 name='phoneNumber'

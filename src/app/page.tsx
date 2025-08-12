@@ -1,4 +1,4 @@
-import Main from '@features/landing-page/component/home/main';
+import Main from '@src/app/(pages)/main';
 
 export default function Page() {
     return (

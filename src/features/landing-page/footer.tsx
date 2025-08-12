@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -31,26 +30,40 @@ const Footer = () => {
                     </Link>
                 </nav>
 
-                {/* Social Media Icons */}
-                {/* Social Media Icons */}
+                {/* Social Media Icons as Images */}
                 <div className='flex gap-3'>
                     <Link
                         href='#'
                         className='flex size-10 items-center justify-center rounded-full bg-gray-100 transition-colors duration-200 hover:bg-gray-200'
                     >
-                        <Instagram size={20} className='text-gray-700' />
+                        <Image
+                            src='/instagram (2).svg'
+                            alt='Instagram'
+                            width={20}
+                            height={20}
+                        />
                     </Link>
                     <Link
                         href='#'
                         className='flex size-10 items-center justify-center rounded-full bg-gray-100 transition-colors duration-200 hover:bg-gray-200'
                     >
-                        <Linkedin size={20} className='text-gray-700' />
+                        <Image
+                            src='/linkedin icon.svg'
+                            alt='LinkedIn'
+                            width={20}
+                            height={20}
+                        />
                     </Link>
                     <Link
                         href='#'
                         className='flex size-10 items-center justify-center rounded-full bg-gray-100 transition-colors duration-200 hover:bg-gray-200'
                     >
-                        <Twitter size={20} className='text-gray-700' />
+                        <Image
+                            src='/Twitter icon.svg'
+                            alt='Twitter'
+                            width={20}
+                            height={20}
+                        />
                     </Link>
                 </div>
             </div>

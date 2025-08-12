@@ -7,15 +7,15 @@ export default function CoreValues() {
                 <h2 className='mb-4 text-3xl font-bold text-[#0F0F0F] md:text-4xl'>
                     Built on Trust, Driven by Innovation
                 </h2>
-                <p className='mx-auto mb-12 max-w-2xl font-[poppins] text-gray-600'>
+                <p className='mx-auto mb-12 max-w-2xl font-[poppins] leading-relaxed text-gray-600'>
                     Our core values shape everything we do—from building
                     inclusive financial solutions to fostering innovation and
                     integrity.
                 </p>
 
-                <div className='flex flex-wrap justify-center gap-6 text-left'>
+                <div className='flex justify-center gap-6 overflow-x-auto text-left'>
                     {/* Innovation */}
-                    <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#FAFDEA] p-4 shadow-sm'>
+                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#FAFDEA] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
                             <Image
                                 src='/innovation.svg'
@@ -28,16 +28,14 @@ export default function CoreValues() {
                             Innovation
                         </h3>
                         <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
-                            We embrace creativity and <br />
-                            forward-thinking solutions <br />
-                            to develop seamless <br />
-                            financial tools that <br />
-                            transform lives.
+                            We embrace creativity and forward-thinking solutions
+                            to develop seamless financial tools that transform
+                            lives.
                         </p>
                     </div>
 
                     {/* Inclusion */}
-                    <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#F8F3FF] p-4 shadow-sm md:mt-16'>
+                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F8F3FF] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
                             <Image
                                 src='/inclusion.svg'
@@ -50,16 +48,14 @@ export default function CoreValues() {
                             Inclusion
                         </h3>
                         <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
-                            We believe in equitable <br />
-                            access to financial <br />
-                            services, ensuring no one is <br />
-                            left behind, regardless of <br />
-                            background or location.
+                            We believe in equitable access to financial
+                            services, ensuring no one is left behind regardless
+                            of background or location.
                         </p>
                     </div>
 
                     {/* Integrity */}
-                    <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#F4FDF5] p-4 shadow-sm'>
+                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F4FDF5] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
                             <Image
                                 src='/integrity.svg'
@@ -72,17 +68,14 @@ export default function CoreValues() {
                             Integrity
                         </h3>
                         <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
-                            We uphold transparency, <br />
-                            accountability, and ethical <br />
-                            decision-making in all our <br />
-                            interactions—both <br />
-                            internally and with our <br />
-                            customers.
+                            We uphold transparency, accountability, and ethical
+                            decision-making in all our interactions — both
+                            internally and with our customers.
                         </p>
                     </div>
 
                     {/* Impact */}
-                    <div className='flex w-full max-w-[230px] flex-col gap-3 rounded-2xl bg-[#F0F9FF] p-4 shadow-sm md:mt-16'>
+                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F0F9FF] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
                             <Image
                                 src='/impact.svg'
@@ -95,10 +88,8 @@ export default function CoreValues() {
                             Impact
                         </h3>
                         <p className='font-[poppins] text-sm leading-relaxed text-gray-600'>
-                            We are committed to <br />
-                            making a real difference in <br />
-                            communities by improving <br />
-                            financial literacy and <br />
+                            We are committed to making a real difference in
+                            communities by improving financial literacy and
                             accessibility.
                         </p>
                     </div>

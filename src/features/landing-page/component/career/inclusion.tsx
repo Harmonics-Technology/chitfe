@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import { ArrowRight } from 'lucide-react';
 const Inclusion = () => {
     return (
         <section className='w-full bg-white px-4 py-12 md:px-10'>
@@ -40,6 +40,15 @@ const Inclusion = () => {
                         respect, and equal <br className='hidden md:block' />
                         opportunity for all.
                     </p>
+
+                    <div className='mt-8 flex justify-center lg:justify-start'>
+                        <a
+                            href='/careers'
+                            className='inline-flex items-center gap-2 rounded-2xl bg-[#2A1A6E] px-6 py-3 font-[poppins] text-base font-medium text-white transition-colors hover:bg-[#3a2190]'
+                        >
+                            Join the team <ArrowRight size={18} />
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

@@ -9,7 +9,7 @@ const roles = [
     },
     {
         category: 'Product/Marketing',
-        color: 'bg-[#EAE2FD] text-[#6E58D3]',
+        color: 'bg-[#EAE2FD] text-[#6E58D3] text-sm',
         items: [
             { title: 'Illustrator' },
             { title: 'Illustrator' },
@@ -38,7 +38,7 @@ export default function OpenRoles() {
                 <div className='flex flex-col gap-10 text-left'>
                     {roles.map((role, index) => (
                         <div key={index}>
-                            {/* Category Title aligned to the first card */}
+                            {/* Category Title */}
                             <span
                                 className={`mb-4 inline-block rounded-md px-3 py-1 text-sm font-semibold ${role.color}`}
                             >
@@ -52,7 +52,7 @@ export default function OpenRoles() {
                                         key={i}
                                         className='flex items-center justify-between rounded-xl bg-white px-6 py-4 shadow-md'
                                     >
-                                        <div className='text-sm font-medium text-[#0F0F0F]'>
+                                        <div className='font-[poppins] text-[16px] font-normal text-[#0F0F0F]'>
                                             {item.title}
                                         </div>
                                         <div className='flex items-center gap-3 text-sm text-gray-400'>

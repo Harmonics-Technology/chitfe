@@ -40,7 +40,7 @@ export default function SignUpWithBVN() {
     }
 
     return (
-        <div className='w-full space-y-8 pt-9 sm:space-y-14 sm:py-10'>
+        <div className='w-full space-y-8 pt-9 font-[poppins] sm:space-y-14 sm:py-10'>
             <div
                 aria-label='Sign up form for new users using BVN'
                 className='space-y-3'
@@ -87,7 +87,7 @@ export default function SignUpWithBVN() {
                             <h2 className='text-sm font-medium leading-[18.3px] text-chit-indigo sm:text-base'>
                                 Why We Need Your BVN
                             </h2>
-                            <p className='text-xs leading-17 text-chit-ship-gray sm:text-sm sm:leading-[19.24px] sm:text-chit-black-cow'>
+                            <p className='text-xs font-normal leading-17 text-chit-ship-gray sm:text-sm sm:leading-[19.24px] sm:text-chit-black-cow'>
                                 Your BVN ensures your account is unique and
                                 secure. It’s a trusted way to confirm your
                                 identity. Rest assured, we don’t have access to

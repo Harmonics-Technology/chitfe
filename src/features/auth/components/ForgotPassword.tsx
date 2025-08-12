@@ -42,10 +42,10 @@ export default function ForgotPassword() {
                 aria-label='Forgot password page title and description block'
                 className='space-y-3'
             >
-                <h1 className='text-xl font-bold leading-26 sm:text-2xl sm:font-semibold sm:text-chit-woodsmoke'>
+                <h1 className='font-[poppins] text-xl font-bold leading-26 sm:text-2xl sm:font-semibold sm:text-chit-woodsmoke'>
                     Forgot Password?
                 </h1>
-                <p className='text-sm font-normal sm:text-base'>
+                <p className='font-[poppins] text-sm font-normal sm:text-base'>
                     Enter your registered email and click on the link to reset
                     your password
                 </p>
@@ -63,7 +63,7 @@ export default function ForgotPassword() {
                                 control={control}
                                 name='email'
                                 render={({ field }) => (
-                                    <FormItem className='w-full space-y-1'>
+                                    <FormItem className='w-full space-y-1 font-[poppins]'>
                                         <FormLabel>Email address</FormLabel>
                                         <FormControl>
                                             <Input
@@ -81,7 +81,7 @@ export default function ForgotPassword() {
                         <div className='flex flex-col items-center space-y-4 pt-16'>
                             <AppButton
                                 type='submit'
-                                className='w-full sm:text-lg'
+                                className='w-full font-[poppins] sm:text-lg'
                                 isLoading={isSubmitting}
                                 isDisabled={!isValid || isSubmitting}
                                 aria-label='Submit forgot password form'
