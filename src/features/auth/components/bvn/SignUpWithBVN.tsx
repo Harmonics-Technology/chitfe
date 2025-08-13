@@ -19,13 +19,21 @@ import {
 import { Input } from '@components/ui/input';
 import AppButton from '@components/app-button';
 
-import { signUpWithBVN } from '@features/auth/lib/schema';
+// ✅ Schema directly here so it's guaranteed correct
+const signUpWithBVNSchema = yup.object({
+    bvn: yup
+        .string()
+        .required('BVN is required')
+        .matches(/^\d{11}$/, 'BVN must be exactly 11 digits'),
+});
 
-type FormSchema = yup.InferType<typeof signUpWithBVN>;
+type FormSchema = yup.InferType<typeof signUpWithBVNSchema>;
 
 export default function SignUpWithBVN() {
     const form = useForm<FormSchema>({
-        resolver: yupResolver(signUpWithBVN),
+        resolver: yupResolver(signUpWithBVNSchema),
+        mode: 'onChange', // ✅ validates as you type
+        reValidateMode: 'onChange', // ✅ re-validates when values change
         defaultValues: {
             bvn: '',
         },
@@ -102,7 +110,7 @@ export default function SignUpWithBVN() {
                             type='submit'
                             className='font-bold sm:text-lg'
                             isLoading={isSubmitting}
-                            isDisabled={!isValid || isSubmitting}
+                            isDisabled={!isValid || isSubmitting} // ✅ now updates live
                         >
                             Verify BVN
                         </AppButton>
