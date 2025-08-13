@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 // import Link from 'next/link';
 
 import AppButton from '@components/app-button';
@@ -13,16 +12,11 @@ import {
     FormMessage,
 } from '@components/ui/form';
 import { Input } from '@components/ui/input';
-import { Button } from '@components/ui/button';
 
-import { useLogin, useCountdown } from '@features/auth/hooks';
-import BackButton from './bvn/BackButton';
-
-const OTP_TIMER = 60;
+import { useLogin } from '@features/auth/hooks';
 
 export default function ForgotPassword() {
     const { form, onLogin } = useLogin();
-    const { countdown, isCountingDown, startTimer } = useCountdown();
 
     const {
         control,
@@ -30,24 +24,17 @@ export default function ForgotPassword() {
         formState: { isValid, isSubmitting },
     } = form;
 
-    useEffect(() => {
-        startTimer(OTP_TIMER);
-    }, []);
-
     return (
-        <div className='w-full space-y-8 p-5 sm:space-y-14 sm:px-16'>
-            <BackButton onGoBack={() => {}} />
-
+        <div className='flex w-full flex-col items-center justify-center space-y-8 p-5 sm:space-y-14 sm:px-16'>
             <div
                 aria-label='Forgot password page title and description block'
                 className='space-y-3'
             >
-                <h1 className='font-[poppins] text-xl font-bold leading-26 sm:text-2xl sm:font-semibold sm:text-chit-woodsmoke'>
+                <h1 className='text-center font-[poppins] text-xl font-bold leading-26 sm:text-2xl sm:font-semibold sm:text-chit-woodsmoke'>
                     Forgot Password?
                 </h1>
                 <p className='font-[poppins] text-sm font-normal sm:text-base'>
-                    Enter your registered email and click on the link to reset
-                    your password
+                    Don't worry, we’ll send you a link to reset it.
                 </p>
             </div>
 
@@ -91,30 +78,6 @@ export default function ForgotPassword() {
                         </div>
                     </form>
                 </Form>
-            </div>
-
-            <div className='mt-4 flex w-full items-center justify-center gap-1'>
-                <div className='flex items-center text-sm text-chit-primary sm:text-base'>
-                    Didn't receive the code?{' '}
-                    <span className='ml-1'>
-                        {isCountingDown ? (
-                            countdown
-                        ) : (
-                            <Button
-                                type='button'
-                                className='w-full px-1 py-0 font-medium hover:bg-transparent sm:font-semibold'
-                                variant='ghost'
-                                // onClick={() =>
-                                //     handleEmailResend(
-                                //         decodeURIComponent(email)
-                                //     )
-                                // }
-                            >
-                                Resend Link
-                            </Button>
-                        )}
-                    </span>
-                </div>
             </div>
         </div>
     );
