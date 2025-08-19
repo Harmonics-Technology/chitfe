@@ -110,7 +110,7 @@ export default function SignUpWithBVN() {
                             type='submit'
                             className='font-bold sm:text-lg'
                             isLoading={isSubmitting}
-                            isDisabled={!isValid || isSubmitting} // ✅ now updates live
+                            isDisabled={!isValid || isSubmitting}
                         >
                             Verify BVN
                         </AppButton>
@@ -120,10 +120,10 @@ export default function SignUpWithBVN() {
                         <p className='text-sm text-chit-baltic-sea sm:text-base sm:font-light sm:text-chit-ship-gray'>
                             Already have an account?{' '}
                             <Link
-                                href='/auth/login'
-                                className='text-chit-indigo sm:font-medium'
+                                href='/login'
+                                className='font-[poppins] text-chit-indigo sm:font-medium'
                             >
-                                Log in
+                                Login
                             </Link>
                         </p>
                     </div>

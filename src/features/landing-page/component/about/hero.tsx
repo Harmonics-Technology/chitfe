@@ -45,7 +45,7 @@ const Hero = () => {
     return (
         <div className='w-full py-10'>
             {/* Title */}
-            <h1 className='text-center text-2xl font-semibold sm:text-3xl md:text-5xl lg:text-5xl'>
+            <h1 className='text-center text-2xl font-semibold sm:text-3xl md:text-5xl lg:text-4xl'>
                 Simplifying <span className='text-[#5539D0]'>Finances</span>{' '}
                 <br /> for a Better Tomorrow
             </h1>
@@ -56,11 +56,16 @@ const Hero = () => {
                 <div
                     ref={slideRef}
                     className={`flex w-full transition-transform duration-700 ease-in-out ${
-                        isSliding ? 'translate-x-[33.3333%]' : ''
+                        isSliding
+                            ? 'translate-x-full sm:translate-x-[50%] md:translate-x-[33.3333%]'
+                            : ''
                     }`}
                 >
                     {images.map((src, idx) => (
-                        <div key={idx} className='shrink-0 basis-1/3 px-2'>
+                        <div
+                            key={idx}
+                            className='shrink-0 basis-full px-2 sm:basis-1/2 md:basis-1/3'
+                        >
                             <div className='overflow-hidden rounded-2xl shadow-md'>
                                 <Image
                                     src={src}

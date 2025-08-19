@@ -132,7 +132,7 @@ export default function Login() {
                             <p className='font-[poppins] text-sm font-light text-chit-ship-gray sm:text-base'>
                                 Don’t have an account?{' '}
                                 <Link
-                                    href='/auth/sign up'
+                                    href='/signup'
                                     className='font-[poppins] text-chit-indigo sm:font-medium'
                                 >
                                     Sign Up

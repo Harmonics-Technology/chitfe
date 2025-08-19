@@ -4,14 +4,18 @@ import Image from 'next/image';
 const StartHere = () => {
     return (
         <div className='mb-14 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-16'>
-            <section className='relative w-full overflow-hidden rounded-xl bg-[#532c9bb7] pt-14 text-white'>
-                {/* Background Pattern */}
+            <section className='relative w-full overflow-hidden rounded-xl pt-14 text-white'>
+                {/* Gradient Background */}
+                <div className='absolute inset-0 -z-20 bg-gradient-to-r from-[#6E58D3] to-[#301A9A]' />
+
+                {/* Background Pattern Overlay */}
                 <div className='absolute inset-0 -z-10'>
                     <Image
                         src='/starthere-backgroundimage.svg'
                         alt='background pattern'
                         fill
-                        className='object-cover'
+                        className='object-cover opacity-80'
+                        priority
                     />
                 </div>
 

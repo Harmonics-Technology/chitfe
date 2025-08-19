@@ -5,8 +5,10 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className=''>
-            <div className='mx-auto flex max-w-6xl flex-col items-center justify-between md:flex-row'>
+        <footer className='px-4'>
+            {/* Top Section */}
+            <div className='mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 py-6 md:flex-row md:gap-0'>
+                {/* Logo */}
                 <Image
                     src='/chit.svg'
                     alt='Chit Logo'
@@ -15,7 +17,7 @@ const Footer = () => {
                 />
 
                 {/* Navigation Links */}
-                <nav className='m-4 flex gap-6 text-sm text-[#030303]'>
+                <nav className='flex flex-wrap justify-center gap-4 text-sm text-[#030303] md:gap-6'>
                     <Link href='/about' className='hover:text-gray-900'>
                         About Us
                     </Link>
@@ -30,7 +32,7 @@ const Footer = () => {
                     </Link>
                 </nav>
 
-                {/* Social Media Icons as Images */}
+                {/* Social Media Icons */}
                 <div className='flex gap-3'>
                     <Link
                         href='#'
@@ -72,8 +74,8 @@ const Footer = () => {
             <div className='my-4 w-full border-t border-gray-300'></div>
 
             {/* Bottom Section */}
-            <div className='mx-auto mb-8 flex max-w-6xl flex-col flex-wrap items-center justify-between text-sm text-[#030303] md:flex-row'>
-                <div className='mb-4 flex gap-6 md:mb-0'>
+            <div className='mx-auto mb-8 flex max-w-6xl flex-col items-center justify-between gap-4 text-center text-sm text-[#030303] md:flex-row md:text-left'>
+                <div className='flex flex-wrap justify-center gap-6'>
                     <Link href='/terms' className='hover:text-gray-900'>
                         Terms of service
                     </Link>

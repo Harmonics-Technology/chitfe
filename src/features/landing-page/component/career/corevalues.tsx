@@ -13,7 +13,8 @@ export default function CoreValues() {
                     integrity.
                 </p>
 
-                <div className='flex justify-center gap-6 overflow-x-auto text-left'>
+                {/* Cards wrapper */}
+                <div className='flex flex-col items-center gap-6 text-left sm:flex-row sm:items-start sm:justify-center sm:overflow-x-auto'>
                     {/* Innovation */}
                     <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#FAFDEA] p-4 shadow-sm'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
@@ -34,8 +35,8 @@ export default function CoreValues() {
                         </p>
                     </div>
 
-                    {/* Inclusion */}
-                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F8F3FF] p-4 shadow-sm'>
+                    {/* Inclusion (shifted down only on sm+) */}
+                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F8F3FF] p-4 shadow-sm sm:mt-12'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
                             <Image
                                 src='/inclusion.svg'
@@ -74,8 +75,8 @@ export default function CoreValues() {
                         </p>
                     </div>
 
-                    {/* Impact */}
-                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F0F9FF] p-4 shadow-sm'>
+                    {/* Impact (shifted down only on sm+) */}
+                    <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F0F9FF] p-4 shadow-sm sm:mt-12'>
                         <div className='flex size-8 items-center justify-center rounded-md border'>
                             <Image
                                 src='/impact.svg'

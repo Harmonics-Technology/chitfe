@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 import SignUpPhoto from '~/public/assets/images/sign-up.svg';
 
@@ -16,7 +17,6 @@ import {
     CarouselItem,
     CarouselApi,
 } from '@components/ui/carousel';
-import Image from 'next/image';
 
 const SLIDES = [
     {
@@ -26,14 +26,16 @@ const SLIDES = [
             'Connect all your bank accounts, mobile money services, and other financial accounts in one place.',
     },
     {
-        title: 'Slide 2',
+        title: 'Aggregated Banking',
         illustration: SignUpPhoto,
-        description: 'Second slide content',
+        description:
+            'Connect all your bank accounts, mobile money services, and other financial accounts in one place.',
     },
     {
-        title: 'Slide 3',
+        title: 'Aggregated Banking',
         illustration: SignUpPhoto,
-        description: 'Third slide content',
+        description:
+            'Connect all your bank accounts, mobile money services, and other financial accounts in one place.',
     },
 ];
 
@@ -42,26 +44,33 @@ export default function AuthCarousel() {
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
-        if (!api) {
-            return;
-        }
+        if (!api) return;
 
-        setCurrent(api.selectedScrollSnap() + 1);
+        // set initial index
+        setCurrent(api.selectedScrollSnap());
 
-        api.on('select', () => {
-            setCurrent(api.selectedScrollSnap() + 1);
-        });
+        // listen to manual change
+        api.on('select', () => setCurrent(api.selectedScrollSnap()));
+
+        // autoplay interval
+        const interval = setInterval(() => {
+            if (!api) return;
+            if (api.canScrollNext()) {
+                api.scrollNext();
+            } else {
+                api.scrollTo(0); // loop back to first slide
+            }
+        }, 3000); // change every 3s
+
+        return () => clearInterval(interval);
     }, [api]);
-
-    const scrollToIndex = (index: number) => {
-        api?.scrollTo(index);
-    };
 
     return (
         <Carousel
             setApi={setApi}
             opts={{
                 loop: true,
+                align: 'start',
             }}
             className='w-full max-w-xs'
         >
@@ -72,21 +81,21 @@ export default function AuthCarousel() {
                             <div className='flex items-center justify-center'>
                                 <Image
                                     src={illustration}
-                                    alt='a phone screen screen showing a list of banks'
+                                    alt='a phone screen showing a list of banks'
                                     className='h-[282px] w-[213px] sm:w-full'
                                 />
                             </div>
-                            {/* Navigation dots */}
+                            {/* Dots */}
                             <div className='mt-4 flex items-center justify-center space-x-2'>
-                                {SLIDES.map((_, index) => (
+                                {SLIDES.map((_, idx) => (
                                     <div
-                                        key={index}
-                                        className={`h-2 rounded-xl transition-all duration-300 ${
-                                            current === index + 1
+                                        key={idx}
+                                        className={`h-2 cursor-pointer rounded-xl transition-all duration-300 ${
+                                            current === idx
                                                 ? 'w-10 bg-[#8D7BE0]'
                                                 : 'w-2.5 bg-chit-milk-white'
                                         }`}
-                                        onClick={() => scrollToIndex(index)}
+                                        onClick={() => api?.scrollTo(idx)}
                                     />
                                 ))}
                             </div>
