@@ -26,10 +26,10 @@ export default function GetStarted() {
     ];
 
     return (
-        <section className='w-full bg-gradient-to-br from-white to-[#f4f0ff] px-6 py-10 md:px-20'>
+        <section className='flex w-full items-center justify-center bg-gradient-to-br from-white to-[#f4f0ff] px-6 py-10 md:px-20'>
             <div className='mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2'>
                 {/* Left Content */}
-                <div className='pt-5 text-center md:text-left'>
+                <div className='mt-10 pt-5 text-center md:text-left'>
                     <h2 className='mb-6 text-4xl font-bold text-gray-900 md:text-5xl'>
                         Get Started
                         <div className='mt-4 text-indigo-600'>With CHIT</div>
@@ -57,7 +57,7 @@ export default function GetStarted() {
                         >
                             {/* Pillar container */}
                             <div className='flex w-[110px] flex-col items-center md:w-[180px]'>
-                                <div className='absolute -top-4 z-10 flex size-7 items-center justify-center rounded-full bg-white text-xs font-bold text-indigo-600 shadow-md md:size-10 md:text-lg'>
+                                <div className='absolute -top-0 bottom-6 z-10 flex size-7 items-center justify-center rounded-full bg-white text-xs font-bold text-indigo-600 shadow-md md:size-10 md:text-lg'>
                                     {index + 1}
                                 </div>
                                 <div className='w-full overflow-hidden rounded-t-[24px] shadow-lg md:rounded-t-[40px]'>
@@ -78,7 +78,7 @@ export default function GetStarted() {
                             </div>
 
                             {/* Floating card with hover effect */}
-                            <div className='absolute right-[-20px] top-[-60px] z-20 m-2 w-40 rounded-xl bg-white p-3 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl md:right-[100px] md:w-72'>
+                            <div className='absolute right-[-20px] top-[-60px] z-20 m-2 w-40 rounded-xl bg-white p-3 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl md:right-[120px] md:w-72'>
                                 <h2 className='mb-1 text-sm font-semibold text-gray-900 md:text-base'>
                                     {step.title}
                                 </h2>

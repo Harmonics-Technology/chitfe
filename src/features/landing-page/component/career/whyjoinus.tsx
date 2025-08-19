@@ -13,7 +13,8 @@ export default function WhyJoinUs() {
                     financial sector.
                 </p>
 
-                <div className='grid grid-cols-1 gap-x-10 gap-y-12 text-left sm:grid-cols-2 lg:grid-cols-3'>
+                {/* Grid */}
+                <div className='grid grid-cols-1 gap-x-14 gap-y-12 text-left sm:grid-cols-2 lg:grid-cols-3'>
                     {[
                         {
                             title: 'Work with Purpose',
@@ -50,11 +51,13 @@ export default function WhyJoinUs() {
                                 width={40}
                                 height={40}
                             />
-                            <div>
+                            <div className='max-w-xs'>
+                                {' '}
+                                {/*  keeps text width consistent */}
                                 <h3 className='font-semibold text-[#0F0F0F]'>
                                     {item.title}
                                 </h3>
-                                <p className='mt-1 font-[poppins] text-sm text-gray-600'>
+                                <p className='mt-1 font-[poppins] text-base leading-snug text-gray-600'>
                                     {item.text}
                                 </p>
                             </div>

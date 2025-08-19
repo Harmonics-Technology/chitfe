@@ -14,7 +14,7 @@ const StartHere = () => {
                         src='/starthere-backgroundimage.svg'
                         alt='background pattern'
                         fill
-                        className='object-cover opacity-80'
+                        className='object-cover opacity-100'
                         priority
                     />
                 </div>

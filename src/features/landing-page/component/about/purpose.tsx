@@ -14,7 +14,7 @@ const Purpose = () => {
             </h1>
 
             {/* Description */}
-            <p className='mx-auto mt-6 max-w-4xl text-center font-[poppins] text-sm font-normal leading-relaxed text-gray-700 sm:text-base md:text-lg'>
+            <p className='mx-auto mt-6 text-center font-[poppins] text-sm font-normal leading-relaxed text-gray-700 sm:text-base md:text-lg'>
                 At CHIT, we are dedicated to transforming Africa's financial
                 services landscape by harnessing the power of mobile money. We
                 understand the unique challenges faced by our diverse user base,

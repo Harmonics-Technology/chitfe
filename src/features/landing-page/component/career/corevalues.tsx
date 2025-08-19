@@ -7,8 +7,8 @@ export default function CoreValues() {
                 <h2 className='mb-4 text-3xl font-bold text-[#0F0F0F] md:text-4xl'>
                     Built on Trust, Driven by Innovation
                 </h2>
-                <p className='mx-auto mb-12 max-w-2xl font-[poppins] leading-relaxed text-gray-600'>
-                    Our core values shape everything we do—from building
+                <p className='mx-auto mb-12 max-w-4xl text-center font-[poppins] leading-relaxed text-gray-600'>
+                    Our core values shape everything we do — from building
                     inclusive financial solutions to fostering innovation and
                     integrity.
                 </p>
@@ -17,12 +17,12 @@ export default function CoreValues() {
                 <div className='flex flex-col items-center gap-6 text-left sm:flex-row sm:items-start sm:justify-center sm:overflow-x-auto'>
                     {/* Innovation */}
                     <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#FAFDEA] p-4 shadow-sm'>
-                        <div className='flex size-8 items-center justify-center rounded-md border'>
+                        <div className='flex size-12 items-center justify-center rounded-md border'>
                             <Image
                                 src='/innovation.svg'
                                 alt='Innovation icon'
-                                width={32}
-                                height={32}
+                                width={48}
+                                height={48}
                             />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
@@ -35,14 +35,14 @@ export default function CoreValues() {
                         </p>
                     </div>
 
-                    {/* Inclusion (shifted down only on sm+) */}
+                    {/* Inclusion */}
                     <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F8F3FF] p-4 shadow-sm sm:mt-12'>
-                        <div className='flex size-8 items-center justify-center rounded-md border'>
+                        <div className='flex size-12 items-center justify-center rounded-md border'>
                             <Image
                                 src='/inclusion.svg'
                                 alt='Inclusion icon'
-                                width={32}
-                                height={32}
+                                width={48}
+                                height={48}
                             />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
@@ -57,12 +57,12 @@ export default function CoreValues() {
 
                     {/* Integrity */}
                     <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F4FDF5] p-4 shadow-sm'>
-                        <div className='flex size-8 items-center justify-center rounded-md border'>
+                        <div className='flex size-12 items-center justify-center rounded-md border'>
                             <Image
                                 src='/integrity.svg'
                                 alt='Integrity icon'
-                                width={32}
-                                height={32}
+                                width={48}
+                                height={48}
                             />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>
@@ -75,14 +75,14 @@ export default function CoreValues() {
                         </p>
                     </div>
 
-                    {/* Impact (shifted down only on sm+) */}
+                    {/* Impact */}
                     <div className='flex w-[230px] flex-col gap-3 rounded-2xl bg-[#F0F9FF] p-4 shadow-sm sm:mt-12'>
-                        <div className='flex size-8 items-center justify-center rounded-md border'>
+                        <div className='flex size-12 items-center justify-center rounded-md border'>
                             <Image
                                 src='/impact.svg'
                                 alt='Impact icon'
-                                width={32}
-                                height={32}
+                                width={48}
+                                height={48}
                             />
                         </div>
                         <h3 className='text-base font-semibold text-[#0F0F0F]'>

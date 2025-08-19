@@ -46,8 +46,8 @@ const Hero = () => {
         <div className='w-full py-10'>
             {/* Title */}
             <h1 className='text-center text-2xl font-semibold sm:text-3xl md:text-5xl lg:text-4xl'>
-                Simplifying <span className='text-[#5539D0]'>Finances</span>{' '}
-                <br /> for a Better Tomorrow
+                Simplifying <span className='text-[#5539D0]'>Finances</span> For
+                A <br /> Better Tomorrow
             </h1>
 
             {/* Carousel */}

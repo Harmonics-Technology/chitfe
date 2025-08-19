@@ -8,9 +8,9 @@ const FeaturesSection = () => {
     return (
         <section className='mt-7 flex flex-col items-stretch justify-between gap-10 px-6 py-16 md:px-16 lg:flex-row'>
             {/* Text Section */}
-            <div className='flex size-full flex-col justify-between gap-12 font-[poppins] lg:w-1/2'>
-                {/* Active Feature */}
-                <div className='group mt-14'>
+            <div className='flex size-full flex-col justify-between font-[poppins] lg:w-1/2'>
+                {/* Feature 1 */}
+                <div className='group border-b border-gray-300 py-8'>
                     <div className='flex flex-col items-start text-[#2A1A6E]'>
                         <div className='mb-2 flex size-12 items-center justify-center rounded-md bg-[#E5DEFF]'>
                             <Banknote size={24} />
@@ -26,7 +26,8 @@ const FeaturesSection = () => {
                     </p>
                 </div>
 
-                <div className='group mt-14 cursor-pointer transition-all duration-300'>
+                {/* Feature 2 */}
+                <div className='group cursor-pointer border-b border-gray-300 py-8 transition-all duration-300'>
                     <div className='flex flex-col items-start text-black group-hover:text-[#2A1A6E]'>
                         <div className='mb-2 flex size-12 items-center justify-center rounded-md bg-[#E5DEFF] group-hover:text-[#2A1A6E]'>
                             <Building2 size={24} />
@@ -37,7 +38,8 @@ const FeaturesSection = () => {
                     </div>
                 </div>
 
-                <div className='group mt-14 cursor-pointer transition-all duration-300'>
+                {/* Feature 3 */}
+                <div className='group cursor-pointer border-b border-gray-300 py-8 transition-all duration-300'>
                     <div className='flex flex-col items-start text-black group-hover:text-[#2A1A6E]'>
                         <div className='mb-2 flex size-12 items-center justify-center rounded-md bg-[#E5DEFF] group-hover:text-[#2A1A6E]'>
                             <PiggyBank size={24} />
