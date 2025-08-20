@@ -58,7 +58,8 @@ export default function GetStarted() {
                             {/* Pillar container */}
                             <div className='flex w-[110px] flex-col items-center md:w-[180px]'>
                                 <div className='absolute -top-0 bottom-6 z-10 flex size-7 items-center justify-center rounded-full bg-white text-xs font-bold text-indigo-600 shadow-md md:size-10 md:text-lg'>
-                                    {index + 1}
+                                    {3 - index}{' '}
+                                    {/* ✅ Tallest = 1, Middle = 2, Shortest = 3 */}
                                 </div>
                                 <div className='w-full overflow-hidden rounded-t-[24px] shadow-lg md:rounded-t-[40px]'>
                                     <Image
@@ -67,10 +68,10 @@ export default function GetStarted() {
                                         width={300}
                                         height={
                                             index === 0
-                                                ? 300
+                                                ? 190 // left (shortest pillar → number 3)
                                                 : index === 1
-                                                  ? 230
-                                                  : 190
+                                                  ? 230 // middle pillar → number 2
+                                                  : 300 // right (tallest pillar → number 1)
                                         }
                                         className='w-full object-cover'
                                     />

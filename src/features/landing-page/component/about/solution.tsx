@@ -7,7 +7,7 @@ const solution = () => {
                 Our Solution
             </p>
             <h1 className='text-4xl font-semibold'>
-                All-In-One financial management
+                All-In-One Financial Management
             </h1>
             <p className='mt-3 font-[poppins] text-lg font-normal'>
                 CHIT is an all-in-one financial management platform tailored for

@@ -7,7 +7,7 @@ export default function CoreValues() {
                 <h2 className='mb-4 text-3xl font-bold text-[#0F0F0F] md:text-4xl'>
                     Built on Trust, Driven by Innovation
                 </h2>
-                <p className='mx-auto mb-12 max-w-4xl text-center font-[poppins] leading-relaxed text-gray-600'>
+                <p className='mx-auto mb-12 max-w-5xl text-center font-[poppins] leading-relaxed text-gray-600'>
                     Our core values shape everything we do — from building
                     inclusive financial solutions to fostering innovation and
                     integrity.
