@@ -64,15 +64,21 @@ const Hero = () => {
                     {images.map((src, idx) => (
                         <div
                             key={idx}
-                            className='shrink-0 basis-full px-2 sm:basis-1/2 md:basis-1/3'
+                            className='shrink-0 basis-full px-2 transition-transform duration-500 sm:basis-1/2 md:basis-1/3'
                         >
-                            <div className='overflow-hidden rounded-2xl shadow-md'>
+                            {/* ✅ Center image larger, sides smaller */}
+                            <div
+                                className={`relative w-full overflow-hidden rounded-2xl shadow-md ${
+                                    idx === 1
+                                        ? 'h-[350px] scale-105'
+                                        : 'h-[300px] scale-95'
+                                }`}
+                            >
                                 <Image
                                     src={src}
                                     alt={`Hero ${idx + 1}`}
-                                    width={450}
-                                    height={400}
-                                    className='h-auto w-full object-cover'
+                                    fill
+                                    className='object-cover'
                                 />
                             </div>
                         </div>
