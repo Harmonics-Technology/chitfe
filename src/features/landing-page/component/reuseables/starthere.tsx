@@ -11,7 +11,7 @@ const StartHere = () => {
                 {/* Background Pattern Overlay */}
                 <div className='absolute inset-0 -z-10'>
                     <Image
-                        src='/starthere-backgroundimage.svg'
+                        src='/footer background.svg'
                         alt='background pattern'
                         fill
                         className='object-cover opacity-100'
