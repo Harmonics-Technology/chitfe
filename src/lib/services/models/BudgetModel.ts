@@ -10,4 +10,5 @@ export type BudgetModel = {
     trackAllAccounts?: boolean;
     startDate?: string;
     endDate?: string;
+    budgetTypeId?: number;
 };

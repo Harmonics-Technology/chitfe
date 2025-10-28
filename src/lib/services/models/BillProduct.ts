@@ -14,4 +14,5 @@ export type BillProduct = {
     customerIdLabel?: string | null;
     requiresValidation?: boolean;
     logoUrl?: string | null;
+    packageCode?: string | null;
 };

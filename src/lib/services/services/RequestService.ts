@@ -255,4 +255,28 @@ export class RequestService {
             },
         });
     }
+    /**
+     * @returns RequestSummaryChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static getRequestStatues({
+        isMobile,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+    }): CancelablePromise<RequestSummaryChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/wallet/api/Request/ListRequestStatus',
+            headers: {
+                IsMobile: isMobile,
+            },
+            errors: {
+                400: `Bad Request`,
+                500: `Server Error`,
+            },
+        });
+    }
 }

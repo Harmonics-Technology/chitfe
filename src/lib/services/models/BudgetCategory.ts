@@ -12,6 +12,7 @@ export type BudgetCategory = {
     name?: string | null;
     description?: string | null;
     isPredefined?: boolean;
+    isArchived?: boolean;
     userId?: string | null;
     user?: User;
     budgets?: Array<Budget> | null;

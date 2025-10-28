@@ -9,6 +9,8 @@ import type { ChitViewChitStandardResponse } from '../models/ChitViewChitStandar
 import type { ChitViewPagedCollectionChitStandardResponse } from '../models/ChitViewPagedCollectionChitStandardResponse';
 import type { ClaimChitModel } from '../models/ClaimChitModel';
 import type { GenerateChitModel } from '../models/GenerateChitModel';
+import type { SendChitModel } from '../models/SendChitModel';
+import type { SendChitViewChitStandardResponse } from '../models/SendChitViewChitStandardResponse';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
@@ -30,6 +32,34 @@ export class ChitService {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/wallet/api/Chit/generate',
+            headers: {
+                IsMobile: isMobile,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                400: `Bad Request`,
+                500: `Server Error`,
+            },
+        });
+    }
+    /**
+     * @returns SendChitViewChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static sendChit({
+        isMobile,
+        requestBody,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+        requestBody?: SendChitModel;
+    }): CancelablePromise<SendChitViewChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/wallet/api/Chit/send',
             headers: {
                 IsMobile: isMobile,
             },

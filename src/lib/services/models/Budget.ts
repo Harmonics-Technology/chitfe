@@ -5,6 +5,7 @@
 import type { BudgetCategory } from './BudgetCategory';
 import type { BudgetHistory } from './BudgetHistory';
 import type { BudgetSpending } from './BudgetSpending';
+import type { BudgetType } from './BudgetType';
 import type { GenericStatus } from './GenericStatus';
 import type { LinkedAccount } from './LinkedAccount';
 import type { Transaction } from './Transaction';
@@ -27,6 +28,8 @@ export type Budget = {
     trackAllAccounts?: boolean;
     budgetStatusId?: number;
     budgetStatus?: GenericStatus;
+    budgetTypeId?: number;
+    budgetType?: BudgetType;
     budgetSpending?: Array<BudgetSpending> | null;
     transactions?: Array<Transaction> | null;
     budgetHistory?: Array<BudgetHistory> | null;

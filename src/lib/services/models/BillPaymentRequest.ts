@@ -6,9 +6,9 @@ export type BillPaymentRequest = {
     productId?: string | null;
     customerId?: string | null;
     amount?: number;
-    phoneNumber?: string | null;
-    email?: string | null;
-    walletId?: string;
     linkedAccountId?: string | null;
-    additionalParameters?: Record<string, string> | null;
+    packageCode?: string | null;
+    customerName?: string | null;
+    meterType?: string | null;
+    customerAddress?: string | null;
 };

@@ -20,7 +20,7 @@ export type OpenAPIConfig = {
 };
 
 export const OpenAPI: OpenAPIConfig = {
-    BASE: 'https://chit-gateway-dev.azurewebsites.net/',
+    BASE: '',
     VERSION: 'Identity',
     WITH_CREDENTIALS: false,
     CREDENTIALS: 'include',

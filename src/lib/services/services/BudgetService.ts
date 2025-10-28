@@ -11,6 +11,7 @@ import type { BudgetHistoryViewListChitStandardResponse } from '../models/Budget
 import type { BudgetModel } from '../models/BudgetModel';
 import type { BudgetSpendingViewChitStandardResponse } from '../models/BudgetSpendingViewChitStandardResponse';
 import type { BudgetTransactionViewPagedCollectionChitStandardResponse } from '../models/BudgetTransactionViewPagedCollectionChitStandardResponse';
+import type { BudgetTypeViewListChitStandardResponse } from '../models/BudgetTypeViewListChitStandardResponse';
 import type { BudgetViewChitStandardResponse } from '../models/BudgetViewChitStandardResponse';
 import type { BudgetViewListChitStandardResponse } from '../models/BudgetViewListChitStandardResponse';
 import type { BudgetViewPagedCollectionChitStandardResponse } from '../models/BudgetViewPagedCollectionChitStandardResponse';
@@ -351,6 +352,41 @@ export class BudgetService {
         });
     }
     /**
+     * @returns BudgetViewChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static updateBudget({
+        budgetId,
+        isMobile,
+        requestBody,
+    }: {
+        budgetId: string;
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+        requestBody?: BudgetModel;
+    }): CancelablePromise<BudgetViewChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'PUT',
+            url: '/wallet/api/Budget/{budgetId}',
+            path: {
+                budgetId: budgetId,
+            },
+            headers: {
+                IsMobile: isMobile,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                400: `Bad Request`,
+                401: `Unauthorized`,
+                404: `Not Found`,
+                500: `Server Error`,
+            },
+        });
+    }
+    /**
      * @returns BooleanChitStandardResponse Success
      * @throws ApiError
      */
@@ -445,12 +481,12 @@ export class BudgetService {
      * @throws ApiError
      */
     public static setupInitialUserBudgets({
-        userId,
         monthlyIncome,
+        monthlyAverageExpense,
         isMobile,
     }: {
-        userId: string;
         monthlyIncome?: number;
+        monthlyAverageExpense?: number;
         /**
          * a flag to indicate if the request is coming from a mobile device
          */
@@ -458,18 +494,71 @@ export class BudgetService {
     }): CancelablePromise<BudgetViewListChitStandardResponse> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/wallet/api/Budget/users/{userId}/setup',
-            path: {
-                userId: userId,
-            },
+            url: '/wallet/api/Budget/users/setup',
             headers: {
                 IsMobile: isMobile,
             },
             query: {
                 monthlyIncome: monthlyIncome,
+                monthlyAverageExpense: monthlyAverageExpense,
             },
             errors: {
                 400: `Bad Request`,
+                500: `Server Error`,
+            },
+        });
+    }
+    /**
+     * @returns BudgetTypeViewListChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static getBudgetTypes({
+        isMobile,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+    }): CancelablePromise<BudgetTypeViewListChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/wallet/api/Budget/types',
+            headers: {
+                IsMobile: isMobile,
+            },
+            errors: {
+                400: `Bad Request`,
+                500: `Server Error`,
+            },
+        });
+    }
+    /**
+     * @returns BooleanChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static archiveBudgetCategory({
+        categoryId,
+        isMobile,
+    }: {
+        categoryId: string;
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+    }): CancelablePromise<BooleanChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/wallet/api/Budget/category/{categoryId}/archive',
+            path: {
+                categoryId: categoryId,
+            },
+            headers: {
+                IsMobile: isMobile,
+            },
+            errors: {
+                400: `Bad Request`,
+                401: `Unauthorized`,
+                404: `Not Found`,
                 500: `Server Error`,
             },
         });

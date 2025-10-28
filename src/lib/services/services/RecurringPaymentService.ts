@@ -2,7 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { BaseMainViewListChitStandardResponse } from '../models/BaseMainViewListChitStandardResponse';
 import type { BooleanChitStandardResponse } from '../models/BooleanChitStandardResponse';
+import type { CreateBillRecurringPaymentModel } from '../models/CreateBillRecurringPaymentModel';
+import type { CreateExternalRecurringPaymentModel } from '../models/CreateExternalRecurringPaymentModel';
+import type { CreateInternalRecurringPaymentModel } from '../models/CreateInternalRecurringPaymentModel';
 import type { CreateRecurringPaymentModel } from '../models/CreateRecurringPaymentModel';
 import type { RecurringPaymentHistoryListChitStandardResponse } from '../models/RecurringPaymentHistoryListChitStandardResponse';
 import type { RecurringPaymentStatus } from '../models/RecurringPaymentStatus';
@@ -41,6 +45,78 @@ export class RecurringPaymentService {
                 400: `Bad Request`,
                 500: `Server Error`,
             },
+        });
+    }
+    /**
+     * @returns any Success
+     * @throws ApiError
+     */
+    public static postWalletApiRecurringPaymentInternal({
+        isMobile,
+        requestBody,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+        requestBody?: CreateInternalRecurringPaymentModel;
+    }): CancelablePromise<any> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/wallet/api/RecurringPayment/internal',
+            headers: {
+                IsMobile: isMobile,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @returns any Success
+     * @throws ApiError
+     */
+    public static postWalletApiRecurringPaymentExternal({
+        isMobile,
+        requestBody,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+        requestBody?: CreateExternalRecurringPaymentModel;
+    }): CancelablePromise<any> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/wallet/api/RecurringPayment/external',
+            headers: {
+                IsMobile: isMobile,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @returns any Success
+     * @throws ApiError
+     */
+    public static postWalletApiRecurringPaymentBill({
+        isMobile,
+        requestBody,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+        requestBody?: CreateBillRecurringPaymentModel;
+    }): CancelablePromise<any> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/wallet/api/RecurringPayment/bill',
+            headers: {
+                IsMobile: isMobile,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
         });
     }
     /**
@@ -327,6 +403,72 @@ export class RecurringPaymentService {
             },
             errors: {
                 500: `Server Error`,
+            },
+        });
+    }
+    /**
+     * @returns BaseMainViewListChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static recurringPayemntStatuses({
+        isMobile,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+    }): CancelablePromise<BaseMainViewListChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/wallet/api/RecurringPayment/statuses/list',
+            headers: {
+                IsMobile: isMobile,
+            },
+            errors: {
+                500: `Server Error`,
+            },
+        });
+    }
+    /**
+     * @returns BaseMainViewListChitStandardResponse Success
+     * @throws ApiError
+     */
+    public static listRecurringPaymentTypes({
+        isMobile,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+    }): CancelablePromise<BaseMainViewListChitStandardResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/wallet/api/RecurringPayment/types/list',
+            headers: {
+                IsMobile: isMobile,
+            },
+            errors: {
+                500: `Server Error`,
+            },
+        });
+    }
+    /**
+     * @returns any Success
+     * @throws ApiError
+     */
+    public static getWalletApiRecurringPaymentStatuses({
+        isMobile,
+    }: {
+        /**
+         * a flag to indicate if the request is coming from a mobile device
+         */
+        isMobile?: any;
+    }): CancelablePromise<any> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/wallet/api/RecurringPayment/statuses',
+            headers: {
+                IsMobile: isMobile,
             },
         });
     }

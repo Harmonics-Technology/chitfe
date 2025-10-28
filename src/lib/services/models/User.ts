@@ -32,6 +32,7 @@ export type User = {
     referralCode?: string | null;
     referrerCode?: string | null;
     transactionPin?: string | null;
+    hasTransactionPin?: boolean | null;
     kycLevel?: number;
     kycStatus?: string | null;
     payStackCustomerId?: string | null;

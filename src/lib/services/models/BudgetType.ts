@@ -2,11 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type BudgetCategoryView = {
-    id?: string;
+export type BudgetType = {
+    id?: number;
+    dateCreated?: string;
+    dateModified?: string;
     name?: string | null;
     description?: string | null;
-    isPredefined?: boolean;
-    isArchived?: boolean;
-    createdAt?: string;
 };

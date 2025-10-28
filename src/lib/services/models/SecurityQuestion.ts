@@ -9,6 +9,10 @@ export type SecurityQuestion = {
     dateModified?: string;
     question?: string | null;
     answer?: string | null;
+    encryptedAnswer?: string | null;
+    salt?: string | null;
+    keyVersion?: string | null;
+    lastRotated?: string | null;
     userId?: string;
     user?: User;
 };

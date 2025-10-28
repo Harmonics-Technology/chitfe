@@ -3,6 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type WalletView = {
+    id?: string;
     userId?: string;
     currency?: string | null;
     balance?: number;
