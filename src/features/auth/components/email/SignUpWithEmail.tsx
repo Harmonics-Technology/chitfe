@@ -1,7 +1,5 @@
 'use client';
 
-// import { useState } from 'react';
-
 import AppButton from '@components/app-button';
 import {
     Form,
@@ -16,23 +14,11 @@ import { Input } from '@components/ui/input';
 import InputPassword from '@components/input-password';
 import { PhoneInput } from '@components/phone-input';
 
-import useAuth, {
-    type SignUpEmailSchemaType,
-} from '@features/auth/hooks/useAuth';
+import useEmailRegister from '@features/auth/hooks/useEmailRegister';
 import Link from 'next/link';
 
 export default function SignUpWithEmail() {
-    const { signUpForm } = useAuth();
-
-    const {
-        control,
-        handleSubmit,
-        formState: { isSubmitting },
-    } = signUpForm;
-
-    async function onSubmit(values: SignUpEmailSchemaType) {
-        console.log(values);
-    }
+    const { form, handleSubmit, isSubmitting, onSubmit } = useEmailRegister();
 
     return (
         <div className='space-y-8 pt-9 font-[poppins] md:p-16'>
@@ -50,14 +36,14 @@ export default function SignUpWithEmail() {
             </div>
 
             <div className='w-full'>
-                <Form {...signUpForm}>
+                <Form {...form}>
                     <form
                         onSubmit={handleSubmit(onSubmit)}
                         className='mt-6 w-full'
                     >
                         <div className='space-y-4'>
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='surname'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -75,7 +61,7 @@ export default function SignUpWithEmail() {
                             />
 
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='firstName'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -94,7 +80,7 @@ export default function SignUpWithEmail() {
                             />
 
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='otherName'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -112,7 +98,7 @@ export default function SignUpWithEmail() {
                             />
 
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='phoneNumber'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -130,7 +116,7 @@ export default function SignUpWithEmail() {
                             />
 
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='email'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -147,7 +133,7 @@ export default function SignUpWithEmail() {
                                 )}
                             />
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='password'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -168,7 +154,7 @@ export default function SignUpWithEmail() {
                             />
 
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='confirmPassword'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
@@ -185,7 +171,7 @@ export default function SignUpWithEmail() {
                             />
 
                             <FormField
-                                control={control}
+                                control={form.control}
                                 name='referral'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1'>
