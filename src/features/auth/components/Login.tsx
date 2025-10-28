@@ -50,7 +50,7 @@ export default function Login() {
                         <div className='space-y-4'>
                             <FormField
                                 control={control}
-                                name='email'
+                                name='identifier'
                                 render={({ field }) => (
                                     <FormItem className='w-full space-y-1 font-[poppins]'>
                                         <FormLabel>

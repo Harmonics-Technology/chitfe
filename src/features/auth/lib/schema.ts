@@ -46,9 +46,8 @@ export const signUpWithEmail = yup.object().shape({
 });
 
 export const loginSchema = yup.object().shape({
-    email: yup
+    identifier: yup
         .string()
-        .email()
         .required('Email, user ID or phone number is required'),
     password: yup.string().required('Password is required'),
     stayLoggedIn: yup.boolean().optional(),
