@@ -5,52 +5,44 @@ import { useRouter } from 'next/navigation';
 
 import AppButton from '@components/app-button';
 import { RadioGroup, RadioGroupItem } from '@components/ui/radio-group';
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from '@components/ui/form';
+import { Input } from '@components/ui/input';
 
 import VerifyOTP from './VerifyOTP';
-
-import { cn } from '@lib/utils';
 import BackButton from './BackButton';
 
-const options = [
-    {
-        id: 'email',
-        label: 'Email',
-        description:
-            'An email with verification code will be sent to chu******ess@gmail.com',
-    },
-    {
-        id: 'phone1',
-        label: 'Phone Number 1',
-        description:
-            'SMS with a verification code will be sent to +234817****788',
-    },
-    {
-        id: 'phone2',
-        label: 'Phone Number 2',
-        description:
-            'SMS with a verification code will be sent to +234909****603',
-    },
-    {
-        id: 'alternative',
-        label: 'Alternative Phone Number',
-        description:
-            'SMS with a verification code will be sent to your alternate phone number',
-    },
-];
+import { cn } from '@lib/utils';
+import { useBvnMethodSelect } from '@features/auth/hooks';
 
 export default function BVNVerification() {
     const [hasCode, setHasCode] = useState<boolean>(false);
-    const [selected, setSelected] = useState<string>('');
     const router = useRouter();
 
-    const toggleOtpInput = () => {
-        setHasCode(!hasCode);
-    };
+    const {
+        form,
+        submit,
+        isSubmitting,
+        selectedMethod,
+        setSelectedMethod,
+        showAlternativePhoneInput,
+        methods,
+    } = useBvnMethodSelect();
+
+    // const toggleOtpInput = () => {
+    //     setHasCode(!hasCode);
+    // };
 
     const goBack = (hasOtp: boolean) => {
         if (hasOtp) return setHasCode(false);
 
-        return router.push('/auth/signup');
+        return router.push('/signup');
     };
 
     return (
@@ -73,32 +65,63 @@ export default function BVNVerification() {
                             verification
                         </p>
                     </div>
-                    <div className='w-full space-y-8'>
-                        <RadioGroup>
-                            {options.map(({ id, label, description }) => (
-                                <VerificationItem
-                                    key={id}
-                                    id={id}
-                                    label={label}
-                                    description={description}
-                                    isChecked={id == selected}
-                                    selected={selected}
-                                    onChange={setSelected}
+
+                    <Form {...form}>
+                        <form onSubmit={submit} className='w-full space-y-8'>
+                            <RadioGroup>
+                                {methods.map((method) => (
+                                    <VerificationItem
+                                        key={method.method}
+                                        id={method.method || ''}
+                                        label={
+                                            method.method
+                                                ?.replace('_', ' ')
+                                                .toUpperCase() || ''
+                                        }
+                                        description={method.hint || ''}
+                                        isChecked={
+                                            method.method === selectedMethod
+                                        }
+                                        selected={selectedMethod}
+                                        onChange={setSelectedMethod}
+                                    />
+                                ))}
+                            </RadioGroup>
+
+                            {showAlternativePhoneInput && (
+                                <FormField
+                                    control={form.control}
+                                    name='alternativePhoneNumber'
+                                    render={({ field }) => (
+                                        <FormItem className='w-full'>
+                                            <FormLabel>
+                                                Alternative Phone Number
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    type='text'
+                                                    placeholder='Enter alternative phone number'
+                                                    {...field}
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
                                 />
-                            ))}
-                        </RadioGroup>
-                    </div>
-                    <div className='pt-14 sm:pt-16'>
-                        <AppButton
-                            type='submit'
-                            className='font-semibold text-chit-white-smoke sm:text-lg'
-                            isLoading={false}
-                            onClick={() => toggleOtpInput()}
-                            // isDisabled={!isValid || isSubmitting}
-                        >
-                            Send OTP
-                        </AppButton>
-                    </div>{' '}
+                            )}
+
+                            <div className='pt-14 sm:pt-16'>
+                                <AppButton
+                                    type='submit'
+                                    className='font-semibold text-chit-white-smoke sm:text-lg'
+                                    isLoading={isSubmitting}
+                                    isDisabled={!selectedMethod || isSubmitting}
+                                >
+                                    Send OTP
+                                </AppButton>
+                            </div>
+                        </form>
+                    </Form>
                 </>
             )}
         </div>

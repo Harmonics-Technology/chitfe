@@ -3,10 +3,6 @@ import Link from 'next/link';
 
 import { Info } from 'lucide-react';
 
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
-
 import {
     Form,
     FormControl,
@@ -19,33 +15,10 @@ import {
 import { Input } from '@components/ui/input';
 import AppButton from '@components/app-button';
 
-// ✅ Schema directly here so it's guaranteed correct
-const signUpWithBVNSchema = yup.object({
-    bvn: yup
-        .string()
-        .required('BVN is required')
-        .matches(/^\d{11}$/, 'BVN must be exactly 11 digits'),
-});
-
-type FormSchema = yup.InferType<typeof signUpWithBVNSchema>;
+import { useBvnRegister } from '@features/auth/hooks';
 
 export default function SignUpWithBVN() {
-    const form = useForm<FormSchema>({
-        resolver: yupResolver(signUpWithBVNSchema),
-        mode: 'onChange', // ✅ validates as you type
-        reValidateMode: 'onChange', // ✅ re-validates when values change
-        defaultValues: {
-            bvn: '',
-        },
-    });
-
-    const {
-        formState: { isValid, isSubmitting },
-    } = form;
-
-    function onSubmit(values: FormSchema) {
-        console.log(values);
-    }
+    const { form, submit, isValid, isSubmitting } = useBvnRegister();
 
     return (
         <div className='w-full space-y-8 pt-9 font-[poppins] sm:space-y-14 sm:py-10'>
@@ -62,7 +35,7 @@ export default function SignUpWithBVN() {
             </div>
 
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className='w-full'>
+                <form onSubmit={submit} className='w-full'>
                     <FormField
                         control={form.control}
                         name='bvn'
