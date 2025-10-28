@@ -149,7 +149,13 @@ export default [
                         },
                         {
                             from: 'app',
-                            allow: ['shared', 'ui', 'feature', 'services', 'app'],
+                            allow: [
+                                'shared',
+                                'ui',
+                                'feature',
+                                'services',
+                                'app',
+                            ],
                         },
                         {
                             from: 'app',
